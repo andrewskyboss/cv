@@ -70,10 +70,6 @@ img {
 	height: 100%;
 	object-fit: cover;
 }
-.container-fluid {
-	padding-left: 0;
-	padding-right: 0;
-}
 /*---------------- Hero Image module ----------------*/
 .hero-image {
 	height: 60vh;
@@ -108,12 +104,29 @@ img {
 header > div.navbar {
 	/*background-color: var(--color-white);*/
 }
-
+.container-fluid {
+	padding-left: 0;
+	padding-right: 0;
+}
+.section-module {
+	display: flex;
+	width: 100%;
+	height: fit-content;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	min-height: 90vh;
+}
 header > div.header-row {
 	display: flex;
 	height: 100px;
 	justify-content: center;
 	align-items: center;
+}
+header > div.navbar-container {
+	display: block;
+	height: 0px;
+
 }
 body.scrolled header > div.header-row {
 	background-color: var(--color-white);
@@ -271,6 +284,7 @@ header > div.navbar-container > div.main-menu {
 	transform: translateY(-200%);
 	transition: transform 2s ease;
 	margin-top: 3px;
+	height: fit-content;
 	background-color: var(--color-white);
 	box-shadow: 0px 6px 12px 2px rgb(0 0 0 / 15%);
 }
@@ -305,6 +319,64 @@ header > div.navbar-container > div.main-menu.visible {
 .main-content-text-home {
 	float: left;
 	padding: 30px 0;
+}
+.row {
+	margin-right: 0;
+	margin-left: 0;
+}
+section  .work-history > div > .work-history-items {
+	width: 80%;
+	margin-left: 10%;
+}
+section  .work-history > div > .work-history-items .work-history-item .work-history-item--trigger {
+	display: flex;
+	padding: 20px;
+	position: relative;
+	box-shadow: 1px 1px 10px rgb(0 0 0 / 20%);
+    margin-bottom: 20px;
+}
+section  .work-history > div > .work-history-items .work-history-item:nth-child(odd) .work-history-item--trigger {
+	background-color: var(--color-brand-4);
+}
+section  .work-history > div > .work-history-items .work-history-item:nth-child(even) .work-history-item--trigger {
+	background-color: transparent;
+}
+section  .work-history > div > .work-history-items .work-history-item .work-history-item--trigger::after {
+	content: '+';
+	position: absolute;
+	right: 20px;
+	width: 10%;
+    font-size: var(--size-title);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    height: 100%;
+    cursor: pointer;
+}
+section  .work-history > div > .work-history-items .work-history-item .work-history-item--trigger[aria-expanded="true"]::after {
+	content: '-';
+}
+section  .work-history > div > .work-history-items .work-history-item .work-history-item--trigger[aria-expanded="true"] + .work-history-item--panel {
+	height: 10rem;
+    opacity: 1;
+    padding: 20px;
+}
+section  .work-history > div > .work-history-items .work-history-item .work-history-item--panel {
+	 height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: height 400ms ease-in-out, opacity 350ms linear;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+section  .work-history > div > .work-history-items .work-history-item .work-history-item--trigger .work-dates,
+section  .work-history > div > .work-history-items .work-history-item .work-history-item--trigger .work-content {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
 }
 
 /*---------------- Social links module ----------------*/

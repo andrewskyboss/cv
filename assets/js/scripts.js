@@ -14,33 +14,7 @@ document.querySelectorAll(".menu-link").forEach(n => n.addEventListener("click",
 }))
 
 /*----------- Mobile menu Open Close ----------*/
-// $('body').on('click', '.main-menu-trigger', function(e) {
-// 	if(!$(this).hasClass('.main-menu-visible')) {
-// 		mainMenuOpenClose(true);
-// 	} else {
-// 		mainMenuOpenClose(false);
-// 	}
-// 	e.stopPropagation();
-// })
-	// .on('click', function(e) {
-	// 	if($('.main-menu-trigger').hasClass('main-menu-visible')) mainMenuOpenClose(false);
-	// });
-// $('body').on('click', function(e) {
-// 	mainMenuOpenClose(false);
-// });
 
-// function mainMenuOpenClose(open) {
-// 	open = (typeof open !== 'undefined') ? open : true;
-
-// 	if(open) {
-// 		$('.main-menu').show('slow').removeClass('hidden').addClass('visible');
-// 		$('.main-menu-trigger').removeClass('main-menu-hidden').addClass('main-menu-visible');
-
-// 	} else {
-// 		$('.main-menu').removeClass('visible').addClass('hidden');
-// 		$('.main-menu-trigger').removeClass('main-menu-visible').addClass('main-menu-hidden');
-// 	}
-// }
 
 $(window).on('load scroll', function(e) {
     // Handle scroll
@@ -52,7 +26,7 @@ $(window).on('load scroll', function(e) {
 });
 
 /*Start ------------ Title animation --------------*/
-var sectionAnimations = document.querySelectorAll('section');
+var sectionAnimations = document.querySelectorAll('.section-module');
 
 observer = new IntersectionObserver((entries) => {
 	entries.forEach(entry => {
@@ -69,3 +43,29 @@ sectionAnimations.forEach(sectionAnimation => {
 });
 
 // main-menu-trigger
+
+
+const accordionTriggers = document.querySelectorAll('.work-history-item--trigger');
+
+accordionTriggers.forEach((trigger) => {
+  trigger.addEventListener('click', expandAccordion);
+});
+
+function expandAccordion(event) {
+    const { target: targetElement } = event;
+    const isPanelExpanded = targetElement.getAttribute('aria-expanded');
+    
+    collapseAllAccordions();
+    
+    if (isPanelExpanded === "false") {
+        targetElement.setAttribute('aria-expanded', true);
+    } else {
+        targetElement.setAttribute('aria-expanded', false);
+    }
+}
+
+function collapseAllAccordions() {
+    accordionTriggers.forEach((trigger) => {
+        trigger.setAttribute('aria-expanded', false);
+    });
+}

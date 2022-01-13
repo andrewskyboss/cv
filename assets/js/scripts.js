@@ -15,7 +15,6 @@ document.querySelectorAll(".menu-link").forEach(n => n.addEventListener("click",
 
 /*----------- Mobile menu Open Close ----------*/
 
-
 $(window).on('load scroll', function(e) {
     // Handle scroll
     if($(document).scrollTop() > scrollThreshold) {
@@ -27,6 +26,7 @@ $(window).on('load scroll', function(e) {
 
 /*Start ------------ Title animation --------------*/
 var sectionAnimations = document.querySelectorAll('.section-module');
+const accordionAllTriggers = document.querySelectorAll('.work-history-item--trigger');
 
 observer = new IntersectionObserver((entries) => {
 	entries.forEach(entry => {
@@ -41,8 +41,11 @@ observer = new IntersectionObserver((entries) => {
 sectionAnimations.forEach(sectionAnimation => {
 	observer.observe(sectionAnimation);
 });
+accordionAllTriggers.forEach(accordionAllTrigger => {
+    observer.observe(accordionAllTrigger);
+});
 
-// main-menu-trigger
+/*----------- Accordion Open Close ----------*/
 
 
 const accordionTriggers = document.querySelectorAll('.work-history-item--trigger');

@@ -22,6 +22,7 @@
 	--size-heading: 50px;
 	--size-title: 40px;
 	--size-subtitle: 30px;
+	--size-body: 16px;
 
 	--font-body: 'Raleway', sans-serif;
 	--font-title: 'Cinzel', serif;
@@ -30,7 +31,7 @@
 /*---------------- Body ----------------*/
 body {
 	font-family: var(--font-body);
-	font-size: 16px;
+	font-size: var(--size-body);
 	font-weight: 400;
 	color: var(--color-brand-6);
 }
@@ -47,7 +48,13 @@ h2 {
 	font-size: 35px;
 	color: var(--color-brand-3);
 }
-h3,h4 {
+h3 {
+	font-family: var(--font-title);
+	font-weight: 300;
+	font-size: 30px;
+	color: var(--color-brand-1);
+}
+h4 {
 	font-family: var(--font-title);
 	font-weight: 300;
 	font-size: 30px;
@@ -69,6 +76,12 @@ img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+}
+hr {
+	width: 100%;
+	height: 1px;
+	color: var(--color-brand-4);
+	background-color: var(--color-brand-4);
 }
 /*---------------- Hero Image module ----------------*/
 .hero-image {
@@ -116,6 +129,12 @@ header > div.navbar {
 	justify-content: center;
 	align-items: center;
 	min-height: 90vh;
+	z-index: 10;
+	background-color: var(--color-white);
+}
+.section-last {
+	margin-bottom: 200px;
+	box-shadow: 0px 12px 12px 2px rgb(0 0 0 / 15%);
 }
 header > div.header-row {
 	display: flex;
@@ -265,8 +284,12 @@ body.scrolled header > div.header-row {
 #main-menu-level-one > ul > li.menu-item {
     width: 23vw; //15vw;
     height: 100%;
-    border-right: 0.5px solid var(--color-brand-5);
-    border-left: 0.5px solid var(--color-brand-5);
+    border-right: 1px solid var(--color-brand-5);
+    
+}
+#main-menu-level-one > ul > li.menu-item:nth-child(1),
+#main-menu-level-one > ul > li.menu-item:nth-child(5) {
+	border-left: 1px solid var(--color-brand-5);
 }
 #main-menu-level-one>ul.menu-header>li:hover a{
 	color: var(--color-white) !important;
@@ -323,6 +346,7 @@ header > div.navbar-container > div.main-menu.visible {
 .row {
 	margin-right: 0;
 	margin-left: 0;
+	width: 100%;
 }
 section  .work-history > div > .work-history-items {
 	width: 80%;
@@ -330,6 +354,7 @@ section  .work-history > div > .work-history-items {
 }
 section  .work-history > div > .work-history-items .work-history-item .work-history-item--trigger {
 	display: flex;
+	flex-wrap: wrap;
 	padding: 20px;
 	position: relative;
 	box-shadow: 1px 1px 10px rgb(0 0 0 / 20%);
@@ -358,21 +383,26 @@ section  .work-history > div > .work-history-items .work-history-item .work-hist
 	content: '-';
 }
 section  .work-history > div > .work-history-items .work-history-item .work-history-item--trigger[aria-expanded="true"] + .work-history-item--panel {
-	height: 10rem;
+	height: auto;
     opacity: 1;
-    padding: 20px;
+    padding: 20px 20px 20px 10%;
 }
 section  .work-history > div > .work-history-items .work-history-item .work-history-item--panel {
-	 height: 0;
+	height: 0;
     opacity: 0;
     overflow: hidden;
     transition: height 400ms ease-in-out, opacity 350ms linear;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
 
 }
-section  .work-history > div > .work-history-items .work-history-item .work-history-item--trigger .work-dates,
+section  .work-history > div > .work-history-items .work-history-item .work-history-item--trigger .work-dates {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
 section  .work-history > div > .work-history-items .work-history-item .work-history-item--trigger .work-content {
 	display: flex;
 	justify-content: flex-start;
@@ -413,9 +443,22 @@ section  .work-history > div > .work-history-items .work-history-item .work-hist
 }
 /*---------------- Footer ----------------*/
 footer {
-	margin-top: 50px;
-	padding-bottom: 50px!important;
-	clear: both;
+	/*margin-top: 50px;
+	padding-bottom: 50px!important;*/
+	/*clear: both;*/
+	position: fixed;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+}
+.footer-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	height: 100%;
 }
 .footer-menu-row {
 	padding-top: 20px;
@@ -461,7 +504,7 @@ footer {
 @keyframes fade-in-bottom-animation-section {
 	0% {
 		transform: translateY(30px);
-		opacity: 0.5;
+		opacity: 1;
 	}
 	100% {
 		transform: translateY(0);

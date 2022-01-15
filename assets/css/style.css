@@ -410,6 +410,54 @@ section  .work-history > div > .work-history-items .work-history-item .work-hist
 	justify-content: flex-start;
 	flex-direction: column;
 }
+/*------------------------------------------*/
+body > div > section.container-fluid.section-module.section-last.add-animation > div > div.col-12.section-title {
+	padding: 50px 5%;
+}
+section > div > div.images-links-3-col {
+	display: flex;
+}
+section > div > div.images-links-3-col .images-links-3-col-single-col {
+	height: 60vh;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	justify-items: center;
+	position: relative;
+	animation: fade-in-bottom-animation 0.8s cubic-bezier(0.250, 0.450, 0.560, 0.950) both;
+}
+section > div > div.images-links-3-col .images-links-3-col-single-col a {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	justify-items: center;
+	position: relative;
+	/* border: 1px solid #2D325A; */
+	box-shadow: 1px 1px 10px rgb(0 0 0 / 20%);
+	overflow: hidden;
+}
+section > div > div.images-links-3-col .images-links-3-col-single-col a span {
+	position: absolute;
+	height: 40%;
+	width: 70%;
+	top: 30%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: rgba(241, 241, 241, 0.6);
+	/*background: rgba( var(--color-brand-4), 0.6);*/
+}
+section > div > div.images-links-3-col .images-links-3-col-single-col a span h3 {
+	color: var(--color-brand-3);
+	text-align: center;
+	transition: color 0.8s ease;
+}
+section > div > div.images-links-3-col .images-links-3-col-single-col a:hover span h3 {
+	color: var(--color-brand-1);
+	transition: color 0.8s ease;
+	animation: fade-in-bottom-animation 0.8s cubic-bezier(0.250, 0.450, 0.560, 0.950) both;
+}
 
 /*---------------- Social links module ----------------*/
 .social-links-container {
@@ -439,22 +487,8 @@ section  .work-history > div > .work-history-items .work-history-item .work-hist
     transform: scale(1);
 	transition: all 0.8s ease;
 }
-/*---------------- Footer Barcode module ----------------*/
-.barcode-image-col {
-	float: right;
-}
-/*body.scrolled>.btt-button {
-	visibility: visible;
-	bottom: 40px;
-	animation: fade-in-bottom-animation 0.8s cubic-bezier(0.25, 0.450, 0.6, 0.79) both;
-}
 
-.btt-link {
-	width: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-}*/
+
 .btn-outline-primary {
 	color: var(--color-brand-1);
 }

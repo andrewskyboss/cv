@@ -72,3 +72,22 @@ function collapseAllAccordions() {
         trigger.setAttribute('aria-expanded', false);
     });
 }
+
+// $('.btt-link').click(function (e) {
+//     window.scrollTo(0, 0)
+// });
+
+var btn = $('.btt-link');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '800');
+});

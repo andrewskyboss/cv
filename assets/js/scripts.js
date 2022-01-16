@@ -26,7 +26,8 @@ $(window).on('load scroll', function(e) {
 
 /*Start ------------ Title animation --------------*/
 var sectionAnimations = document.querySelectorAll('.section-module');
-const accordionAllTriggers = document.querySelectorAll('.work-history-item--trigger');
+var accordionAllTriggers = document.querySelectorAll('.work-history-item--trigger');
+var skillsItems = document.querySelectorAll('.skills-item');
 
 observer = new IntersectionObserver((entries) => {
 	entries.forEach(entry => {
@@ -43,6 +44,9 @@ sectionAnimations.forEach(sectionAnimation => {
 });
 accordionAllTriggers.forEach(accordionAllTrigger => {
     observer.observe(accordionAllTrigger);
+});
+skillsItems.forEach(skillsItem => {
+    observer.observe(skillsItem);
 });
 
 /*----------- Accordion Open Close ----------*/

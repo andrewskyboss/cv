@@ -39,8 +39,8 @@ h1 {
 	font-family: var(--font-title);
 	font-weight: 400;
 	font-size: 40px;
-    color: var(--color-brand-1);
-    animation: fade-in-bottom-animation 0.8s cubic-bezier(0.250, 0.450, 0.560, 0.950) both;
+	color: var(--color-brand-1);
+	animation: fade-in-bottom-animation 0.8s cubic-bezier(0.250, 0.450, 0.560, 0.950) both;
 }
 h2 {
 	font-family: var(--font-title);
@@ -538,6 +538,68 @@ section > div > div.images-links-3-col .images-links-3-col-single-col a:hover sp
 	background-color: var(--color-brand-3);
 }
 
+/* START -------------- Form module --------------*/
+.contact-form-section {
+	justify-content: center;
+	width: 50%;
+}
+form.contact-form-form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+}
+form.contact-form-form button {
+	color: var(--color-brand-6);
+	width: fit-content;
+	margin: 10px 20px;
+}
+form .form-input {
+	width: 100%;
+	height: 40px;
+	border-right: 0;
+	margin-bottom: 10px;
+	border: 1px solid var(--color-brand-6);
+	outline: none;
+}
+form .form-input::placeholder {
+	padding-left: 20px;
+}
+form .form-input.textarea {
+	height: auto;
+}
+
+.btn.btn-primary {
+	border-radius: 0;
+	color: var(--color-brand-1);
+	border: 1px solid var(--color-brand-1);
+	background-color: transparent;
+	transition: 1s;
+	padding: 15px 30px;
+	/*color: var(--color-brand-6);
+	background: var(--color-white);
+	border-radius: 0;
+	*/
+}
+.btn.btn-primary:hover,
+.btn.btn-primary:active,
+.btn.btn-primary:focus {
+	/*background-color: var(--color-brand-5)!important;
+	border: 1px solid var(--color-brand-5)!important;*/
+	box-shadow: inset 0 -100px 0 0 var(--color-brand-1);
+    background-color: transparent;
+	color: var(--color-white);
+}
+
+.section-title {
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.section-title h1 {
+	animation: fade-in-from-bottom-animation 0.8s cubic-bezier(0.25, 0.450, 0.6, 0.79) both;
+}
+
 /*---------------- Social links module ----------------*/
 .social-links-container {
 	margin-top: 20px;
@@ -679,4 +741,35 @@ footer {
 		transform: translateY(0);
 		opacity: 1;
 	}
+}
+
+@media (max-width: 1199px) {
+	h1 {
+		font-size: 35px;
+		text-align: center;
+	}
+	h2 {
+		font-size: 30px;
+	}
+	h3 {
+		font-size: 26px;
+	}
+	h4 {
+		font-size: 24px;
+	}
+
+	.header-row .header-logo .header-logo-link {
+		font-size: var(--size-subtitle);
+	}
+	.contact-form-section {
+		width: 90%;
+	}
+	.section-title h1 {
+		font-size: var(--size-subtitle);
+	}
+	section  .work-history > div > .work-history-items {
+		width: 96%;
+		margin-left: 2%;
+	}
+
 }

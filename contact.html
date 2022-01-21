@@ -32,6 +32,13 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("user_dZ2tuIh8l1eKkXWGiLT7s");
+        })();
+    </script>
+
 </head>
 <body class="page">
 	<div class="site-container">
@@ -151,89 +158,25 @@
             
         </section>
          <section class="container-fluid section-module section-last">
-            <div class="row work-history">
-                <div class="col-12">
-                    <div class="work-history-items">
-                        <div class="work-history-item">
-                            <div id="accordion-trigger-1" class="work-history-item--trigger" aria-expanded="false" aria-controls="accordion-panel-1">
-                                <div class="col-lg-4 col-sm-12 work-dates">
-                                    <h4>06/2019 - Present</h4>
-                                </div>
-                                <div class="col-lg-8 col-sm-12 work-content">
-                                    <h4>Revmac Ltd (avvio.com - Internet Business Solutions)</h4>
-                                    <p>Designer</p>
-                                </div>
-                            </div>
-                            <div id="accordion-panel-1" class="work-history-item--panel" role="region" aria-labelledby="accordion-trigger-1">
-                                <h2>Duties:</h2>
-                                <hr>
-                                <ul>
-                                    <li>Design, development, and maintenance of responsive websites incorporating innovative solutions and industry best practices</li>
-                                    <li>Styling and building of Content Management websites</li>
-                                    <li>Strong understanding of responsive design. Must be able to create design solutions for mobile tablet, etc.</li>
-                                    <li>Optimising photography for web.</li>
-                                    <li>Where required deal with clients on a one to one basis to work through projects ahead of go live date.</li>
-                                    <li>Work independently to achieve team goals and reach target timeless.</li>
-                                    <li>Testing all designs, codes, and scripts on multiple browsers.</li>
-                                    <li>Lend support and assistance where needed to other departments within the company.</li>
-                                    <li>Solve problems creatively and come up with alternative solutions.</li>
-                                </ul>
-                                <p>Avvio works <a href="https://indd.adobe.com/view/40c28afd-8c39-4839-9475-655083403df5" target="_blank" title="Portfolio 2020">Portfolio 2020</a></p>
-                                <hr>
-                                <a href="https://www.avvio.com" target="_blank" title="Avvio">Avvio</a>
-                            </div>
-                        </div>
-                        <div class="work-history-item">
-                            <div id="accordion-trigger-2" class="work-history-item--trigger" aria-expanded="false" aria-controls="accordion-panel-2">
-                                <div class="col-lg-4 col-sm-12 work-dates">
-                                    <h4>03/2017 - 09/2017</h4>
-                                </div>
-                                <div class="col-lg-8 col-sm-12 work-content">
-                                    <h4>Revmac Ltd (avvio.com - Internet Business Solutions)</h4>
-                                    <p>Web Designer Intern</p>
-                                </div>
-                            </div>
-                            <div id="accordion-panel-2" class="work-history-item--panel" role="region" aria-labelledby="accordion-trigger-2">
-                                <h2>Duties:</h2>
-                                <hr>
-                                <ul>
-                                    <li>Create website design using Avvio templates and Avvio CMS system (php, html and CSS coding).</li>
-                                    <li>Develop site navigation by categorizing content.</li>
-                                    <li>Develop site content and graphics, designing images, icons, banners, audio enhancements, etc</li>
-                                    <li>Create quality responsive mock-ups and prototypes</li>
-                                    <li>Form creation and integration into websites using polldaddy.com third level application</li>
-                                    <li>Maintaining and updating already designed websites.</li>
-                                    <li>Keeping up to date with recent technological and software developments</li>
-                                </ul>
-                                <p>Avvio works <a href="https://indd.adobe.com/view/bf1928be-ea1d-45bb-9096-4e576352109a" target="_blank" title="Portfolio 2017">Portfolio 2017</a></p>
-                                <hr>
-                                <a href="https://www.avvio.com" target="_blank" title="Avvio">Avvio</a>
-                            </div>
-                        </div>
-                        <div class="work-history-item">
-                            <div id="accordion-trigger-3" class="work-history-item--trigger" aria-expanded="false" aria-controls="accordion-panel-3">
-                                <div class="col-lg-4 col-sm-12 work-dates">
-                                    <h4>04/2006 - 06/2012</h4>
-                                </div>
-                                <div class="col-lg-8 col-sm-12 work-content">
-                                    <h4>Shannon Airport, Shannon, Co.Clare</h4>
-                                    <p>Sales Assistant</p>
-                                </div>
-                            </div>
-                            <div id="accordion-panel-3" class="work-history-item--panel" role="region" aria-labelledby="accordion-trigger-3">
-                                <h2>Duties:</h2>
-                                <hr>
-                                <ul>
-                                    <li>Serving customers</li>
-                                    <li>Handling cash and using the cash register</li>
-                                    <li>Responsible for stock control, pricing and displaying goods</li>
-                                </ul>
-                                <hr>
-                                <a href="https://www.shannonairport.ie" target="_blank" title="Shannon Airport ">Shannon Airport </a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="row image-boxes">
+                <div class="section-title col-12">
+                    <h2>Contact Us</h2>
+                    <h2 id="confirmation-title" class="confirm-title"></h2>
                 </div>
+            </div>
+            <div class="row contact-form-section">
+                <form class="contact-form-form" id="contact-us-form" method="POST">
+                    <input type="text" name="firstName" id="firstName" class="form-input" placeholder="Name" required>
+                    <input type="text" name="lastName" id="lastName" class="form-input" placeholder="Surname" required>
+                    <input type="email" name="emailAddress" id="emailAddress" class="form-input" placeholder="Email" required>
+                    <input type="tel" name="phoneNumber" id="phoneNumber" class="form-input" placeholder="Phone" required>
+                    <input type="text" name="address" id="address" class="form-input" placeholder="Address" required>
+                    <input type="text" name="city" id="city" class="form-input" placeholder="City" required>
+                    <input type="text" name="country" id="country" class="form-input" placeholder="Country" required>
+                    <textarea rows="4" cols="12" name="message" id="message" class="form-input textarea" placeholder="Message" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send a Message</button>
+                    <button type="reset" class="btn btn-primary">Clear Fields</button>
+                </form>
             </div>
         </section>
         <!-- Footer Section -->

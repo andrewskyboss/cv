@@ -417,6 +417,7 @@ body > div > section.container-fluid.section-module.section-last.add-animation >
 section > div > div.images-links-3-col {
 	display: flex;
 	flex-wrap: wrap;
+	width: 100%;
 }
 section > div > div.images-links-3-col .images-links-3-col-single-col {
 	height: 60vh;
@@ -428,6 +429,9 @@ section > div > div.images-links-3-col .images-links-3-col-single-col {
 	position: relative;
 	animation: fade-in-bottom-animation 0.8s cubic-bezier(0.250, 0.450, 0.560, 0.950) both;
 }
+section > div > div.images-links-3-col > div > a > .portfolio-embeded {
+	width: 100%;
+}
 section > div > div.images-links-3-col .images-links-3-col-single-col a {
 	display: flex;
 	flex-direction: row;
@@ -437,12 +441,25 @@ section > div > div.images-links-3-col .images-links-3-col-single-col a {
 	/* border: 1px solid #2D325A; */
 	box-shadow: 1px 1px 10px rgb(0 0 0 / 20%);
 	overflow: hidden;
+	width: 100%;
 }
 section > div > div.images-links-3-col .images-links-3-col-single-col a span {
 	position: absolute;
 	height: 40%;
 	width: 70%;
 	top: 30%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: rgba(241, 241, 241, 0.6);
+	/*background: rgba( var(--color-brand-4), 0.6);*/
+}
+section > div > div.images-links-3-col .images-links-3-col-single-col a .images-links-3-col-single-col-title {
+	position: absolute;
+	height: 20%;
+	width: 100%;
+	top: unset;
+	bottom: 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

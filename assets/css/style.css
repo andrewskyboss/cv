@@ -115,9 +115,9 @@ hr {
 .hero-image-title h2 {
 	text-align: center;
 }
-header > div.navbar {
-	/*background-color: var(--color-white);*/
-}
+/* header > div.navbar {
+	background-color: var(--color-white);
+} */
 .container-fluid {
 	padding-left: 0;
 	padding-right: 0;
@@ -459,6 +459,7 @@ section > div > div.images-links-3-col .images-links-3-col-single-col a span {
 	flex-direction: column;
 	justify-content: center;
 	background-color: rgba(241, 241, 241, 0.6);
+	box-shadow: 0px 6px 12px 2px rgb(0 0 0 / 15%);
 	/*background: rgba( var(--color-brand-4), 0.6);*/
 }
 section > div > div.images-links-3-col .images-links-3-col-single-col a .images-links-3-col-single-col-title {

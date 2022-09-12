@@ -32,6 +32,13 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
+    <!-- <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("user_dZ2tuIh8l1eKkXWGiLT7s");
+        })();
+    </script> -->
+
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script>
         (function(){
@@ -166,13 +173,13 @@
             </div>
             <div class="row contact-form-section">
                 <form class="contact-form-form" id="contact-us-form" method="POST">
-                    <input type="text" name="firstName" id="firstName" class="form-input" placeholder="Name" required>
-                    <input type="text" name="lastName" id="lastName" class="form-input" placeholder="Surname" required>
+                    <input type="text" name="nameFull" id="nameFull" class="form-input" placeholder="Your Name" required>
+                    <input type="text" name="companyName" id="companyName" class="form-input" placeholder="Company Name">
                     <input type="email" name="emailAddress" id="emailAddress" class="form-input" placeholder="Email" required>
                     <input type="tel" name="phoneNumber" id="phoneNumber" class="form-input" placeholder="Phone" required>
-                    <input type="text" name="address" id="address" class="form-input" placeholder="Address" required>
-                    <input type="text" name="city" id="city" class="form-input" placeholder="City" required>
-                    <input type="text" name="country" id="country" class="form-input" placeholder="Country" required>
+                    <input type="text" name="address" id="address" class="form-input" placeholder="Address">
+                    <!-- <input type="text" name="city" id="city" class="form-input" placeholder="City" required>
+                    <input type="text" name="country" id="country" class="form-input" placeholder="Country" required> -->
                     <textarea rows="4" cols="12" name="message" id="message" class="form-input textarea" placeholder="Message" required></textarea>
                     <button type="submit" class="btn btn-primary">Send a Message</button>
                     <button type="reset" class="btn btn-primary">Clear Fields</button>
@@ -226,5 +233,6 @@
         </div>
     </div>
     <script src="assets/js/scripts.js"></script>
+	<script src="assets/js/contact-form.js"></script>
 </body>
 </html>

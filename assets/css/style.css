@@ -107,6 +107,7 @@ hr {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	box-shadow: 0px 6px 12px 2px rgb(0 0 0 / 15%);
     /* background-color: rgba(241, 228, 243, 0.6); */
 	background-color: rgba(241, 241, 241, 0.6);
     animation: fade-in-bottom-animation 0.8s cubic-bezier(0.250, 0.450, 0.560, 0.950) both;
@@ -146,11 +147,11 @@ header > div.header-row {
 	width: 100%;
 	position: relative;
 	z-index: 1000;
-
+	background-color: #ffffff;
 }
 header > div.navbar-container {
 	display: block;
-	height: auto;
+	height: 0;
 	position: relative;
 	z-index: 10;
 

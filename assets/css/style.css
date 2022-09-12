@@ -143,10 +143,16 @@ header > div.header-row {
 	height: 100px;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
+	position: relative;
+	z-index: 1000;
+
 }
 header > div.navbar-container {
 	display: block;
-	height: 0px;
+	height: auto;
+	position: relative;
+	z-index: 10;
 
 }
 body.scrolled header > div.header-row {

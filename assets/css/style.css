@@ -137,7 +137,7 @@ hr {
 }
 .section-last {
 	margin-bottom: 200px;
-	box-shadow: 0px 12px 12px 2px rgb(0 0 0 / 15%);
+	box-shadow: 0px 45px 43px -10px rgb(0 0 0 / 50%);
 }
 header > div.header-row {
 	display: flex;

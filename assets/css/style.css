@@ -626,6 +626,10 @@ form .form-input.textarea {
 }
 
 /*---------------- Social links module ----------------*/
+
+footer {
+	background-color: var(--color-brand-3);
+}
 .social-links-container {
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -639,7 +643,7 @@ form .form-input.textarea {
 	margin-right: 20px!important;
 }
 .social-links-container ul li a {
-	color: var(--color-brand-3);
+	color: var(--color-white);
 }
 .social-links-container ul li a:hover {
 	color: var(--color-brand-2);

@@ -20,6 +20,8 @@
 
 	--color-gradient-white:  rgba(241, 241, 241, 0.6);
 	--color-gradient-black:  rgba(0, 0, 0, 0.6);
+	--color-gradient-black-15: rgb(0 0 0 / 15%);
+	--color-gradient-black-20: rgb(0 0 0 / 20%);
 
 	--size-heading: 50px;
 	--size-title: 40px;
@@ -99,7 +101,7 @@ hr {
 	margin-left: 5%;
 	margin-right: 5%;
     margin-bottom: 30px;
-    box-shadow: 1px 1px 10px rgb(0, 0, 0, 20%);
+    box-shadow: 1px 1px 10px var(--color-gradient-black-20);
 	/* background-image: url("../images/img-04.jpg");
 	background-attachment: fixed;
 	background-position: center;
@@ -129,9 +131,9 @@ hr {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	box-shadow: 0px 6px 12px 2px rgb(0 0 0 / 15%);
+	box-shadow: 0px 6px 12px 2px var(--color-gradient-black-15);
     /* background-color: rgba(241, 228, 243, 0.6); */
-	background-color: rgba(241, 241, 241, 0.6);
+	background-color: var(--color-gradient-white);
     animation: fade-in-bottom-animation 0.8s cubic-bezier(0.250, 0.450, 0.560, 0.950) both;
 }
 .hero-image-title h2 {
@@ -169,7 +171,8 @@ header > div.header-row {
 	width: 100%;
 	position: relative;
 	z-index: 1000;
-	background-color: #ffffff;
+	border-bottom: 1px solid var(--color-brand-4);
+	background-color: var(--color-white);
 }
 header > div.navbar-container {
 	display: block;
@@ -180,7 +183,7 @@ header > div.navbar-container {
 }
 body.scrolled header > div.header-row {
 	background-color: var(--color-white);
-	box-shadow: 0px 6px 12px 2px rgb(0 0 0 / 15%);
+	box-shadow: 0px 6px 12px 2px var(--color-gradient-black-15);
 }
 .header-row .header-logo .header-logo-link {
 	font-size: var(--size-title);
@@ -340,7 +343,7 @@ header > div.navbar-container > div.main-menu {
 	margin-top: 0px;
 	height: fit-content;
 	background-color: var(--color-white);
-	box-shadow: 0px 6px 12px 2px rgb(0 0 0 / 15%);
+	box-shadow: 0px 6px 12px 2px var(--color-gradient-black-15);
 }
 
 /*header > div.navbar-container > div.main-menu.hidden {
@@ -388,7 +391,7 @@ section  .work-history > div > .work-history-items .work-history-item .work-hist
 	flex-wrap: wrap;
 	padding: 20px;
 	position: relative;
-	box-shadow: 1px 1px 10px rgb(0 0 0 / 20%);
+	box-shadow: 1px 1px 10px var(--color-gradient-black-20);
     margin-bottom: 20px;
 }
 section  .work-history > div > .work-history-items .work-history-item:nth-child(odd) .work-history-item--trigger {
@@ -468,7 +471,7 @@ section > div > div.images-links-3-col .images-links-3-col-single-col a {
 	justify-items: center;
 	position: relative;
 	/* border: 1px solid #2D325A; */
-	box-shadow: 1px 1px 10px rgb(0 0 0 / 20%);
+	box-shadow: 1px 1px 10px var(--color-gradient-black-20);
 	overflow: hidden;
 	width: 100%;
 }
@@ -481,7 +484,7 @@ section > div > div.images-links-3-col .images-links-3-col-single-col a span {
 	flex-direction: column;
 	justify-content: center;
 	background-color: rgba(241, 241, 241, 0.8);
-	box-shadow: 0px 6px 12px 2px rgb(0 0 0 / 15%);
+	box-shadow: 0px 6px 12px 2px var(--color-gradient-black-15);
 	/*background: rgba( var(--color-brand-4), 0.6);*/
 }
 section > div > div.images-links-3-col .images-links-3-col-single-col a .images-links-3-col-single-col-title {
@@ -493,7 +496,7 @@ section > div > div.images-links-3-col .images-links-3-col-single-col a .images-
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background-color: rgba(255, 255, 255, 1.0);
+	background-color: var(--color-white);
 	/*background: rgba( var(--color-brand-4), 0.6);*/
 }
 section > div > div.images-links-3-col .images-links-3-col-single-col a span h3 {
@@ -821,7 +824,7 @@ footer {
     top: 30%;
     width: 60%;
     left: 20%;
-    background-color: rgba(241, 241, 241, 0.6);
+    background-color: var(--color-gradient-white);
 }
 
 /* Next & previous buttons */

@@ -112,7 +112,9 @@ hr {
 
 .hero-image.background-image {
 	position: relative;
-	min-height: 55vh;
+	min-height: 65vh;
+	width: 100%;
+	margin: 0;
 	background-image: url("../images/pc-image-004.jpg");
 	background-attachment: fixed;
 	background-position: center;

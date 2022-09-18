@@ -100,7 +100,7 @@ hr {
 	margin-right: 5%;
     margin-bottom: 30px;
     box-shadow: 1px 1px 10px rgb(0, 0, 0, 20%);
-	background-image: url("/assets/images/img-04.jpg");
+	background-image: url("../images/img-04.jpg");
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;

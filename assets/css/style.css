@@ -356,7 +356,7 @@ header > div.navbar-container > div.main-menu.visible {
 .main-content {
 	padding-left: 5%!important;
 	padding-right: 5%!important;
-	margin-top: 170px;
+	margin-top: 130px;
 }
 .main-content-title {
 	float: left;
@@ -510,6 +510,7 @@ section > div > div.images-links-3-col .images-links-3-col-single-col a span .su
 	font-size: var(--size-subtitle);
 	text-align: center;
 	visibility: hidden;
+	height: 0;
 }
 section > div > div.images-links-3-col .images-links-3-col-single-col a:hover span h3 {
 	color: var(--color-brand-1);
@@ -518,6 +519,7 @@ section > div > div.images-links-3-col .images-links-3-col-single-col a:hover sp
 }
 section > div > div.images-links-3-col .images-links-3-col-single-col a:hover span .subtitle {
 	color: var(--color-brand-1);
+	height: auto;
 	visibility: visible;
 	transition: color 0.8s ease, visibility 0.8s ease;
 	animation: fade-in-bottom-animation 0.8s cubic-bezier(0.250, 0.450, 0.560, 0.950) both;

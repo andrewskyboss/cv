@@ -501,6 +501,15 @@ section > div > div.images-links-3-col .images-links-3-col-single-col a span h3 
 	text-align: center;
 	transition: color 0.8s ease;
 }
+section > div > div.images-links-3-col .images-links-3-col-single-col a span .subtitle {
+	color: var(--color-brand-3);
+	text-align: center;
+	transition: color 0.8s ease;
+	font-family: var(--font-subtitle);
+	font-weight: 300;
+	font-size: var(--size-subtitle);
+	text-align: center;
+}
 section > div > div.images-links-3-col .images-links-3-col-single-col a:hover span h3 {
 	color: var(--color-brand-1);
 	transition: color 0.8s ease;

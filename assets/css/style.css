@@ -438,6 +438,7 @@ section  .work-history > div > .work-history-items .work-history-item .work-hist
 	display: flex;
 	justify-content: flex-start;
 	flex-direction: column;
+	padding-right: 10%;
 }
 /*------------------------------------------*/
 body > div > section.container-fluid.section-module.section-last.add-animation > div > div.col-12.section-title {

@@ -90,9 +90,9 @@ hr {
 /*---------------- Hero Image module ----------------*/
 .hero-image {
 	height: 60vh;
-	width: 90vw;
+	width: 100%;
 	overflow: hidden;
-	float: left;
+	/* float: left; */
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -108,13 +108,10 @@ hr {
 	background-repeat: no-repeat;
 	background-size: cover; */
 }
-.hero-image.home {
-	height: 65vh;
-}
 
 .hero-image-background-image {
 	position: relative;
-	min-height: 65vh;
+	height: 100%;
 	width: 100%;
 	margin: 0;
 	background-image: url("../images/pc-image-004.jpg");
@@ -793,6 +790,9 @@ footer {
 
 .add-animation {
 	animation: fade-in-bottom-animation-section 1.8s cubic-bezier(0.250, 0.450, 0.560, 0.950) both;
+}
+.no-animation {
+	animation: none!important;
 }
 
 .container{

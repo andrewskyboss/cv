@@ -127,7 +127,7 @@ show_slide = (i) => {
   }
 
   // only display the image that's next or previous
-  images[index].style.display === "block";
+  images[index].style.display = "block";
   // only make the current dot active
   dots[index].className += " active";
 

@@ -146,8 +146,8 @@ hr {
 .section-module {
 	display: flex;
 	width: 100%;
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	height: fit-content;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -157,6 +157,7 @@ hr {
 	background-color: var(--color-white);
 }
 .section-last {
+	padding-bottom: 70px;
 	margin-bottom: 200px;
 	box-shadow: 0px 45px 43px -10px rgb(0 0 0 / 50%);
 }
@@ -296,7 +297,7 @@ body.scrolled header > div.header-row {
 #main-menu-level-one > ul > li.menu-item > a > svg {
 	overflow: inherit;
 	width: 100px;
-	height: 100px;
+	height: 60px;
 }
 #main-menu-level-one > ul > li.menu-item > a > svg > path {
 	stroke: var(--color-brand-3);
@@ -442,7 +443,7 @@ section  .work-history > div > .work-history-items .work-history-item .work-hist
 }
 /*------------------------------------------*/
 body > div > section.container-fluid.section-module.section-last.add-animation > div > div.col-12.section-title {
-	padding: 50px 5%;
+	padding: 20px 5%;
 }
 section > div > div.images-links-3-col {
 	display: flex;
@@ -660,7 +661,7 @@ form .form-input.textarea {
 
 .section-title {
 	text-align: center;
-	margin-top: 40px;
+	margin-top: 10px;
 	margin-bottom: 40px;
 }
 .section-title h1 {

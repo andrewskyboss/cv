@@ -67,6 +67,9 @@ h4 {
 p {
 	text-align: justify;
 }
+.subtitle {
+	text-align: center;
+}
 a {
 	color: var(--color-brand-1);
 	transition: color 0.8s ease;

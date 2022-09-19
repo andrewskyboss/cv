@@ -413,6 +413,8 @@ section  .work-history > div > .work-history-items .work-history-item .work-hist
     top: 0;
     height: 100%;
     cursor: pointer;
+	transform: scale(1);
+	transition: transform 0.8s ease;
 }
 section  .work-history > div > .work-history-items .work-history-item .work-history-item--trigger[aria-expanded="true"]::after {
 	content: '-';
@@ -421,6 +423,9 @@ section  .work-history > div > .work-history-items .work-history-item .work-hist
 	height: auto;
     opacity: 1;
     padding: 20px 20px 20px 10%;
+}
+section  .work-history > div > .work-history-items .work-history-item .work-history-item--trigger:hover ::after {
+	transform: scale(1.2);
 }
 section  .work-history > div > .work-history-items .work-history-item .work-history-item--panel {
 	height: 0;
@@ -630,7 +635,7 @@ form .form-input {
 	height: 40px;
 	border-right: 0;
 	margin-bottom: 10px;
-	border: 1px solid var(--color-brand-6);
+	border: 1px solid var(--color-brand-4);
 	outline: none;
 }
 form .form-input::placeholder {

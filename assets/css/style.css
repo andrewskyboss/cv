@@ -279,15 +279,22 @@ body.scrolled header > div.header-row {
 
 .header-tags.left .main-menu-trigger:hover {
 	box-shadow: inset 0 -100px 0 0 var(--color-brand-2);
+} 
+
+#main-menu-level-one {
+	display: flex;
+	width: 100%;
 }
 
-#main-menu-level-one > ul {
+#main-menu-level-one ul {
 	display: flex;
 	list-style: none;
 	flex-wrap: wrap;
 	justify-content: center;
+	width: 100%;
+	padding: 0;
 }
-#main-menu-level-one > ul > li.menu-item > a {
+#main-menu-level-one ul li.menu-item a {
 	width: 100%;
 	height: 100%;
 	padding: 20px;
@@ -297,33 +304,33 @@ body.scrolled header > div.header-row {
 	justify-content: center;
 	transition: all 0.8s ease;
 }
-#main-menu-level-one > ul > li.menu-item > a > svg {
+#main-menu-level-one ul li.menu-item a svg {
 	overflow: inherit;
 	width: 100px;
-	height: 60px;
+	height: 40px;
 }
-#main-menu-level-one > ul > li.menu-item > a > svg > path {
+#main-menu-level-one ul li.menu-item a svg path {
 	stroke: var(--color-brand-3);
     stroke-width: 4px;
     fill: none;
     transition: stroke 0.8s ease;
 }
-#main-menu-level-one > ul > li.menu-item > a > span.menu-item-title {
+#main-menu-level-one ul li.menu-item a span.menu-item-title {
 	margin-top: 10px;
-	font-size: 30px;
+	font-size: 20px;
 	text-transform: uppercase;
 	font-family: var(--font-menu);
 	font-weight: 200;
 	padding: 0;
 }
-#main-menu-level-one > ul > li.menu-item {
-    width: 23vw;
+#main-menu-level-one ul li.menu-item {
+    width: 14%;
     height: 100%;
     border-right: 1px solid var(--color-brand-5);
     
 }
-#main-menu-level-one > ul > li.menu-item:nth-child(1),
-#main-menu-level-one > ul > li.menu-item:nth-child(5) {
+#main-menu-level-one ul li.menu-item:nth-child(1),
+#main-menu-level-one ul li.menu-item:nth-child(5) {
 	border-left: 1px solid var(--color-brand-5);
 }
 #main-menu-level-one>ul.menu-header>li:hover a{
@@ -338,7 +345,7 @@ body.scrolled header > div.header-row {
 #main-menu-level-one>ul.menu-header>li:hover a>svg.menu-link-icon-svg path {
 	stroke: var(--color-white) !important;
 }
-header > div.navbar-container > div.main-menu {
+header div.navbar-container div.main-menu {
 	transform: translateY(-200%);
 	transition: transform 2s ease;
 	margin-top: 0px;

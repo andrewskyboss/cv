@@ -329,8 +329,8 @@ body.scrolled header > div.header-row {
     border-right: 1px solid var(--color-brand-5);
     
 }
-#main-menu-level-one ul li.menu-item:nth-child(1),
-#main-menu-level-one ul li.menu-item:nth-child(5) {
+/*#main-menu-level-one ul li.menu-item:nth-child(5),*/
+#main-menu-level-one ul li.menu-item:nth-child(1) {
 	border-left: 1px solid var(--color-brand-5);
 }
 #main-menu-level-one>ul.menu-header>li:hover a{

@@ -467,7 +467,8 @@ section > div > div.images-links-3-col {
 	width: 100%;
 }
 section > div > div.images-links-3-col .images-links-3-col-single-col {
-	height: 60vh;
+	height: auto;
+	min-height: 50vh;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
@@ -475,6 +476,9 @@ section > div > div.images-links-3-col .images-links-3-col-single-col {
 	justify-items: center;
 	position: relative;
 	animation: fade-in-bottom-animation 0.8s cubic-bezier(0.250, 0.450, 0.560, 0.950) both;
+}
+section > div > div.images-links-3-col .images-links-3-col-single-col.videos {
+	min-height: 40vh;
 }
 section > div > div.images-links-3-col > div > a > .portfolio-embeded {
 	width: 100%;

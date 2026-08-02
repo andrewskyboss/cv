@@ -110,6 +110,7 @@ hr {
 	margin-left: 5%;
 	margin-right: 5%;
     margin-bottom: 30px;
+    border-radius: var(--border-radius-container);
     box-shadow: 1px 1px 10px var(--color-gradient-black-20);
 	/* background-image: url("../images/img-04.jpg");
 	background-attachment: fixed;
@@ -411,6 +412,7 @@ section  .work-history > div > .work-history-items .work-history-item .work-hist
 	position: relative;
 	box-shadow: 1px 1px 10px var(--color-gradient-black-20);
     margin-bottom: 20px;
+    border-radius: var(--border-radius-container);
 }
 section  .work-history > div > .work-history-items .work-history-item:nth-child(odd) .work-history-item--trigger {
 	background-color: var(--color-brand-4);

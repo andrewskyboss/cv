@@ -28,6 +28,11 @@
 	--size-subtitle: 30px;
 	--size-body: 16px;
 
+	--border-radius-default: 0px;
+	--border-radius-button: 2px;
+
+	--transition-default: all 0.8s ease;
+
 	--font-body: 'Raleway', sans-serif;
 	--font-title: 'Playfair Display SC', serif;
 	--font-menu: 'Oswald', sans-serif;
@@ -72,12 +77,12 @@ p {
 }
 a {
 	color: var(--color-brand-1);
-	transition: color 0.8s ease;
+	transition: var(--transition-default);
 }
 a:hover,a:active,a:focus {
 	text-decoration: none;
 	color: var(--color-brand-2);
-	transition: color 0.8s ease;
+	transition: var(--transition-default);
 }
 img {
 	width: 100%;
@@ -204,7 +209,7 @@ body.scrolled header > div.header-row {
     padding: 15px 25px;
     z-index: 1000;
     cursor: pointer;
-    transition: 0.5s;
+    transition: var(--transition-default);
     background-color: var(--color-brand-1);
 	/*transition: background-color 0.8s ease;*/
 	display: inline-block;
@@ -233,7 +238,7 @@ body.scrolled header > div.header-row {
 	background-color: var(--color-white);
 	border-radius: 0px;
 	height: 1px;
-	transition: all 0.8s ease;
+	transition: var(--transition-default);
 	width: 80%;
 }
 
@@ -248,7 +253,7 @@ body.scrolled header > div.header-row {
 }
 .header-tags .main-menu-trigger .menu-hamburger .menu-hamburger-bars i:nth-child(2) {
 	visibility: visible;
-	transition: all 0.5s ease;
+	transition: var(--transition-default);
 }
 
 .header-tags .main-menu-trigger .menu-hamburger .menu-hamburger-bars i:nth-child(3) {
@@ -302,7 +307,7 @@ body.scrolled header > div.header-row {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	transition: all 0.8s ease;
+	transition: var(--transition-default);
 }
 #main-menu-level-one ul li.menu-item a svg {
 	overflow: inherit;
@@ -521,12 +526,12 @@ section > div > div.images-links-3-col .images-links-3-col-single-col a .images-
 section > div > div.images-links-3-col .images-links-3-col-single-col a span h3 {
 	color: var(--color-brand-3);
 	text-align: center;
-	transition: color 0.8s ease;
+	transition: var(--transition-default);
 }
 section > div > div.images-links-3-col .images-links-3-col-single-col a span .subtitle {
 	color: var(--color-brand-3);
 	text-align: center;
-	transition: color 0.8s ease;
+	transition: var(--transition-default);
 	font-family: var(--font-subtitle);
 	font-weight: 300;
 	font-size: var(--size-subtitle);
@@ -536,7 +541,7 @@ section > div > div.images-links-3-col .images-links-3-col-single-col a span .su
 }
 section > div > div.images-links-3-col .images-links-3-col-single-col a:hover span h3 {
 	color: var(--color-brand-1);
-	transition: color 0.8s ease;
+	transition: var(--transition-default);
 	animation: fade-in-bottom-animation 0.8s cubic-bezier(0.250, 0.450, 0.560, 0.950) both;
 }
 section > div > div.images-links-3-col .images-links-3-col-single-col a:hover span .subtitle {
@@ -588,12 +593,12 @@ section > div > div.images-links-3-col .images-links-3-col-single-col a:hover sp
 }
 .skills-logo:hover a {
 	color: var(--color-brand-1);
-	transition: color 0.8s ease;
+	transition: var(--transition-default);
 }
 .skills-logo:hover a .languages-logos-skills {
     filter: grayscale(0);
     transform: scale(1.2);
-	transition: all 0.8s ease;
+	transition: var(--transition-default);
 }
 .progress-type {
 	position: absolute;
@@ -613,13 +618,13 @@ section > div > div.images-links-3-col .images-links-3-col-single-col a:hover sp
 	object-fit: contain;
     filter: grayscale(1);
     transform: scale(1);
-	transition: all 0.8s ease;
+	transition: var(--transition-default);
 }
 .progress {
 	height: 40px;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	border-radius: 0;
+	border-radius: var(--border-radius-default);
 	background-color: var(--color-brand-4);
 }
 .progress-bar {
@@ -658,11 +663,11 @@ form .form-input.textarea {
 }
 
 .btn.btn-primary {
-	border-radius: 0;
+	border-radius: var(--border-radius-button);
 	color: var(--color-brand-1);
 	border: 1px solid var(--color-brand-1);
 	background-color: transparent;
-	transition: 1s;
+	transition: var(--transition-default);
 	padding: 15px 30px;
 	/*color: var(--color-brand-6);
 	background: var(--color-white);
@@ -713,12 +718,12 @@ footer {
 }
 .social-links-container ul li a:hover i {
 	transform: scale(1.2);
-	transition: all 0.8s ease;
+	transition: var(--transition-default);
 }
 .social-links-container ul li a i {
     font-size: 34px;
     transform: scale(1);
-	transition: all 0.8s ease;
+	transition: var(--transition-default);
 }
 
 .btn-outline-primary {
@@ -731,7 +736,7 @@ footer {
 }
 body > div > div.btt-button.scrolling-up {
 	position: fixed;
-	border-radius: 0;
+	border-radius: var(--border-radius-button);
 	right: 20px;
 	bottom: -100px;
 	z-index: 1000;
@@ -742,7 +747,7 @@ body > div > div.btt-button.scrolling-up {
 	/*animation: fade-in-bottom-animation 0.8s cubic-bezier(0.25, 0.450, 0.6, 0.79) both;*/
 }
 .btt-link.show {
-	border-radius: 0;
+	border-radius: var(--border-radius-button);
 	color: var(--color-brand-1);
 	background-color: transparent;
 	position: absolute;
@@ -751,7 +756,7 @@ body > div > div.btt-button.scrolling-up {
 	right: 0;
 	top: 0;
 	display: flex;
-	transition: 1s
+	transition: var(--transition-default);
 }
 .btt-link.show:hover {
 	box-shadow: inset 0 -100px 0 0 var(--color-brand-1);
@@ -761,7 +766,7 @@ body.scrolled > div > div.btt-button.scrolling-up {
 	position: fixed;
 	/*bottom: 20px;*/
 	transform: translateY(-120px);
-	transition: transform 0.8s ease;
+	transition: var(--transition-default);
 	/*animation: fade-in-bottom-animation 0.8s cubic-bezier(0.25, 0.450, 0.6, 0.79) both;*/
 }
 /*---------------- Footer ----------------*/
@@ -802,12 +807,12 @@ footer {
 .footer-menu-row .footer-menu > ul > li a.menuitem-link {
 	padding: 20px;
 	color: #2D325A;
-	transition: all 0.8s ease;
+	transition: var(--transition-default);
 }
 .footer-menu-row .footer-menu > ul > li a.menuitem-link:hover {
 	color: var(--color-brand-1)!important;
 	background-color: var(--color-brand-4);
-	transition: all 0.8s ease;
+	transition: var(--transition-default);
 }
 
 .add-animation {
@@ -859,8 +864,8 @@ footer {
 	color: var(--color-brand-1);
 	font-weight: bold;
 	font-size: 1rem;
-	transition: 0.6s ease;
-	border-radius: 0;
+	transition: var(--transition-default);
+	border-radius: var(--border-radius-button);
 	user-select: none;
 }
 #prev {
@@ -888,9 +893,9 @@ footer {
   width: 15px;
   margin: 0 2px;
   background-color: var(--color-brand-1);
-  border-radius: 0%;
+  border-radius: var(--border-radius-button);
   /* transition from one do to the next */
-  transition: background-color 0.6s ease;
+  transition: var(--transition-default);
 }
 .active{
   background-color: var(--color-brand-3);

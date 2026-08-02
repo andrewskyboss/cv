@@ -119,15 +119,17 @@ hr {
 
 .hero-image-background-image {
 	position: relative;
-	height: 100%;
+	/*height: 100%;*/
+	height: auto;
 	width: 100%;
 	margin: 0;
 	/*background-image: url("../images/pc-image-004.jpg");*/
 	background-image: url("../images/lunked-banner.jpg");
 	background-attachment: fixed;
 	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-repeat: repeat;
+	/*background-size: cover;*/
+	background-size: contain;
 }
 .hero-image-title {
 	position: absolute;

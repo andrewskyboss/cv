@@ -303,6 +303,7 @@ body.scrolled header div.header-row {
 	flex-wrap: wrap;
 	justify-content: center;
 	width: 100%;
+	margin-bottom: 0;
 	padding: 0;
 }
 #main-menu-level-one ul li.menu-item a {

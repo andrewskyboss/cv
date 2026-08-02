@@ -29,7 +29,7 @@
 	--size-body: 16px;
 
 	--border-radius-default: 0px;
-	--border-radius-button: 2px;
+	--border-radius-button: 4px;
 	--border-radius-container: 10px;
 
 	--transition-default: all 0.8s ease;
@@ -659,6 +659,7 @@ form .form-input {
 	height: 40px;
 	border-right: 0;
 	margin-bottom: 10px;
+	border-radius: var(--border-radius-button);
 	border: 1px solid var(--color-brand-4);
 	outline: none;
 }
@@ -858,7 +859,7 @@ footer {
     top: 30%;
     width: 60%;
     left: 20%;
-    border-radius: var(--border-radius-default);
+    border-radius: var(--border-radius-container);
     background-color: var(--color-gradient-white);
 }
 

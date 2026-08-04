@@ -480,7 +480,7 @@ section  .work-history > div > .work-history-items .work-history-item .work-hist
 body section.container-fluid.section-module.section-last.add-animation div.col-12.section-title {
 	padding: 20px 5%;
 }
-section div.images-links-2-col,
+section div.images-links-6-col,
 section div.images-links-3-col {
 	display: flex;
 	flex-wrap: wrap;

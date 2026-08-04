@@ -487,7 +487,7 @@ section div.images-links-3-col {
 	width: 100%;
 	max-width: 90%;
 }
-section div.images-links-2-col .images-links-2-col-single-col,
+section div.images-links-6-col .images-links-2-col-single-col,
 section div.images-links-3-col .images-links-3-col-single-col {
 	height: auto;
 	min-height: 50vh;
@@ -505,6 +505,7 @@ section div.images-links-3-col .images-links-3-col-single-col.videos {
 section div.images-links-3-col div a .portfolio-embeded {
 	width: 100%;
 }
+section div.images-links-6-col .images-links-3-col-single-col a,
 section div.images-links-3-col .images-links-3-col-single-col a {
 	display: flex;
 	flex-direction: row;

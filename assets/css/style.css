@@ -3,6 +3,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap');
+
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap');
 
 :root {
@@ -31,13 +34,13 @@
 	--size-body: 16px;
 
 	--border-radius-default: 0px;
-	--border-radius-button: 4px;
-	--border-radius-container: 10px;
+	--border-radius-button: 10px;
+	--border-radius-container: 20px;
 
 	--transition-default: all 0.8s ease;
 
 	--font-body: 'Raleway', sans-serif;
-	--font-title: "Libre Baskerville", serif;
+	--font-title: "Lexend", sans-serif;
 	--font-menu: 'Oswald', sans-serif;
 }
 /*---------------- Body ----------------*/

@@ -760,7 +760,7 @@ footer {
 .btn-outline-primary:hover {
 	background-color: transparent;
 }
-body > div > div.btt-button.scrolling-up {
+body div.btt-button.scrolling-up {
 	position: fixed;
 	border-radius: var(--border-radius-button);
 	right: 20px;
@@ -782,13 +782,15 @@ body > div > div.btt-button.scrolling-up {
 	right: 0;
 	top: 0;
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	transition: var(--transition-default);
 }
 .btt-link.show:hover {
 	box-shadow: inset 0 -100px 0 0 var(--color-brand-1);
 	background-color: transparent;
 }
-body.scrolled > div > div.btt-button.scrolling-up {
+body.scrolled div.btt-button.scrolling-up {
 	position: fixed;
 	/*bottom: 20px;*/
 	transform: translateY(-120px);

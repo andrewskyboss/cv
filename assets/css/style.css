@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Raleway:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap');
-
-
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap');
 
 :root {
@@ -973,6 +968,11 @@ footer {
 }
 
 @media (max-width: 1199px) {
+
+	.hero-image {
+		height: 20vh;
+	}
+
 	h1 {
 		font-size: 35px;
 		text-align: center;
@@ -1002,7 +1002,12 @@ footer {
 	}
 
 	#main-menu-level-one ul li.menu-item {
-		width: 18%;
+		width: 19%;
+	}
+
+	section div.images-links-6-col .images-links-2-col-single-col, 
+	section div.images-links-3-col .images-links-3-col-single-col {
+		min-height: 35vh;
 	}
 
 }
@@ -1022,6 +1027,28 @@ footer {
 	section div.images-links-3-col {
 		gap: 30px;
 		max-width: 98%;
+	}
+
+}
+
+@media (max-width: 771px) {
+
+	#main-menu-level-one ul li.menu-item {
+		width: 25%;
+	}
+
+	#main-menu-level-one ul li.menu-item a svg {
+		display: none;
+	}
+
+	#main-menu-level-one ul li.menu-item a span.menu-item-title {
+		margin-top: 0px;
+		font-size: 15px;
+		font-weight: 400;
+	}
+
+	#main-menu-level-one ul li.menu-item a {
+		padding: 10px;
 	}
 
 }

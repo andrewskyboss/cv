@@ -171,7 +171,7 @@ hr {
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	min-height: 90vh;
+	min-height: 70vh;
 	z-index: 10;
 	background-color: var(--color-white);
 }
@@ -996,9 +996,32 @@ footer {
 	.section-title h1 {
 		font-size: var(--size-subtitle);
 	}
-	section  .work-history > div > .work-history-items {
+	section  .work-history div .work-history-items {
 		width: 96%;
 		margin-left: 2%;
+	}
+
+	#main-menu-level-one ul li.menu-item {
+		width: 18%;
+	}
+
+}
+
+@media (max-width: 991px) {
+
+	.hero-image {
+		height: 20vh;
+	}
+
+	section div.images-links-6-col .images-links-2-col-single-col, 
+	section div.images-links-3-col .images-links-3-col-single-col {
+		min-height: 35vh;
+	}
+
+	section div.images-links-6-col, 
+	section div.images-links-3-col {
+		gap: 30px;
+		max-width: 98%;
 	}
 
 }

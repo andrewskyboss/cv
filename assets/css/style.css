@@ -1036,6 +1036,9 @@ footer {
 		height: 20vh;
 	}
 
+	section div.images-links-3-col .images-links-3-col-single-col.videos {
+		min-height: 13vh;
+	}
 	section div.images-links-6-col .images-links-2-col-single-col, 
 	section div.images-links-3-col .images-links-3-col-single-col {
 		min-height: 35vh;

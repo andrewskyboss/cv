@@ -996,6 +996,14 @@ footer {
 		font-size: 24px;
 	}
 
+	.container {
+		height: 50vh;
+	}
+
+	.section-module {
+		min-height: 50vh;
+	}
+
 	.header-row .header-logo .header-logo-link {
 		font-size: var(--size-subtitle);
 	}

@@ -897,6 +897,7 @@ footer {
 	color: var(--color-brand-1);
 	font-weight: bold;
 	font-size: 1rem;
+	background-color: var(--color-gradient-white);
 	transition: var(--transition-default);
 	border-radius: var(--border-radius-button);
 	user-select: none;

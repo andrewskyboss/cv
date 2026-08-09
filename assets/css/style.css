@@ -1051,6 +1051,10 @@ footer {
 
 @media (max-width: 771px) {
 
+	.header-row .header-logo .header-logo-link {
+		font-size: calc(var(--size-subtitle) - 6px);
+	}
+
 	#main-menu-level-one ul li.menu-item {
 		width: 25%;
 	}
@@ -1067,6 +1071,7 @@ footer {
 
 	#main-menu-level-one ul li.menu-item a {
 		padding: 10px;
+		text-align: center;
 	}
 
 }

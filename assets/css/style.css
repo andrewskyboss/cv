@@ -776,7 +776,7 @@ body div.btt-button.scrolling-up {
 .btt-link {
 	border-radius: var(--border-radius-button);
 	color: var(--color-brand-1);
-	background-color: transparent;
+	background-color: var(--color-gradient-white);
 	/*position: absolute;*/
 	height: 100%;
 	width: 100%;

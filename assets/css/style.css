@@ -768,6 +768,7 @@ body div.btt-button.scrolling-up {
 	z-index: 1000;
 	width: 100px;
 	height: 50px;
+	padding: 0;
 	border-color: var(--color-brand-1);
 	transition: transform 0.8s ease;
 	/*animation: fade-in-bottom-animation 0.8s cubic-bezier(0.25, 0.450, 0.6, 0.79) both;*/
@@ -826,18 +827,18 @@ footer {
 	display: inline-block;
 	text-align: center;
 }
-.footer-menu-row .footer-menu > ul {
+.footer-menu-row .footer-menu ul {
 	margin-bottom: 30px;
 }
-.footer-menu-row .footer-menu > ul > li {
+.footer-menu-row .footer-menu ul li {
 	margin-right: 0!important;
 }
-.footer-menu-row .footer-menu > ul > li a.menuitem-link {
+.footer-menu-row .footer-menu ul li a.menuitem-link {
 	padding: 20px;
 	color: #2D325A;
 	transition: var(--transition-default);
 }
-.footer-menu-row .footer-menu > ul > li a.menuitem-link:hover {
+.footer-menu-row .footer-menu ul li a.menuitem-link:hover {
 	color: var(--color-brand-1)!important;
 	background-color: var(--color-brand-4);
 	transition: var(--transition-default);

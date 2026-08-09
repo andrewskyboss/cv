@@ -98,7 +98,7 @@ hr {
 }
 /*---------------- Hero Image module ----------------*/
 .hero-image {
-	height: 60vh;
+	height: 40vh;
 	width: 100%;
 	overflow: hidden;
 	/* float: left; */
@@ -856,7 +856,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 80vh;
+  height: 70vh;
   position: relative;
   max-width: 100%;  
 }
@@ -865,6 +865,10 @@ footer {
 }*/
 .hero-image-slider-image {
 	position: relative;
+}
+
+.hero-image-slider-image img {
+	border-radius: var(--border-radius-container);
 }
 .hero-image-slider-content {
 	position: absolute;
@@ -877,7 +881,6 @@ footer {
     top: 30%;
     width: 60%;
     left: 20%;
-    border-radius: var(--border-radius-container);
     background-color: var(--color-gradient-white);
 }
 

@@ -772,11 +772,11 @@ body div.btt-button.scrolling-up {
 	transition: transform 0.8s ease;
 	/*animation: fade-in-bottom-animation 0.8s cubic-bezier(0.25, 0.450, 0.6, 0.79) both;*/
 }
-.btt-link.show {
+.btt-link {
 	border-radius: var(--border-radius-button);
 	color: var(--color-brand-1);
 	background-color: transparent;
-	position: absolute;
+	/*position: absolute;*/
 	height: 100%;
 	width: 100%;
 	right: 0;
@@ -786,7 +786,7 @@ body div.btt-button.scrolling-up {
 	align-items: center;
 	transition: var(--transition-default);
 }
-.btt-link.show:hover {
+.btt-link:hover {
 	box-shadow: inset 0 -100px 0 0 var(--color-brand-1);
 	background-color: transparent;
 }

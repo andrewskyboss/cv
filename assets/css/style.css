@@ -120,11 +120,13 @@ hr {
 }
 
 .hero-image-background-image {
-	position: relative;
+	/*position: relative;*/
+	position: absolute;
 	/*height: 100%;*/
 	height: auto;
 	width: 100%;
 	margin: 0;
+	border-radius: var(--border-radius-container);
 	/*background-image: url("../images/pc-image-004.jpg");*/
 	background-image: url("../images/lunked-banner.jpg");
 	background-attachment: fixed;
@@ -403,10 +405,11 @@ header > div.navbar-container > div.main-menu.visible {
 .main-content-text {
 	float: right;
 	padding: 30px 0;
+	min-height: 35vh;
 }
 .main-content-text-home {
 	float: left;
-	padding: 30px 0;
+	padding: 30px 20px 20px 0px;
 }
 .row {
 	margin-right: 0;

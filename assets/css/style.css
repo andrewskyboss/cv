@@ -166,7 +166,7 @@ hr {
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	min-height: 70vh;
+	min-height: 40vh;
 	z-index: 10;
 	background-color: var(--color-white);
 }
@@ -390,7 +390,7 @@ header > div.navbar-container > div.main-menu.visible {
 .main-content {
 	padding-left: 5%!important;
 	padding-right: 5%!important;
-	margin-top: 130px;
+	margin-top: 100px;
 }
 .main-content-title {
 	float: left;

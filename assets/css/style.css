@@ -122,8 +122,8 @@ hr {
 .hero-image-background-image {
 	/*position: relative;*/
 	position: absolute;
-	/*height: 100%;*/
-	height: auto;
+	height: 100%;
+	/*height: auto;*/
 	width: 100%;
 	margin: 0;
 	border-radius: var(--border-radius-container);
@@ -405,10 +405,10 @@ header > div.navbar-container > div.main-menu.visible {
 .main-content-text {
 	float: right;
 	padding: 30px 0;
-	min-height: 35vh;
 }
 .main-content-text-home {
 	float: left;
+	min-height: 35vh;
 	padding: 30px 20px 20px 0px;
 }
 .row {

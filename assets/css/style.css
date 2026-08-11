@@ -130,10 +130,10 @@ hr {
 	/*background-image: url("../images/pc-image-004.jpg");*/
 	background-image: url("../images/lunked-banner.jpg");
 	background-attachment: fixed;
-	background-position: center;
+	background-position: top;
 	background-repeat: repeat;
 	/*background-size: cover;*/
-	background-size: contain;
+	background-size: 50%;
 }
 .hero-image-title {
 	position: absolute;

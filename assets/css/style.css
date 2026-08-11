@@ -240,7 +240,7 @@ body.scrolled header div.header-row {
 	/*height: 27px;*/
 	height: 100%;
 	z-index: 10;
-	padding: 15px 7px;
+	padding: 17px 10px;
 }
 .header-tags.left .main-menu-trigger .menu-hamburger .menu-hamburger-bars {
 	display: flex;

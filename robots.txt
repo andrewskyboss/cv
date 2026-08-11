@@ -1,0 +1,7 @@
+Plaintext
+
+
+User-agent: *
+Allow: /
+
+Sitemap: https://andrewskyboss.github.io/cv/sitemap.xml

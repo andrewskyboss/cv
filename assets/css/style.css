@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap');
 
-
 :root {
 	--color-brand-1: #F71735;
 	/*Orange Engineering*/
@@ -34,6 +33,7 @@
 	--border-radius-container: 20px;
 
 	--transition-default: all 0.8s ease;
+
 	--font-body: 'Raleway', sans-serif;
 	--font-title: "Lexend", sans-serif;
 	--font-menu: 'Oswald', sans-serif;
@@ -171,6 +171,11 @@ hr {
 	min-height: 40vh;
 	z-index: 10;
 	background-color: var(--color-white);
+}
+
+.section-module.top-section {
+	animation: 20s linear infinite hero-bg-cycle;
+    animation-delay: var(--bg-cycle-delay,0s)
 }
 .section-last {
 	padding-bottom: 70px;
@@ -988,6 +993,49 @@ footer {
 		transform: translateY(0);
 		opacity: 1;
 	}
+}
+
+@property --hero-bg {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #f2fce2
+}
+
+@keyframes hero-bg-cycle {
+    0% {
+        --hero-bg: #f2fce2;
+        background-color: #f2fce2;
+        animation-timing-function: ease-out
+    }
+
+    20% {
+        --hero-bg: #eafbfc;
+        background-color: #eafbfc;
+        animation-timing-function: ease-out
+    }
+
+    40% {
+        --hero-bg: #eff0fc;
+        background-color: #eff0fc;
+        animation-timing-function: ease-out
+    }
+
+    60% {
+        --hero-bg: #fcedf6;
+        background-color: #fcedf6;
+        animation-timing-function: ease-out
+    }
+
+    80% {
+        --hero-bg: #fcf2ed;
+        background-color: #fcf2ed;
+        animation-timing-function: ease-out
+    }
+
+    to {
+        --hero-bg: #f2fce2;
+        background-color: #f2fce2
+    }
 }
 
 @media (max-width: 1199px) {

@@ -57,7 +57,7 @@ h1 {
 h2 {
 	font-family: var(--font-title);
 	font-weight: 400;
-	font-size: calc(var(--size-title) -5px);
+	font-size: calc(var(--size-title) - 5px);
 	color: var(--color-brand-3);
 }
 h3 {

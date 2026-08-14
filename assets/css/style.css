@@ -18,6 +18,8 @@
 	--color-black: #000000;
 	--color-white: #ffffff;
 
+
+
 	--color-gradient-white:  rgba(241, 241, 241, 0.6);
 	--color-gradient-black:  rgba(0, 0, 0, 0.6);
 	--color-gradient-black-15: rgb(0 0 0 / 15%);
@@ -29,8 +31,8 @@
 	--size-body: 16px;
 
 	--border-radius-default: 0px;
-	--border-radius-button: 10px;
-	--border-radius-container: 20px;
+	--border-radius-button: 4px;
+	--border-radius-container: 10px;
 
 	--transition-default: all 0.8s ease;
 

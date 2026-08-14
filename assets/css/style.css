@@ -174,8 +174,8 @@ hr {
 }
 
 .section-module.top-section {
-	animation: 20s linear infinite hero-bg-cycle;
-    animation-delay: var(--bg-cycle-delay,0s)
+	animation: 20s linear infinite hero-bg-cycle!important;
+    animation-delay: var(--bg-cycle-delay,0s)!important;
 }
 .section-last {
 	padding-bottom: 70px;
@@ -398,6 +398,7 @@ header > div.navbar-container > div.main-menu.visible {
 	padding-left: 5%!important;
 	padding-right: 5%!important;
 	margin-top: 100px;
+	padding-bottom: 50px;
 }
 .main-content-title {
 	float: left;
@@ -1005,36 +1006,36 @@ footer {
     0% {
         --hero-bg: #f2fce2;
         background-color: #f2fce2;
-        animation-timing-function: ease-out
+        animation-timing-function: ease-out;
     }
 
     20% {
         --hero-bg: #eafbfc;
         background-color: #eafbfc;
-        animation-timing-function: ease-out
+        animation-timing-function: ease-out;
     }
 
     40% {
         --hero-bg: #eff0fc;
         background-color: #eff0fc;
-        animation-timing-function: ease-out
+        animation-timing-function: ease-out;
     }
 
     60% {
         --hero-bg: #fcedf6;
         background-color: #fcedf6;
-        animation-timing-function: ease-out
+        animation-timing-function: ease-out;
     }
 
     80% {
         --hero-bg: #fcf2ed;
         background-color: #fcf2ed;
-        animation-timing-function: ease-out
+        animation-timing-function: ease-out;
     }
 
     to {
         --hero-bg: #f2fce2;
-        background-color: #f2fce2
+        background-color: #f2fce2;
     }
 }
 

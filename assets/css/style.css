@@ -4,9 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap');
 
 :root {
-	--color-brand-1: #F71735;
+	--color-brand-1: #F03A47;
 	/*Orange Engineering*/
-	--color-brand-2: #F89400;
+	--color-brand-2: #E9724C;
 	/*Yellow Orange*/
 	--color-brand-3: #2D325A;
 	/*Dark Slate grey*/
@@ -51,7 +51,7 @@ h1 {
 	font-family: var(--font-title);
 	font-weight: 400;
 	font-size: var(--size-title);
-	color: var(--color-black);
+	color: var(--color-brand-5);
 	animation: fade-in-bottom-animation 0.8s cubic-bezier(0.250, 0.450, 0.560, 0.950) both;
 }
 h2 {
@@ -213,7 +213,7 @@ body.scrolled header div.header-row {
 .header-row .header-logo .header-logo-link {
 	font-size: calc(var(--size-title) - 10px);
 	font-family: var(--font-title);
-	color: var(--color-black);
+	color: var(--color-brand-5);
 }
 
 .header-row div.header-tags.left {

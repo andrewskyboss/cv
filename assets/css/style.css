@@ -50,20 +50,20 @@ body {
 h1 {
 	font-family: var(--font-title);
 	font-weight: 400;
-	font-size: 40px;
-	color: var(--color-brand-1);
+	font-size: var(--size-title);
+	color: var(--color-black);
 	animation: fade-in-bottom-animation 0.8s cubic-bezier(0.250, 0.450, 0.560, 0.950) both;
 }
 h2 {
 	font-family: var(--font-title);
 	font-weight: 400;
-	font-size: 35px;
+	font-size: calc(var(--size-title) -5px);
 	color: var(--color-brand-3);
 }
 h3 {
 	font-family: var(--font-title);
 	font-weight: 300;
-	font-size: 30px;
+	font-size: var(--size-subtitle);
 	color: var(--color-brand-1);
 }
 h4 {
@@ -213,6 +213,7 @@ body.scrolled header div.header-row {
 .header-row .header-logo .header-logo-link {
 	font-size: calc(var(--size-title) - 10px);
 	font-family: var(--font-title);
+	color: var(--color-black);
 }
 
 .header-row div.header-tags.left {

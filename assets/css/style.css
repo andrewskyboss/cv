@@ -46,6 +46,24 @@
 	--font-title: "Lexend", sans-serif;
 	--font-menu: 'Oswald', sans-serif;
 }
+
+@media screen and (max-width: 1199px) {
+  :root {
+    --size-heading: 40px;
+	--size-title: 30px;
+	--size-subtitle: 27px;
+	--size-body: 16px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  :root {
+    --size-heading: 35px;
+	--size-title: 25px;
+	--size-subtitle: 22px;
+	--size-body: 16px;
+  }
+}
 /*---------------- Body ----------------*/
 body {
 	font-family: var(--font-body);
@@ -56,14 +74,14 @@ body {
 h1 {
 	font-family: var(--font-title);
 	font-weight: 400;
-	font-size: var(--size-title);
+	font-size: var(--size-heading);
 	color: var(--color-brand-5);
 	animation: fade-in-bottom-animation 0.8s cubic-bezier(0.250, 0.450, 0.560, 0.950) both;
 }
 h2 {
 	font-family: var(--font-title);
 	font-weight: 400;
-	font-size: calc(var(--size-title) - 5px);
+	font-size: calc(var(--size-title) - 0px);
 	color: var(--color-brand-3);
 }
 h3 {
@@ -75,11 +93,12 @@ h3 {
 h4 {
 	font-family: var(--font-title);
 	font-weight: 300;
-	font-size: 30px;
+	font-size: calc(var(--size-subtitle) - 5px);
 	color: var(--color-brand-3);
 }
 p {
 	text-align: justify;
+	font-size: var(--size-body);
 }
 .subtitle {
 	text-align: center;
@@ -1055,10 +1074,10 @@ footer {
 	}
 
 	h1 {
-		font-size: 35px;
+		/*font-size: 35px;*/
 		text-align: center;
 	}
-	h2 {
+	/*h2 {
 		font-size: 30px;
 	}
 	h3 {
@@ -1066,7 +1085,7 @@ footer {
 	}
 	h4 {
 		font-size: 24px;
-	}
+	}*/
 
 	.container {
 		height: 50vh;
@@ -1139,7 +1158,7 @@ footer {
 
 	#main-menu-level-one ul li.menu-item a span.menu-item-title {
 		margin-top: 0px;
-		font-size: 15px;
+		font-size: 14px;
 		font-weight: 400;
 	}
 

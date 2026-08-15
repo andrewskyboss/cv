@@ -19,6 +19,12 @@
 	--color-white: #ffffff;
 
 
+	--color-bkg-01: #EFF0FC;
+	--color-bkg-02: #FCEDF6;
+	--color-bkg-03: #EAFBFC;
+	--color-bkg-04: #F2FCE2;
+	--color-bkg-05: #FCF2ED;
+
 
 	--color-gradient-white:  rgba(241, 241, 241, 0.6);
 	--color-gradient-black:  rgba(0, 0, 0, 0.6);
@@ -176,7 +182,7 @@ hr {
 }
 
 .section-module.top-section {
-	animation: 20s linear infinite hero-bg-cycle!important;
+	animation: 20s linear infinite hero-bkg-cycle!important;
     animation-delay: var(--bg-cycle-delay,0s)!important;
 }
 .section-last {
@@ -442,7 +448,7 @@ section  .work-history .work-history-items .work-history-item .work-history-item
     border-radius: var(--border-radius-container);
 }
 section  .work-history .work-history-items .work-history-item:nth-child(odd) .work-history-item--trigger {
-	background-color: var(--color-brand-4);
+	background-color: var(--color-bkg-04);
 }
 section  .work-history .work-history-items .work-history-item:nth-child(even) .work-history-item--trigger {
 	background-color: transparent;
@@ -999,46 +1005,46 @@ footer {
 	}
 }
 
-@property --hero-bg {
+@property --hero-bkg {
     syntax: "<color>";
     inherits: true;
-    initial-value: #f2fce2
+    initial-value: var(--color-bkg-01);
 }
 
-@keyframes hero-bg-cycle {
+@keyframes hero-bkg-cycle {
     0% {
-        --hero-bg: #f2fce2;
-        background-color: #f2fce2;
+        --hero-bkg: var(--color-bkg-01);
+        background-color: var(--color-bkg-01);
         animation-timing-function: ease-out;
     }
 
     20% {
-        --hero-bg: #eafbfc;
-        background-color: #eafbfc;
+        --hero-bkg: var(--color-bkg-02);
+        background-color: var(--color-bkg-02);
         animation-timing-function: ease-out;
     }
 
     40% {
-        --hero-bg: #eff0fc;
-        background-color: #eff0fc;
+        --hero-bkg: var(--color-bkg-03);
+        background-color: var(--color-bkg-03);
         animation-timing-function: ease-out;
     }
 
     60% {
-        --hero-bg: #fcedf6;
-        background-color: #fcedf6;
+        --hero-bkg: var(--color-bkg-04);
+        background-color: var(--color-bkg-04);
         animation-timing-function: ease-out;
     }
 
     80% {
-        --hero-bg: #fcf2ed;
-        background-color: #fcf2ed;
+        --hero-bkg: var(--color-bkg-05);
+        background-color: var(--color-bkg-05);
         animation-timing-function: ease-out;
     }
 
     to {
-        --hero-bg: #f2fce2;
-        background-color: #f2fce2;
+        --hero-bkg: var(--color-bkg-01);
+        background-color: var(--color-bkg-01);
     }
 }
 

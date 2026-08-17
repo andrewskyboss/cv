@@ -1179,4 +1179,8 @@ footer {
 		text-align: center;
 	}
 
+	.section-title p {
+		max-width: 90vw;
+	}
+
 }

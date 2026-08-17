@@ -758,12 +758,24 @@ form .form-input.textarea {
 }
 
 .section-title {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	text-align: center;
 	margin-top: 10px;
 	margin-bottom: 40px;
 }
+
 .section-title h1 {
 	animation: fade-in-from-bottom-animation 0.8s cubic-bezier(0.25, 0.450, 0.6, 0.79) both;
+}
+
+.section-title p {
+	text-align: center;
+	width: 90%;
+	max-width: 50vw;
+	font-size: calc(var(--size-body) + 5px);
 }
 
 /*---------------- Social links module ----------------*/

@@ -1,156 +1,149 @@
-
 /*----------- Mobile menu Open Close ----------*/
-var scrollThreshold = 50;
+const scrollThreshold = 50;
 
 const mainMenuTrigger = document.querySelector(".main-menu-trigger");
 const mainMenu = document.querySelector(".main-menu");
 
-mainMenuTrigger.addEventListener("click", () => {
-	mainMenuTrigger.classList.toggle("main-menu-visible");
-	mainMenu.classList.toggle("visible");
-})
+if (mainMenuTrigger && mainMenu) {
+  mainMenuTrigger.addEventListener("click", () => {
+    mainMenuTrigger.classList.toggle("main-menu-visible");
+    mainMenu.classList.toggle("visible");
+  });
 
-document.querySelectorAll(".menu-link").forEach(n => n.addEventListener("click", ()=> {
-	mainMenuTrigger.classList.remove("main-menu-visible");
-	mainMenu.classList.remove("visible");
-}))
+  document.querySelectorAll(".menu-link").forEach((link) => {
+    link.addEventListener("click", () => {
+      mainMenuTrigger.classList.remove("main-menu-visible");
+      mainMenu.classList.remove("visible");
+    });
+  });
+}
 
 /*----------- Page adding scrolled class ----------*/
+const handleScroll = () => {
+  if (window.scrollY > scrollThreshold) {
+    document.body.classList.add("scrolled");
+  } else {
+    document.body.classList.remove("scrolled");
+  }
+};
 
-$(window).on('load scroll', function(e) {
-    // Handle scroll
-    if($(document).scrollTop() > scrollThreshold) {
-        $('body').addClass('scrolled');
-    } else {
-        $('body').removeClass('scrolled');
-    }
-});
+window.addEventListener("scroll", handleScroll);
+window.addEventListener("load", handleScroll);
 
 /*Start ------------ Title animation --------------*/
-var sectionAnimations = document.querySelectorAll('.section-module');
-var accordionAllTriggers = document.querySelectorAll('.work-history-item--trigger');
-var skillsItems = document.querySelectorAll('.skills-item');
+const sectionAnimations = document.querySelectorAll(".section-module");
+const accordionAllTriggers = document.querySelectorAll(".work-history-item--trigger");
+const skillsItems = document.querySelectorAll(".skills-item");
 
-observer = new IntersectionObserver((entries) => {
-	entries.forEach(entry => {
-		if (entry.intersectionRatio > 0) {
-			entry.target.classList.add('add-animation');
-		} else {
-			entry.target.classList.remove('add-animation');
-		}
-	});
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.intersectionRatio > 0) {
+      entry.target.classList.add("add-animation");
+    } else {
+      entry.target.classList.remove("add-animation");
+    }
+  });
 });
 
-sectionAnimations.forEach(sectionAnimation => {
-	observer.observe(sectionAnimation);
-});
-accordionAllTriggers.forEach(accordionAllTrigger => {
-    observer.observe(accordionAllTrigger);
-});
-skillsItems.forEach(skillsItem => {
-    observer.observe(skillsItem);
-});
+sectionAnimations.forEach((item) => observer.observe(item));
+accordionAllTriggers.forEach((item) => observer.observe(item));
+skillsItems.forEach((item) => observer.observe(item));
 
 /*----------- Accordion Open Close ----------*/
-
-
-const accordionTriggers = document.querySelectorAll('.work-history-item--trigger');
-
-accordionTriggers.forEach((trigger) => {
-  trigger.addEventListener('click', expandAccordion);
-});
-
-function expandAccordion(event) {
-    const { target: targetElement } = event;
-    const isPanelExpanded = targetElement.getAttribute('aria-expanded');
-    
-    collapseAllAccordions();
-    
-    if (isPanelExpanded === "false") {
-        targetElement.setAttribute('aria-expanded', true);
-    } else {
-        targetElement.setAttribute('aria-expanded', false);
-    }
-}
+const accordionTriggers = document.querySelectorAll(".work-history-item--trigger");
 
 function collapseAllAccordions() {
-    accordionTriggers.forEach((trigger) => {
-        trigger.setAttribute('aria-expanded', false);
-    });
+  accordionTriggers.forEach((trigger) => {
+    trigger.setAttribute("aria-expanded", "false");
+  });
 }
+
+function expandAccordion(event) {
+  const targetElement = event.currentTarget;
+  const isPanelExpanded = targetElement.getAttribute("aria-expanded");
+
+  collapseAllAccordions();
+
+  if (isPanelExpanded === "false") {
+    targetElement.setAttribute("aria-expanded", "true");
+  } else {
+    targetElement.setAttribute("aria-expanded", "false");
+  }
+}
+
+accordionTriggers.forEach((trigger) => {
+  trigger.addEventListener("click", expandAccordion);
+});
 
 /*----------- Scroll to top ----------*/
-var btn = $('.btt-link');
+const btn = document.querySelector(".btt-link");
 
-$(window).scroll(function() {
-  if ($(window).scrollTop() > 300) {
-    btn.addClass('show');
-  } else {
-    btn.removeClass('show');
-  }
-});
+if (btn) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      btn.classList.add("show");
+    } else {
+      btn.classList.remove("show");
+    }
+  });
 
-btn.on('click', function(e) {
-  e.preventDefault();
-  $('html, body').animate({scrollTop:0}, '800');
-});
-
-/*----------- Accordion Open Close ----------*/
-var index = 0;
-
-show_slide = (i) => {
-  //increment/decrement slide index
-  index += i;
-
-  //grab all the images
-  var images = document.getElementsByClassName("hero-image-slider-image");
-  //grab all the dots
-  var dots = document.getElementsByClassName("dot");
-
-  // hide all the images
-  for (i = 0; i < images.length; i++) 
-    images[i].style.display = "none";
-  
-  // remove the active class from the dot
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  
-  // if index is greater than the amount of images (set it to zero)
-  if (index > images.length - 1) {
-    index = 0 ;
-  }
-  
-  // if index is less than zero (set it to the length of images)
-  if (index < 0) {
-    index = images.length - 1;
-  }
-
-  // only display the image that's next or previous
-  images[index].style.display = "block";
-  // only make the current dot active
-  dots[index].className += " active";
-
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
 }
 
-window.addEventListener("onload", show_slide(index));
+/*----------- Hero Image Slider ----------*/
+let currentSlideIndex = 0;
+let isAnimating = false;
 
-// window.onload = function() {
+const show_slide = (n) => {
+  const slides = document.querySelectorAll(".hero-image-slider-image");
+  const dots = document.querySelectorAll(".dot");
 
-// 	document.getElementById('confirmation-title').textContent = '';
+  if (!slides.length || isAnimating) return;
 
-// 	document.getElementById('contact-us-form').addEventListener('submit', function(event) {
-// 	event.preventDefault();
+  const currentSlide = slides[currentSlideIndex];
 
-// 		emailjs.sendForm('service_u9b5bpg', 'emplate_4bc1e0j', this)
-// 		.then(function() {
-// 			console.log('SUCCESS!');
-// 			$('.form-input').val('');
-// 			document.getElementById('confirmation-title').textContent = 'Thank You. I will be in touch with you';
+  // Calculate new target index with wrap-around logic
+  let nextSlideIndex = currentSlideIndex + n;
+  if (nextSlideIndex >= slides.length) nextSlideIndex = 0;
+  if (nextSlideIndex < 0) nextSlideIndex = slides.length - 1;
 
-// 		}, function(error) {
-// 			console.log('FAILED...', error);
-// 			document.getElementById('confirmation-title').textContent = 'Sorry, something went wrong. Try Later.';
-// 		});
-// 	});
-// };
+  // Handle initial display setup or static transition
+  if (n === 0 || currentSlideIndex === nextSlideIndex) {
+    slides.forEach((slide, idx) => {
+      slide.classList.toggle("active", idx === nextSlideIndex);
+      slide.classList.remove("slideFromRight");
+    });
+    dots.forEach((dot, idx) => dot.classList.toggle("active", idx === nextSlideIndex));
+    currentSlideIndex = nextSlideIndex;
+    return;
+  }
+
+  isAnimating = true;
+  const nextSlide = slides[nextSlideIndex];
+
+  // Animate next slide on top of current slide
+  slides.forEach((slide) => slide.classList.remove("slideFromRight"));
+  nextSlide.classList.add("slideFromRight");
+
+  // Update dots
+  dots.forEach((dot, idx) => dot.classList.toggle("active", idx === nextSlideIndex));
+
+  // Sync state after CSS animation finishes (0.5s)
+  setTimeout(() => {
+    slides.forEach((slide) => slide.classList.remove("active", "slideFromRight"));
+    nextSlide.classList.add("active");
+    currentSlideIndex = nextSlideIndex;
+    isAnimating = false;
+  }, 500);
+};
+
+// Initialize initial slide on load
+window.addEventListener("DOMContentLoaded", () => {
+  show_slide(0);
+});

@@ -563,6 +563,7 @@ section div.images-links-3-col .images-links-3-col-single-col a {
 	overflow: hidden;
 	width: 100%;
 }
+section div.images-links-3-col .images-links-3-col-single-col .portfolio-embeded,
 section div.images-links-6-col .images-links-2-col-single-col a span,
 section div.images-links-3-col .images-links-3-col-single-col a span {
 	position: absolute;

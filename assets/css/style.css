@@ -984,6 +984,7 @@ footer {
 	transition: var(--transition-default);
 	border-radius: var(--border-radius-button);
 	user-select: none;
+	z-index: 1;
 }
 #prev {
 	left: 0;

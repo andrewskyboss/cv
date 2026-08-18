@@ -1,166 +1,156 @@
+
 /*----------- Mobile menu Open Close ----------*/
-const scrollThreshold = 50;
+var scrollThreshold = 50;
 
 const mainMenuTrigger = document.querySelector(".main-menu-trigger");
 const mainMenu = document.querySelector(".main-menu");
 
-if (mainMenuTrigger && mainMenu) {
-  mainMenuTrigger.addEventListener("click", () => {
-    mainMenuTrigger.classList.toggle("main-menu-visible");
-    mainMenu.classList.toggle("visible");
-  });
+mainMenuTrigger.addEventListener("click", () => {
+	mainMenuTrigger.classList.toggle("main-menu-visible");
+	mainMenu.classList.toggle("visible");
+})
 
-  document.querySelectorAll(".menu-link").forEach((link) => {
-    link.addEventListener("click", () => {
-      mainMenuTrigger.classList.remove("main-menu-visible");
-      mainMenu.classList.remove("visible");
-    });
-  });
-}
+document.querySelectorAll(".menu-link").forEach(n => n.addEventListener("click", ()=> {
+	mainMenuTrigger.classList.remove("main-menu-visible");
+	mainMenu.classList.remove("visible");
+}))
 
 /*----------- Page adding scrolled class ----------*/
-const handleScroll = () => {
-  if (window.scrollY > scrollThreshold) {
-    document.body.classList.add("scrolled");
-  } else {
-    document.body.classList.remove("scrolled");
-  }
-};
 
-window.addEventListener("scroll", handleScroll);
-window.addEventListener("load", handleScroll);
+$(window).on('load scroll', function(e) {
+    // Handle scroll
+    if($(document).scrollTop() > scrollThreshold) {
+        $('body').addClass('scrolled');
+    } else {
+        $('body').removeClass('scrolled');
+    }
+});
 
 /*Start ------------ Title animation --------------*/
-const sectionAnimations = document.querySelectorAll(".section-module");
-const accordionAllTriggers = document.querySelectorAll(".work-history-item--trigger");
-const skillsItems = document.querySelectorAll(".skills-item");
+var sectionAnimations = document.querySelectorAll('.section-module');
+var accordionAllTriggers = document.querySelectorAll('.work-history-item--trigger');
+var skillsItems = document.querySelectorAll('.skills-item');
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.intersectionRatio > 0) {
-      entry.target.classList.add("add-animation");
-    } else {
-      entry.target.classList.remove("add-animation");
-    }
-  });
+observer = new IntersectionObserver((entries) => {
+	entries.forEach(entry => {
+		if (entry.intersectionRatio > 0) {
+			entry.target.classList.add('add-animation');
+		} else {
+			entry.target.classList.remove('add-animation');
+		}
+	});
 });
 
-sectionAnimations.forEach((item) => observer.observe(item));
-accordionAllTriggers.forEach((item) => observer.observe(item));
-skillsItems.forEach((item) => observer.observe(item));
+sectionAnimations.forEach(sectionAnimation => {
+	observer.observe(sectionAnimation);
+});
+accordionAllTriggers.forEach(accordionAllTrigger => {
+    observer.observe(accordionAllTrigger);
+});
+skillsItems.forEach(skillsItem => {
+    observer.observe(skillsItem);
+});
 
 /*----------- Accordion Open Close ----------*/
-const accordionTriggers = document.querySelectorAll(".work-history-item--trigger");
 
-function collapseAllAccordions() {
-  accordionTriggers.forEach((trigger) => {
-    trigger.setAttribute("aria-expanded", "false");
-  });
-}
 
-function expandAccordion(event) {
-  const targetElement = event.currentTarget;
-  const isPanelExpanded = targetElement.getAttribute("aria-expanded");
-
-  collapseAllAccordions();
-
-  if (isPanelExpanded === "false") {
-    targetElement.setAttribute("aria-expanded", "true");
-  } else {
-    targetElement.setAttribute("aria-expanded", "false");
-  }
-}
+const accordionTriggers = document.querySelectorAll('.work-history-item--trigger');
 
 accordionTriggers.forEach((trigger) => {
-  trigger.addEventListener("click", expandAccordion);
+  trigger.addEventListener('click', expandAccordion);
 });
 
-/*----------- Scroll to top ----------*/
-const btn = document.querySelector(".btt-link");
-
-if (btn) {
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      btn.classList.add("show");
+function expandAccordion(event) {
+    const { target: targetElement } = event;
+    const isPanelExpanded = targetElement.getAttribute('aria-expanded');
+    
+    collapseAllAccordions();
+    
+    if (isPanelExpanded === "false") {
+        targetElement.setAttribute('aria-expanded', true);
     } else {
-      btn.classList.remove("show");
+        targetElement.setAttribute('aria-expanded', false);
     }
-  });
-
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  });
 }
 
-/*----------- Hero Image Slider ----------*/
-let currentSlideIndex = 0;
-let isAnimating = false;
-
-// Exposed directly to window so inline onclick="show_slide(...)" attributes continue working
-window.show_slide = function(n) {
-  const slides = document.querySelectorAll(".hero-image-slider-image");
-  const dots = document.querySelectorAll(".dot");
-
-  if (!slides.length || isAnimating) return;
-
-  // Calculate next slide index with wrap-around logic
-  let nextSlideIndex = currentSlideIndex + n;
-  if (nextSlideIndex >= slides.length) nextSlideIndex = 0;
-  if (nextSlideIndex < 0) nextSlideIndex = slides.length - 1;
-
-  // Initial page load setup or static switch
-  if (n === 0 || currentSlideIndex === nextSlideIndex) {
-    slides.forEach((slide, idx) => {
-      slide.classList.toggle("active", idx === nextSlideIndex);
-      slide.classList.remove("slideFromRight");
+function collapseAllAccordions() {
+    accordionTriggers.forEach((trigger) => {
+        trigger.setAttribute('aria-expanded', false);
     });
-    dots.forEach((dot, idx) => dot.classList.toggle("active", idx === nextSlideIndex));
-    currentSlideIndex = nextSlideIndex;
-    return;
+}
+
+/*----------- Scroll to top ----------*/
+var btn = $('.btt-link');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
   }
-
-  isAnimating = true;
-  const nextSlide = slides[nextSlideIndex];
-
-  // Layer next slide on top and trigger keyframe animation over the previous image
-  slides.forEach((slide) => slide.classList.remove("slideFromRight"));
-  nextSlide.classList.add("slideFromRight");
-
-  // Update navigation dots
-  dots.forEach((dot, idx) => dot.classList.toggle("active", idx === nextSlideIndex));
-
-  // Finalize active class when animation completes (0.5s matching CSS duration)
-  setTimeout(() => {
-    slides.forEach((slide) => slide.classList.remove("active", "slideFromRight"));
-    nextSlide.classList.add("active");
-    currentSlideIndex = nextSlideIndex;
-    isAnimating = false;
-  }, 500);
-};
-
-// Bind listeners once DOM content is ready
-document.addEventListener("DOMContentLoaded", () => {
-  const prevBtn = document.getElementById("prev");
-  const nextBtn = document.getElementById("next");
-
-  if (prevBtn) {
-    prevBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      window.show_slide(-1);
-    });
-  }
-
-  if (nextBtn) {
-    nextBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      window.show_slide(1);
-    });
-  }
-
-  // Initialize first slide display
-  window.show_slide(0);
 });
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '800');
+});
+
+/*----------- Accordion Open Close ----------*/
+var index = 0;
+
+show_slide = (i) => {
+  //increment/decrement slide index
+  index += i;
+
+  //grab all the images
+  var images = document.getElementsByClassName("hero-image-slider-image");
+  //grab all the dots
+  var dots = document.getElementsByClassName("dot");
+
+  // hide all the images
+  for (i = 0; i < images.length; i++) 
+    images[i].style.display = "none";
+  
+  // remove the active class from the dot
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  
+  // if index is greater than the amount of images (set it to zero)
+  if (index > images.length - 1) {
+    index = 0 ;
+  }
+  
+  // if index is less than zero (set it to the length of images)
+  if (index < 0) {
+    index = images.length - 1;
+  }
+
+  // only display the image that's next or previous
+  images[index].style.display = "block";
+  // only make the current dot active
+  dots[index].className += " active";
+
+}
+
+window.addEventListener("onload", show_slide(index));
+
+// window.onload = function() {
+
+// 	document.getElementById('confirmation-title').textContent = '';
+
+// 	document.getElementById('contact-us-form').addEventListener('submit', function(event) {
+// 	event.preventDefault();
+
+// 		emailjs.sendForm('service_u9b5bpg', 'emplate_4bc1e0j', this)
+// 		.then(function() {
+// 			console.log('SUCCESS!');
+// 			$('.form-input').val('');
+// 			document.getElementById('confirmation-title').textContent = 'Thank You. I will be in touch with you';
+
+// 		}, function(error) {
+// 			console.log('FAILED...', error);
+// 			document.getElementById('confirmation-title').textContent = 'Sorry, something went wrong. Try Later.';
+// 		});
+// 	});
+// };

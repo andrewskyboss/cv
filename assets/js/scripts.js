@@ -100,20 +100,19 @@ if (btn) {
 let currentSlideIndex = 0;
 let isAnimating = false;
 
-const show_slide = (n) => {
+// Exposed directly to window so inline onclick="show_slide(...)" attributes continue working
+window.show_slide = function(n) {
   const slides = document.querySelectorAll(".hero-image-slider-image");
   const dots = document.querySelectorAll(".dot");
 
   if (!slides.length || isAnimating) return;
 
-  const currentSlide = slides[currentSlideIndex];
-
-  // Calculate new target index with wrap-around logic
+  // Calculate next slide index with wrap-around logic
   let nextSlideIndex = currentSlideIndex + n;
   if (nextSlideIndex >= slides.length) nextSlideIndex = 0;
   if (nextSlideIndex < 0) nextSlideIndex = slides.length - 1;
 
-  // Handle initial display setup or static transition
+  // Initial page load setup or static switch
   if (n === 0 || currentSlideIndex === nextSlideIndex) {
     slides.forEach((slide, idx) => {
       slide.classList.toggle("active", idx === nextSlideIndex);
@@ -127,14 +126,14 @@ const show_slide = (n) => {
   isAnimating = true;
   const nextSlide = slides[nextSlideIndex];
 
-  // Animate next slide on top of current slide
+  // Layer next slide on top and trigger keyframe animation over the previous image
   slides.forEach((slide) => slide.classList.remove("slideFromRight"));
   nextSlide.classList.add("slideFromRight");
 
-  // Update dots
+  // Update navigation dots
   dots.forEach((dot, idx) => dot.classList.toggle("active", idx === nextSlideIndex));
 
-  // Sync state after CSS animation finishes (0.5s)
+  // Finalize active class when animation completes (0.5s matching CSS duration)
   setTimeout(() => {
     slides.forEach((slide) => slide.classList.remove("active", "slideFromRight"));
     nextSlide.classList.add("active");
@@ -143,7 +142,25 @@ const show_slide = (n) => {
   }, 500);
 };
 
-// Initialize initial slide on load
-window.addEventListener("DOMContentLoaded", () => {
-  show_slide(0);
+// Bind listeners once DOM content is ready
+document.addEventListener("DOMContentLoaded", () => {
+  const prevBtn = document.getElementById("prev");
+  const nextBtn = document.getElementById("next");
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.show_slide(-1);
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.show_slide(1);
+    });
+  }
+
+  // Initialize first slide display
+  window.show_slide(0);
 });

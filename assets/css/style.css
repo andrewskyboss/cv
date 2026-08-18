@@ -566,9 +566,9 @@ section div.images-links-3-col .images-links-3-col-single-col a {
 section div.images-links-6-col .images-links-2-col-single-col a span,
 section div.images-links-3-col .images-links-3-col-single-col a span {
 	position: absolute;
-	height: 40%;
+	height: 50%;
 	width: 70%;
-	top: 30%;
+	top: 25%;
 	border-radius: var(--border-radius-container);
 	display: flex;
 	flex-direction: column;
@@ -614,21 +614,21 @@ section div.images-links-3-col .images-links-3-col-single-col a span .subtitle {
 	text-align: center;
 	transition: var(--transition-default);
 	font-family: var(--font-subtitle);
-	font-weight: 300;
-	font-size: var(--size-subtitle);
+	font-weight: 400;
+	font-size: calc(var(--size-subtitle) - 5px);
 	text-align: center;
 	visibility: hidden;
 	height: 0;
 }
 section div.images-links-6-col .images-links-2-col-single-col a:hover span h3,
 section div.images-links-3-col .images-links-3-col-single-col a:hover span h3 {
-	color: var(--color-brand-1);
+	color: var(--color-brand-3);
 	transition: var(--transition-default);
 	animation: fade-in-bottom-animation 0.8s cubic-bezier(0.250, 0.450, 0.560, 0.950) both;
 }
 section div.images-links-6-col .images-links-2-col-single-col a:hover span .subtitle,
 section div.images-links-3-col .images-links-3-col-single-col a:hover span .subtitle {
-	color: var(--color-brand-1);
+	color: var(--color-brand-5);
 	height: auto;
 	visibility: visible;
 	transition: color 0.8s ease, visibility 0.8s ease;

@@ -563,7 +563,6 @@ section div.images-links-3-col .images-links-3-col-single-col a {
 	overflow: hidden;
 	width: 100%;
 }
-section div.images-links-3-col .images-links-3-col-single-col .portfolio-embeded,
 section div.images-links-6-col .images-links-2-col-single-col a span,
 section div.images-links-3-col .images-links-3-col-single-col a span {
 	position: absolute;
@@ -577,6 +576,17 @@ section div.images-links-3-col .images-links-3-col-single-col a span {
 	background-color: rgba(241, 241, 241, 0.8);
 	box-shadow: 0px 6px 12px 2px var(--color-gradient-black-15);
 	/*background: rgba( var(--color-brand-4), 0.6);*/
+}
+section div.images-links-3-col .images-links-3-col-single-col .portfolio-embeded {
+	position: absolute;
+	height: 100%;
+	width: 96%;
+	top: 0%;
+	border-radius: var(--border-radius-container);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	box-shadow: 0px 6px 12px 2px var(--color-gradient-black-15);
 }
 section div.images-links-6-col .images-links-2-col-single-col a .images-links-3-col-single-col-title,
 section div.images-links-3-col .images-links-3-col-single-col a .images-links-3-col-single-col-title {

@@ -569,6 +569,7 @@ section div.images-links-3-col .images-links-3-col-single-col a span {
 	height: 50%;
 	width: 70%;
 	top: 25%;
+	padding: 20px;
 	border-radius: var(--border-radius-container);
 	display: flex;
 	flex-direction: column;

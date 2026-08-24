@@ -1,156 +1,131 @@
-
 /*----------- Mobile menu Open Close ----------*/
 var scrollThreshold = 50;
 
 const mainMenuTrigger = document.querySelector(".main-menu-trigger");
 const mainMenu = document.querySelector(".main-menu");
 
-mainMenuTrigger.addEventListener("click", () => {
-	mainMenuTrigger.classList.toggle("main-menu-visible");
-	mainMenu.classList.toggle("visible");
-})
+if (mainMenuTrigger && mainMenu) {
+  mainMenuTrigger.addEventListener("click", () => {
+    mainMenuTrigger.classList.toggle("main-menu-visible");
+    mainMenu.classList.toggle("visible");
+  });
 
-document.querySelectorAll(".menu-link").forEach(n => n.addEventListener("click", ()=> {
-	mainMenuTrigger.classList.remove("main-menu-visible");
-	mainMenu.classList.remove("visible");
-}))
+  document.querySelectorAll(".menu-link").forEach((n) =>
+    n.addEventListener("click", () => {
+      mainMenuTrigger.classList.remove("main-menu-visible");
+      mainMenu.classList.remove("visible");
+    })
+  );
+}
 
-/*----------- Page adding scrolled class ----------*/
+/*----------- Page adding scrolled class (Vanilla JS Fix) ----------*/
+function handleScrollClass() {
+  if (window.scrollY > scrollThreshold) {
+    document.body.classList.add("scrolled");
+  } else {
+    document.body.classList.remove("scrolled");
+  }
+}
 
-$(window).on('load scroll', function(e) {
-    // Handle scroll
-    if($(document).scrollTop() > scrollThreshold) {
-        $('body').addClass('scrolled');
-    } else {
-        $('body').removeClass('scrolled');
-    }
-});
+window.addEventListener("scroll", handleScrollClass, { passive: true });
+window.addEventListener("DOMContentLoaded", handleScrollClass);
 
-/*Start ------------ Title animation --------------*/
-var sectionAnimations = document.querySelectorAll('.section-module');
-var accordionAllTriggers = document.querySelectorAll('.work-history-item--trigger');
-var skillsItems = document.querySelectorAll('.skills-item');
+/*----------- Title animation --------------*/
+var sectionAnimations = document.querySelectorAll(".section-module");
+var accordionAllTriggers = document.querySelectorAll(".work-history-item--trigger");
+var skillsItems = document.querySelectorAll(".skills-item");
 
-observer = new IntersectionObserver((entries) => {
-	entries.forEach(entry => {
-		if (entry.intersectionRatio > 0) {
-			entry.target.classList.add('add-animation');
-		} else {
-			entry.target.classList.remove('add-animation');
-		}
-	});
-});
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio > 0) {
+        entry.target.classList.add("add-animation");
+      } else {
+        entry.target.classList.remove("add-animation");
+      }
+    });
+  });
 
-sectionAnimations.forEach(sectionAnimation => {
-	observer.observe(sectionAnimation);
-});
-accordionAllTriggers.forEach(accordionAllTrigger => {
-    observer.observe(accordionAllTrigger);
-});
-skillsItems.forEach(skillsItem => {
-    observer.observe(skillsItem);
-});
+  sectionAnimations.forEach((el) => observer.observe(el));
+  accordionAllTriggers.forEach((el) => observer.observe(el));
+  skillsItems.forEach((el) => observer.observe(el));
+}
 
 /*----------- Accordion Open Close ----------*/
-
-
-const accordionTriggers = document.querySelectorAll('.work-history-item--trigger');
+const accordionTriggers = document.querySelectorAll(".work-history-item--trigger");
 
 accordionTriggers.forEach((trigger) => {
-  trigger.addEventListener('click', expandAccordion);
+  trigger.addEventListener("click", expandAccordion);
 });
 
 function expandAccordion(event) {
-    const { target: targetElement } = event;
-    const isPanelExpanded = targetElement.getAttribute('aria-expanded');
-    
-    collapseAllAccordions();
-    
-    if (isPanelExpanded === "false") {
-        targetElement.setAttribute('aria-expanded', true);
-    } else {
-        targetElement.setAttribute('aria-expanded', false);
-    }
+  const { currentTarget: targetElement } = event;
+  const isPanelExpanded = targetElement.getAttribute("aria-expanded");
+
+  collapseAllAccordions();
+
+  if (isPanelExpanded === "false" || !isPanelExpanded) {
+    targetElement.setAttribute("aria-expanded", "true");
+  } else {
+    targetElement.setAttribute("aria-expanded", "false");
+  }
 }
 
 function collapseAllAccordions() {
-    accordionTriggers.forEach((trigger) => {
-        trigger.setAttribute('aria-expanded', false);
-    });
+  accordionTriggers.forEach((trigger) => {
+    trigger.setAttribute("aria-expanded", "false");
+  });
 }
 
-/*----------- Scroll to top ----------*/
-var btn = $('.btt-link');
+/*----------- Scroll to top (Vanilla JS Fix) ----------*/
+const btn = document.querySelector(".btt-link");
 
-$(window).scroll(function() {
-  if ($(window).scrollTop() > 300) {
-    btn.addClass('show');
-  } else {
-    btn.removeClass('show');
-  }
-});
+if (btn) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      btn.classList.add("show");
+    } else {
+      btn.classList.remove("show");
+    }
+  });
 
-btn.on('click', function(e) {
-  e.preventDefault();
-  $('html, body').animate({scrollTop:0}, '800');
-});
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+}
 
-/*----------- Accordion Open Close ----------*/
+/*----------- Hero Image Slider ----------*/
 var index = 0;
 
-show_slide = (i) => {
-  //increment/decrement slide index
-  index += i;
-
-  //grab all the images
+const show_slide = (i) => {
   var images = document.getElementsByClassName("hero-image-slider-image");
-  //grab all the dots
   var dots = document.getElementsByClassName("dot");
 
-  // hide all the images
-  for (i = 0; i < images.length; i++) 
-    images[i].style.display = "none";
-  
-  // remove the active class from the dot
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  
-  // if index is greater than the amount of images (set it to zero)
-  if (index > images.length - 1) {
-    index = 0 ;
-  }
-  
-  // if index is less than zero (set it to the length of images)
-  if (index < 0) {
-    index = images.length - 1;
+  if (!images.length) return;
+
+  index += i;
+
+  if (index > images.length - 1) index = 0;
+  if (index < 0) index = images.length - 1;
+
+  for (let j = 0; j < images.length; j++) {
+    images[j].style.display = "none";
   }
 
-  // only display the image that's next or previous
+  for (let j = 0; j < dots.length; j++) {
+    dots[j].className = dots[j].className.replace(" active", "");
+  }
+
   images[index].style.display = "block";
-  // only make the current dot active
-  dots[index].className += " active";
+  if (dots[index]) {
+    dots[index].className += " active";
+  }
+};
 
-}
-
-window.addEventListener("onload", show_slide(index));
-
-// window.onload = function() {
-
-// 	document.getElementById('confirmation-title').textContent = '';
-
-// 	document.getElementById('contact-us-form').addEventListener('submit', function(event) {
-// 	event.preventDefault();
-
-// 		emailjs.sendForm('service_u9b5bpg', 'emplate_4bc1e0j', this)
-// 		.then(function() {
-// 			console.log('SUCCESS!');
-// 			$('.form-input').val('');
-// 			document.getElementById('confirmation-title').textContent = 'Thank You. I will be in touch with you';
-
-// 		}, function(error) {
-// 			console.log('FAILED...', error);
-// 			document.getElementById('confirmation-title').textContent = 'Sorry, something went wrong. Try Later.';
-// 		});
-// 	});
-// };
+window.addEventListener("DOMContentLoaded", () => {
+  show_slide(0);
+});

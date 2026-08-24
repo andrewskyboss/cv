@@ -49,19 +49,19 @@
 
 @media screen and (max-width: 1199px) {
   :root {
-    --size-heading: 40px;
-	--size-title: 30px;
-	--size-subtitle: 27px;
-	--size-body: 16px;
+		--size-heading: 40px;
+		--size-title: 30px;
+		--size-subtitle: 25px;
+		--size-body: 16px;
   }
 }
 
 @media screen and (max-width: 991px) {
   :root {
-    --size-heading: 35px;
-	--size-title: 25px;
-	--size-subtitle: 22px;
-	--size-body: 16px;
+		--size-heading: 35px;
+		--size-title: 25px;
+		--size-subtitle: 22px;
+		--size-body: 16px;
   }
 }
 /*---------------- Body ----------------*/
@@ -239,6 +239,11 @@ body.scrolled header div.header-row {
 	font-size: calc(var(--size-title) - 10px);
 	font-family: var(--font-title);
 	color: var(--color-brand-5);
+	transition: var(--transition-default);
+}
+
+.header-row .header-logo .header-logo-link:hover {
+	color: var(--color-brand-2);
 }
 
 .header-row div.header-tags.left {
@@ -859,6 +864,7 @@ body div.btt-button.scrolling-up {
 	transition: var(--transition-default);
 }
 .btt-link:hover {
+	color: var(--color-white);
 	box-shadow: inset 0 -100px 0 0 var(--color-brand-1);
 	background-color: transparent;
 }

@@ -1011,6 +1011,7 @@ footer {
   height: 15px;
   width: 15px;
   margin: 0 2px;
+  cursor: pointer;
   background-color: var(--color-brand-1);
   border-radius: var(--border-radius-button);
   /* transition from one do to the next */
@@ -1018,7 +1019,12 @@ footer {
 }
 .active{
   background-color: var(--color-brand-3);
-} 
+
+}
+
+.dot:hover {
+	background-color: var(--color-brand-2);
+}
 .fade{
 	opacity: 1;
 /* Animation support for different browsers */

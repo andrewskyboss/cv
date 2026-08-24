@@ -99,33 +99,136 @@ if (btn) {
 }
 
 /*----------- Hero Image Slider ----------*/
-var index = 0;
+// var index = 0;
 
-const show_slide = (i) => {
-  var images = document.getElementsByClassName("hero-image-slider-image");
-  var dots = document.getElementsByClassName("dot");
+// const show_slide = (i) => {
+//   var images = document.getElementsByClassName("hero-image-slider-image");
+//   var dots = document.getElementsByClassName("dot");
+
+//   if (!images.length) return;
+
+//   index += i;
+
+//   if (index > images.length - 1) index = 0;
+//   if (index < 0) index = images.length - 1;
+
+//   for (let j = 0; j < images.length; j++) {
+//     images[j].style.display = "none";
+//   }
+
+//   for (let j = 0; j < dots.length; j++) {
+//     dots[j].className = dots[j].className.replace(" active", "");
+//   }
+
+//   images[index].style.display = "block";
+//   if (dots[index]) {
+//     dots[index].className += " active";
+//   }
+// };
+
+// window.addEventListener("DOMContentLoaded", () => {
+//   show_slide(0);
+// });
+
+
+
+/*----------- Hero Image Slider (Auto + Manual) ----------*/
+let slideIndex = 0;
+let slideInterval = null;
+const AUTO_PLAY_DELAY = 6000; // 6 seconds auto-switch
+
+// Core function to update visible image and dot state
+function show_slide(n) {
+  const images = document.getElementsByClassName("hero-image-slider-image");
+  const dots = document.getElementsByClassName("dot");
 
   if (!images.length) return;
 
-  index += i;
-
-  if (index > images.length - 1) index = 0;
-  if (index < 0) index = images.length - 1;
-
-  for (let j = 0; j < images.length; j++) {
-    images[j].style.display = "none";
+  // Calculate slide index boundary
+  if (n >= images.length) {
+    slideIndex = 0;
+  } else if (n < 0) {
+    slideIndex = images.length - 1;
+  } else {
+    slideIndex = n;
   }
 
-  for (let j = 0; j < dots.length; j++) {
-    dots[j].className = dots[j].className.replace(" active", "");
+  // Hide all images
+  for (let i = 0; i < images.length; i++) {
+    images[i].style.display = "none";
   }
 
-  images[index].style.display = "block";
-  if (dots[index]) {
-    dots[index].className += " active";
+  // Remove active state from all dots
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
   }
-};
 
+  // Activate target slide and dot
+  images[slideIndex].style.display = "block";
+  if (dots[slideIndex]) {
+    dots[slideIndex].className += " active";
+  }
+}
+
+// Timer controls for automatic play
+function startAutoSlide() {
+  stopAutoSlide();
+  slideInterval = setInterval(() => {
+    show_slide(slideIndex + 1);
+  }, AUTO_PLAY_DELAY);
+}
+
+function stopAutoSlide() {
+  if (slideInterval) clearInterval(slideInterval);
+}
+
+// Manual trigger handler (resets the auto-play timer)
+function handleManualSlide(targetIndex) {
+  show_slide(targetIndex);
+  startAutoSlide();
+}
+
+// Initialize listeners and slider behavior
 window.addEventListener("DOMContentLoaded", () => {
+  const images = document.getElementsByClassName("hero-image-slider-image");
+  if (!images.length) return;
+
+  // Initial load
   show_slide(0);
+  startAutoSlide();
+
+  // Attach listener to existing #prev button
+  const prevBtn = document.getElementById("prev");
+  if (prevBtn) {
+    prevBtn.removeAttribute("onclick"); // Clear inline attribute override
+    prevBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      handleManualSlide(slideIndex - 1);
+    });
+  }
+
+  // Attach listener to existing #next button
+  const nextBtn = document.getElementById("next");
+  if (nextBtn) {
+    nextBtn.removeAttribute("onclick"); // Clear inline attribute override
+    nextBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      handleManualSlide(slideIndex + 1);
+    });
+  }
+
+  // Attach listeners to each .dot based on its index position
+  const dots = document.querySelectorAll(".dots .dot");
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      handleManualSlide(index);
+    });
+  });
+
+  // Pause timer when mouse hovers over slider container
+  const sliderContainer = document.querySelector(".hero-image-slider") || document.querySelector(".hero");
+  if (sliderContainer) {
+    sliderContainer.addEventListener("mouseenter", stopAutoSlide);
+    sliderContainer.addEventListener("mouseleave", startAutoSlide);
+  }
 });

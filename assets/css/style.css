@@ -568,6 +568,7 @@ section div.images-links-3-col .images-links-3-col-single-col a {
 	overflow: hidden;
 	width: 100%;
 }
+.card-content,
 section div.images-links-6-col .images-links-2-col-single-col a span,
 section div.images-links-3-col .images-links-3-col-single-col a span {
 	position: absolute;
@@ -1176,7 +1177,7 @@ footer {
 }
 
 /* Text Overlay Positioning */
-.card-content {
+/*.card-content {
     position: relative;
     z-index: 3;
     display: flex;
@@ -1186,9 +1187,9 @@ footer {
     padding: 1.5rem;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.75) 100%);
     color: #ffffff;
-}
+}*/
 
-.card-content .title {
+/*.card-content .title {
     margin: 0 0 0.5rem 0;
     color: #ffffff;
 }
@@ -1198,7 +1199,7 @@ footer {
     font-size: 0.95rem;
     line-height: 1.4;
     color: #e0e0e0;
-}
+}*/
 
 @media (max-width: 1199px) {
 

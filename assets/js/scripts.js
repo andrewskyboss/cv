@@ -135,7 +135,7 @@ if (btn) {
 /*----------- Hero Image Slider (Auto + Manual) ----------*/
 let slideIndex = 0;
 let slideInterval = null;
-const AUTO_PLAY_DELAY = 6000; // 6 seconds auto-switch
+const AUTO_PLAY_DELAY = 3000; // 6 seconds auto-switch
 
 // Core function to update visible image and dot state
 function show_slide(n) {

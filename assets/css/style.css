@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&family=Syne:wght@400..800&display=swap');
+
+
 :root {
 	--color-brand-1: #F03A47;
 	/*Orange Engineering*/
@@ -43,9 +46,13 @@
 
 	--transition-default: all 0.8s ease;
 
-	--font-body: 'Raleway', sans-serif;
+	/*--font-body: 'Raleway', sans-serif;
 	--font-title: "Lexend", sans-serif;
-	--font-menu: 'Oswald', sans-serif;
+	--font-menu: 'Oswald', sans-serif;*/
+
+	--font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-title: 'Syne', sans-serif;
+  --font-menu: 'Plus Jakarta Sans', sans-serif;
 }
 
 @media screen and (max-width: 1199px) {

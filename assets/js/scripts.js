@@ -232,3 +232,28 @@ window.addEventListener("DOMContentLoaded", () => {
     sliderContainer.addEventListener("mouseleave", startAutoSlide);
   }
 });
+
+/*----------- Card Background Image Slideshow ----------*/
+function initCardSlideshows() {
+  const slideshows = document.querySelectorAll('.card-slideshow');
+  const SLIDE_INTERVAL = 3500; // 3.5 seconds per slide transition
+
+  slideshows.forEach((slideshow, cardIndex) => {
+    const slides = slideshow.querySelectorAll('.slide-img');
+    if (slides.length <= 1) return;
+
+    let currentIndex = 0;
+
+    // Stagger start times slightly for adjacent cards so they don't cycle in exact unison
+    setTimeout(() => {
+      setInterval(() => {
+        slides[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % slides.length;
+        slides[currentIndex].classList.add('active');
+      }, SLIDE_INTERVAL);
+    }, cardIndex * 400);
+  });
+}
+
+window.addEventListener('DOMContentLoaded', initCardSlideshows);
+

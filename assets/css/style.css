@@ -652,7 +652,7 @@ section div.images-links-3-col .images-links-3-col-single-col a span .subtitle {
 	transition: var(--transition-default);
 	font-family: var(--font-subtitle);
 	font-weight: 400;
-	font-size: calc(var(--size-subtitle) - 5px);
+	font-size: calc(var(--size-subtitle) - 8px);
 	text-align: center;
 	visibility: hidden;
 	height: 0;

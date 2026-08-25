@@ -621,13 +621,14 @@ section div.images-links-3-col .images-links-3-col-single-col a span {
 }
 
 section div.images-links-3-col .images-links-3-col-single-col a img {
-	animation: flip-vertical-right 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-	transform: scale(1.0);
+	/*animation: flip-vertical-right 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;*/
+	animation: none;
+	/*transform: scale(1.0);*/
 	transition: var(--transition-default);
 }
 section div.images-links-3-col .images-links-3-col-single-col a:hover img {
 	animation: flip-vertical-right 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-	transform: scale(1.05);
+	/*transform: scale(1.05);*/
 	transition: var(--transition-default);
 }
 section div.images-links-3-col .images-links-3-col-single-col .portfolio-embeded {

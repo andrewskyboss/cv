@@ -457,6 +457,7 @@ header > div.navbar-container > div.main-menu.visible {
 	padding-right: 5%!important;
 	margin-top: 100px;
 	padding-bottom: 50px;
+	max-width: var(--container-max-width);
 }
 .main-content-title {
 	float: left;

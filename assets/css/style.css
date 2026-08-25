@@ -54,7 +54,7 @@
   --animation-delay-bkg: var(--bg-cycle-delay,0s)!important;
 
   --box-shadow-pre-hover-brand-1: inset 0px 0px 0 0 var(--color-brand-1);
-	--box-shadow-hover-brand-1: inset 0px 300px 0 0 var(--color-brand-1);
+	--box-shadow-hover-brand-1: inset 0px -200px 0 0 var(--color-brand-1);
 
 	--container-max-width: 1280px;
 
@@ -594,6 +594,7 @@ section div.images-links-3-col .images-links-3-col-single-col a {
 	justify-content: center;
 	justify-items: center;
 	position: relative;
+	overflow: hidden;
 	border-radius: var(--border-radius-container);
 	/* border: 1px solid #2D325A; */
 	box-shadow: 1px 1px 10px var(--color-gradient-black-20);
@@ -617,6 +618,15 @@ section div.images-links-3-col .images-links-3-col-single-col a span {
 	background-color: var(--color-gradient-white-08);
 	box-shadow: 0px 6px 12px 2px var(--color-gradient-black-15);
 	/*background: rgba( var(--color-brand-4), 0.6);*/
+}
+
+section div.images-links-3-col .images-links-3-col-single-col a img {
+	transform: scale(1.0);
+	transition: var(--transition-default);
+}
+section div.images-links-3-col .images-links-3-col-single-col a:hover img {
+	transform: scale(1.05);
+	transition: var(--transition-default);
 }
 section div.images-links-3-col .images-links-3-col-single-col .portfolio-embeded {
 	position: absolute;

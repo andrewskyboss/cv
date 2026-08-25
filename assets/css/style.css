@@ -561,6 +561,8 @@ section div.images-links-3-col {
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
+}
+section div.images-links-6-col {
 	max-width: var(--container-max-width);
 }
 section div.images-links-6-col .images-links-2-col-single-col,

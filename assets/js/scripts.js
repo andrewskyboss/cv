@@ -1,3 +1,4 @@
+
 /*----------- Mobile menu Open Close ----------*/
 var scrollThreshold = 50;
 
@@ -5,17 +6,31 @@ const mainMenuTrigger = document.querySelector(".main-menu-trigger");
 const mainMenu = document.querySelector(".main-menu");
 
 if (mainMenuTrigger && mainMenu) {
-  mainMenuTrigger.addEventListener("click", () => {
+  // Toggle menu state on trigger click
+  mainMenuTrigger.addEventListener("click", (e) => {
+    e.stopPropagation(); // Prevents document click handler from firing immediately
     mainMenuTrigger.classList.toggle("main-menu-visible");
     mainMenu.classList.toggle("visible");
   });
 
+  // Close menu when clicking a link inside it
   document.querySelectorAll(".menu-link").forEach((n) =>
     n.addEventListener("click", () => {
       mainMenuTrigger.classList.remove("main-menu-visible");
       mainMenu.classList.remove("visible");
     })
   );
+
+  // Close menu when clicking outside the menu and trigger button
+  document.addEventListener("click", (e) => {
+    const isClickInsideMenu = mainMenu.contains(e.target);
+    const isClickOnTrigger = mainMenuTrigger.contains(e.target);
+
+    if (!isClickInsideMenu && !isClickOnTrigger && mainMenu.classList.contains("visible")) {
+      mainMenuTrigger.classList.remove("main-menu-visible");
+      mainMenu.classList.remove("visible");
+    }
+  });
 }
 
 /*----------- Page adding scrolled class (Vanilla JS Fix) ----------*/
@@ -98,44 +113,10 @@ if (btn) {
   });
 }
 
-/*----------- Hero Image Slider ----------*/
-// var index = 0;
-
-// const show_slide = (i) => {
-//   var images = document.getElementsByClassName("hero-image-slider-image");
-//   var dots = document.getElementsByClassName("dot");
-
-//   if (!images.length) return;
-
-//   index += i;
-
-//   if (index > images.length - 1) index = 0;
-//   if (index < 0) index = images.length - 1;
-
-//   for (let j = 0; j < images.length; j++) {
-//     images[j].style.display = "none";
-//   }
-
-//   for (let j = 0; j < dots.length; j++) {
-//     dots[j].className = dots[j].className.replace(" active", "");
-//   }
-
-//   images[index].style.display = "block";
-//   if (dots[index]) {
-//     dots[index].className += " active";
-//   }
-// };
-
-// window.addEventListener("DOMContentLoaded", () => {
-//   show_slide(0);
-// });
-
-
-
 /*----------- Hero Image Slider (Auto + Manual) ----------*/
 let slideIndex = 0;
 let slideInterval = null;
-const AUTO_PLAY_DELAY = 4500; // 6 seconds auto-switch
+const AUTO_PLAY_DELAY = 4500; // 4.5 seconds auto-switch
 
 // Core function to update visible image and dot state
 function show_slide(n) {
@@ -200,7 +181,7 @@ window.addEventListener("DOMContentLoaded", () => {
   // Attach listener to existing #prev button
   const prevBtn = document.getElementById("prev");
   if (prevBtn) {
-    prevBtn.removeAttribute("onclick"); // Clear inline attribute override
+    prevBtn.removeAttribute("onclick");
     prevBtn.addEventListener("click", (e) => {
       e.preventDefault();
       handleManualSlide(slideIndex - 1);
@@ -210,7 +191,7 @@ window.addEventListener("DOMContentLoaded", () => {
   // Attach listener to existing #next button
   const nextBtn = document.getElementById("next");
   if (nextBtn) {
-    nextBtn.removeAttribute("onclick"); // Clear inline attribute override
+    nextBtn.removeAttribute("onclick");
     nextBtn.addEventListener("click", (e) => {
       e.preventDefault();
       handleManualSlide(slideIndex + 1);

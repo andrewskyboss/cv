@@ -771,7 +771,7 @@ form .form-input {
 	border-right: 0;
 	margin-bottom: 10px;
 	border-radius: var(--border-radius-button);
-	border: 1px solid var(--color-brand-4);
+	border: 1px solid var(--color-brand-5);
 	outline: none;
 }
 form .form-input::placeholder {

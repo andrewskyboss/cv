@@ -556,15 +556,16 @@ section  .work-history .work-history-items .work-history-item .work-history-item
 body section.container-fluid.section-module.section-last.add-animation div.col-12.section-title {
 	padding: 20px 5%;
 }
+section div.images-links-6-col {
+	max-width: var(--container-max-width);
+}
 section div.images-links-6-col,
 section div.images-links-3-col {
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
 }
-section div.images-links-6-col {
-	max-width: var(--container-max-width);
-}
+
 section div.images-links-6-col .images-links-2-col-single-col,
 section div.images-links-3-col .images-links-3-col-single-col {
 	height: auto;

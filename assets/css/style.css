@@ -234,7 +234,7 @@ hr {
 
 section div.row {
 	justify-content: center;
-	max-width: var(--container-max-width);
+	/*max-width: var(--container-max-width);*/
 }
 header div.header-row {
 	display: flex;

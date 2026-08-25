@@ -898,12 +898,15 @@ body div.btt-button.scrolling-up {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	box-shadow: var(--box-shadow-pre-hover-brand-1);
 	transition: var(--transition-default);
 }
 .btt-link:hover {
 	color: var(--color-white);
-	box-shadow: inset 0 -100px 0 0 var(--color-brand-1);
+	/*box-shadow: inset 0 -100px 0 0 var(--color-brand-1);*/
 	background-color: transparent;
+	box-shadow: var(--box-shadow-hover-brand-1);
+	transition: var(--transition-default);
 }
 body.scrolled div.btt-button.scrolling-up {
 	position: fixed;

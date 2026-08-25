@@ -626,6 +626,7 @@ section div.images-links-3-col .images-links-3-col-single-col a img {
 }
 section div.images-links-3-col .images-links-3-col-single-col a:hover img {
 	transform: scale(1.05);
+	animation: flip-vertical-right 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 	transition: var(--transition-default);
 }
 section div.images-links-3-col .images-links-3-col-single-col .portfolio-embeded {
@@ -1098,6 +1099,17 @@ footer {
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
+}
+
+@keyframes flip-vertical-right {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
 }
 
 .slideFromRight {

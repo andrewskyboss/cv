@@ -415,7 +415,7 @@ body.scrolled header div.header-row {
 	padding: 0;
 }
 #main-menu-level-one ul li.menu-item {
-    width: 12%;
+    width: 15%;
     height: 100%;
     border-right: 1px solid var(--color-brand-5);
     

@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 
 :root {
@@ -64,9 +65,16 @@
 	--font-title: "Lexend", sans-serif;
 	--font-menu: 'Oswald', sans-serif;*/
 
-	--font-body: 'Plus Jakarta Sans', sans-serif;
+	/*--font-body: 'Plus Jakarta Sans', sans-serif;
   --font-title: 'Syne', sans-serif;
-  --font-menu: 'Plus Jakarta Sans', sans-serif;
+  --font-menu: 'Plus Jakarta Sans', sans-serif;*/
+
+  --font-body: "Inter", sans-serif;
+	--font-title: "Instrument Serif", serif;
+	--font-menu: "Geist", sans-serif;
+
+
+
 }
 
 @media screen and (max-width: 1199px) {
@@ -97,20 +105,20 @@ h1 {
 	font-family: var(--font-title);
 	font-weight: 400;
 	font-size: var(--size-heading);
-	color: var(--color-brand-5);
+	color: var(--color-black);
 	animation: fade-in-bottom-animation 0.8s cubic-bezier(0.250, 0.450, 0.560, 0.950) both;
 }
 h2 {
 	font-family: var(--font-title);
 	font-weight: 400;
 	font-size: calc(var(--size-title) - 0px);
-	color: var(--color-brand-3);
+	color: var(--color-black);
 }
 h3 {
 	font-family: var(--font-title);
 	font-weight: 300;
 	font-size: var(--size-subtitle);
-	color: var(--color-brand-1);
+	color: var(--color-brand-5);
 }
 h4 {
 	font-family: var(--font-title);

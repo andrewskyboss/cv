@@ -1042,17 +1042,21 @@ footer {
     top: 25%;
     width: 60%;
     left: 20%;
-    gap: 10px;
+    /*gap: 10px;*/
     border-radius: var(--border-radius-container);
-    background-color: var(--color-gradient-white);
+    /*background-color: var(--color-gradient-white);*/
+    background-color: var(--color-gradient-white-08);
 }
 
 .hero-image-slider-content h2.image-subtitle {
 	font-size: var(--size-subtitle);
 }
 
-.hero-image-slider-content .btn.btn-primary {
-	min-width: 200px;
+.hero-image-slider-content .hero-btn-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
 }
 
 /* Next & previous buttons */

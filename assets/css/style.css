@@ -575,6 +575,7 @@ section div.images-links-3-col {
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
+	gap: 20px;
 }
 
 section div.images-links-6-col .images-links-2-col-single-col,
@@ -589,6 +590,10 @@ section div.images-links-3-col .images-links-3-col-single-col {
 	position: relative;
 	animation: fade-in-bottom-animation 0.8s cubic-bezier(0.250, 0.450, 0.560, 0.950) both;
 }
+section div.images-links-6-col .images-links-2-col-single-col {
+	flex: 0 0 calc(50% - 10px);
+}
+
 section div.images-links-3-col .images-links-3-col-single-col.videos {
 	min-height: 40vh;
 }

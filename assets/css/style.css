@@ -591,6 +591,7 @@ section div.images-links-3-col .images-links-3-col-single-col {
 	animation: fade-in-bottom-animation 0.8s cubic-bezier(0.250, 0.450, 0.560, 0.950) both;
 }
 section div.images-links-6-col .images-links-2-col-single-col {
+	padding: 0;
 	flex: 0 0 calc(50% - 10px);
 }
 

@@ -575,6 +575,9 @@ section div.images-links-3-col {
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
+}
+
+section div.images-links-6-col {
 	gap: 20px;
 }
 

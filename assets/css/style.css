@@ -96,7 +96,8 @@
 }
 /*---------------- Body ----------------*/
 
-html {
+html,
+#link-to-choice {
     scroll-behavior: smooth;
 }
 body {

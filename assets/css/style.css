@@ -69,7 +69,7 @@
   --font-title: 'Syne', sans-serif;
   --font-menu: 'Plus Jakarta Sans', sans-serif;*/
 
-  --font-body: "Inter", sans-serif;
+	--font-body: "Inter", sans-serif;
 	--font-title: "Instrument Serif", serif;
 	--font-menu: "Geist", sans-serif;
 
@@ -95,6 +95,10 @@
   }
 }
 /*---------------- Body ----------------*/
+
+html {
+    scroll-behavior: smooth;
+}
 body {
 	font-family: var(--font-body);
 	font-size: var(--size-body);

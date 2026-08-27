@@ -1059,6 +1059,10 @@ footer {
 	gap: 20px;
 }
 
+.hero-image-slider-content .btn-primary {
+	min-width: 200px;
+}
+
 /* Next & previous buttons */
 #prev,
 #next{  

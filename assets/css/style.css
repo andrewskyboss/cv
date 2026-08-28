@@ -30,10 +30,10 @@
 	--color-bkg-05: #FCF2ED;*/
 
 	--color-bkg-01: #ECEEF8;
-  --color-bkg-02: #FEECEE;
-  --color-bkg-03: #FEF0EC;
-  --color-bkg-04: #EAF3F3;
-  --color-bkg-05: #E8EBF4;
+	--color-bkg-02: #FEECEE;
+	--color-bkg-03: #FEF0EC;
+	--color-bkg-04: #EAF3F3;
+	--color-bkg-05: #E8EBF4;
 
 
 	--color-gradient-white:  rgba(241, 241, 241, 0.6);
@@ -52,10 +52,17 @@
 	--border-radius-container: 6px;
 
 	--animation-bkg: 20s linear infinite hero-bkg-cycle!important;
-  --animation-delay-bkg: var(--bg-cycle-delay,0s)!important;
+	--animation-delay-bkg: var(--bg-cycle-delay,0s)!important;
 
-  --box-shadow-pre-hover-brand-1: inset 0px 0px 0 0 var(--color-brand-1);
+	--box-shadow-pre-hover-brand-1: inset 0px 0px 0 0 var(--color-brand-1);
 	--box-shadow-hover-brand-1: inset 0px -200px 0 0 var(--color-brand-1);
+
+	--box-shadow-header: 0px 6px 12px 2px var(--color-gradient-black-15);
+	--box-shadow-block: 1px 1px 10px var(--color-gradient-black-15);
+
+	--box-shadow-main: 4px 10px 21px -10px var(--color-black);
+	--box-shadow-bkg: 1px 1px 25px -15px var(--color-black);
+	--box-shadow-header: 4px 10px 21px -21px var(--color-black);
 
 	--container-max-width: 1280px;
 
@@ -598,6 +605,8 @@ section div.images-links-3-col .images-links-3-col-single-col {
 	justify-content: center;
 	justify-items: center;
 	position: relative;
+	overflow: hidden;
+	box-shadow: var(--box-shadow-block);
 	animation: fade-in-bottom-animation 0.8s cubic-bezier(0.250, 0.450, 0.560, 0.950) both;
 }
 section div.images-links-6-col .images-links-2-col-single-col {

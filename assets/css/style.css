@@ -783,6 +783,17 @@ section .images-links-6-col .description-btns {
 	gap: 20px;
 }
 
+section .images-links-6-col .description-btns a {
+	color: var(--color-brand-1);
+	box-shadow: var(--box-shadow-pre-hover-brand-1);
+	transition: var(--transition-default);
+}
+section .images-links-6-col .description-btns a:hover {
+	color: var(--color-white);
+	box-shadow: var(--box-shadow-hover-brand-1);
+	transition: var(--transition-default);
+}
+
 /*---------------- Skills module ----------------*/
 .col-skills {
 	width: 100%;

@@ -772,17 +772,19 @@ section .images-links-6-col .images-links-2-col-single-col:hover .project-descri
 section .images-links-6-col .description-container {
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: 10px;
 }
 
+section .images-links-6-col .description-container p {
+	text-align: left;
+}
 section .images-links-6-col .description-btns {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	gap: 20px;
+	gap: 10px;
 }
-
 section .images-links-6-col .description-btns a {
 	color: var(--color-brand-1);
 	box-shadow: var(--box-shadow-pre-hover-brand-1);

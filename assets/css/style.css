@@ -56,6 +56,8 @@
 
 	--box-shadow-pre-hover-brand-1: inset 0px 0px 0 0 var(--color-brand-1);
 	--box-shadow-hover-brand-1: inset 0px -200px 0 0 var(--color-brand-1);
+	--box-shadow-pre-hover-brand-3: inset 0px 0px 0 0 var(--color-brand-3);
+	--box-shadow-hover-brand-3: inset 0px -200px 0 0 var(--color-brand-3);
 
 	--box-shadow-header: 0px 6px 12px 2px var(--color-gradient-black-15);
 	--box-shadow-block: 1px 1px 10px var(--color-gradient-black-15);
@@ -793,10 +795,19 @@ section .images-links-6-col .images-links-2-col-single-col .description-btns a {
 	box-shadow: var(--box-shadow-pre-hover-brand-1);
 	transition: var(--transition-default);
 }
+section .images-links-6-col .images-links-2-col-single-col .description-btns a.btn-secondary {
+	color: var(--color-brand-3);
+	box-shadow: var(--box-shadow-pre-hover-brand-3);
+}
 section .images-links-6-col .images-links-2-col-single-col .description-btns a:hover {
 	color: var(--color-white);
+	/*border-color: var(--color-brand-1);*/
 	box-shadow: var(--box-shadow-hover-brand-1);
 	transition: var(--transition-default);
+}
+section .images-links-6-col .images-links-2-col-single-col .description-btns a.btn-secondary:hover {
+	color: var(--color-white);
+	box-shadow: var(--box-shadow-hover-brand-3);
 }
 
 /*---------------- Skills module ----------------*/
@@ -928,7 +939,7 @@ form .form-input.textarea {
 	border: 1px solid var(--color-brand-3);
 	background-color: transparent;
 	padding: 15px 30px;
-	box-shadow: var(--box-shadow-pre-hover-brand-1);
+	box-shadow: var(--box-shadow-pre-hover-brand-3);
 	transition: var(--transition-default);
 	
 }
@@ -948,7 +959,7 @@ form .form-input.textarea {
 	/*box-shadow: inset 0 -100px 0 0 var(--color-brand-3);*/
   background-color: transparent;
 	color: var(--color-white);
-	box-shadow: var(--box-shadow-hover-brand-1);
+	box-shadow: var(--box-shadow-hover-brand-3);
 	transition: var(--transition-default);
 }
 

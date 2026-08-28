@@ -1182,7 +1182,8 @@ footer {
 	gap: 20px;
 }
 
-.hero-image-slider-content .btn-primary {
+.hero-image-slider-content .btn-primary,
+.hero-image-slider-content .btn-secondary {
 	min-width: 200px;
 }
 

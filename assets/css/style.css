@@ -142,7 +142,9 @@ a {
 	color: var(--color-brand-1);
 	transition: var(--transition-default);
 }
-a:hover,a:active,a:focus {
+a:hover,
+a:active,
+a:focus {
 	text-decoration: none;
 	color: var(--color-brand-2);
 	transition: var(--transition-default);

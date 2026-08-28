@@ -1,1555 +1,541 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Raleway:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&family=Syne:wght@400..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-
-:root {
-	--color-brand-1: #F03A47;
-	/*Orange Engineering*/
-	--color-brand-2: #E9724C;
-	/*Yellow Orange*/
-	--color-brand-3: #2D325A;
-	/*Dark Slate grey*/
-	--color-brand-4: #F1F1F1;
-	/*Languid Levander * grey*/
-	--color-brand-5: #091819;
-	/*Dark Jungle Green*/
-	--color-brand-6: #0A0E29;
-	--color-black: #000000;
-	--color-white: #ffffff;
-
-
-	/*--color-bkg-01: #EFF0FC;
-	--color-bkg-02: #FCEDF6;
-	--color-bkg-03: #EAFBFC;
-	--color-bkg-04: #F2FCE2;
-	--color-bkg-05: #FCF2ED;*/
-
-	--color-bkg-01: #ECEEF8;
-	--color-bkg-02: #FEECEE;
-	--color-bkg-03: #FEF0EC;
-	--color-bkg-04: #EAF3F3;
-	--color-bkg-05: #E8EBF4;
-
-
-	--color-gradient-white:  rgba(241, 241, 241, 0.6);
-	--color-gradient-white-08: rgba(241, 241, 241, 0.8);
-	--color-gradient-black:  rgba(0, 0, 0, 0.6);
-	--color-gradient-black-15: rgb(0 0 0 / 15%);
-	--color-gradient-black-20: rgb(0 0 0 / 20%);
-
-	--size-heading: 50px;
-	--size-title: 40px;
-	--size-subtitle: 30px;
-	--size-body: 16px;
-
-	--border-radius-default: 0px;
-	--border-radius-button: 2px;
-	--border-radius-container: 6px;
-
-	--animation-bkg: 20s linear infinite hero-bkg-cycle!important;
-	--animation-delay-bkg: var(--bg-cycle-delay,0s)!important;
-
-	--box-shadow-pre-hover-brand-1: inset 0px 0px 0 0 var(--color-brand-1);
-	--box-shadow-hover-brand-1: inset 0px -200px 0 0 var(--color-brand-1);
-	--box-shadow-pre-hover-brand-3: inset 0px 0px 0 0 var(--color-brand-3);
-	--box-shadow-hover-brand-3: inset 0px -200px 0 0 var(--color-brand-3);
-
-	--box-shadow-header: 0px 6px 12px 2px var(--color-gradient-black-15);
-	--box-shadow-block: 1px 1px 10px var(--color-gradient-black-15);
-
-	--box-shadow-main: 4px 10px 21px -10px var(--color-black);
-	--box-shadow-bkg: 1px 1px 25px -15px var(--color-black);
-	--box-shadow-header: 4px 10px 21px -21px var(--color-black);
-
-	--container-max-width: 1280px;
-
-	--transition-default: all 0.8s ease;
-
-	/*--font-body: 'Raleway', sans-serif;
-	--font-title: "Lexend", sans-serif;
-	--font-menu: 'Oswald', sans-serif;*/
-
-	/*--font-body: 'Plus Jakarta Sans', sans-serif;
-  --font-title: 'Syne', sans-serif;
-  --font-menu: 'Plus Jakarta Sans', sans-serif;*/
-
-	--font-body: "Inter", sans-serif;
-	--font-title: "Instrument Serif", serif;
-	--font-menu: "Geist", sans-serif;
-
-
-
-}
-
-@media screen and (max-width: 1199px) {
-  :root {
-		--size-heading: 40px;
-		--size-title: 30px;
-		--size-subtitle: 25px;
-		--size-body: 16px;
-  }
-}
-
-@media screen and (max-width: 991px) {
-  :root {
-		--size-heading: 35px;
-		--size-title: 25px;
-		--size-subtitle: 22px;
-		--size-body: 16px;
-  }
-}
-/*---------------- Body ----------------*/
-
-html,
-#link-to-choice {
-    scroll-behavior: smooth;
-}
-
-body {
-	font-family: var(--font-body);
-	font-size: var(--size-body);
-	font-weight: 400;
-	color: var(--color-brand-6);
-}
-h1 {
-	font-family: var(--font-title);
-	font-weight: 400;
-	font-size: var(--size-heading);
-	color: var(--color-black);
-	animation: fade-in-bottom-animation 0.8s cubic-bezier(0.250, 0.450, 0.560, 0.950) both;
-}
-h2 {
-	font-family: var(--font-title);
-	font-weight: 400;
-	font-size: calc(var(--size-title) - 0px);
-	color: var(--color-black);
-}
-h3 {
-	font-family: var(--font-title);
-	font-weight: 300;
-	font-size: var(--size-subtitle);
-	color: var(--color-brand-5);
-}
-h4 {
-	font-family: var(--font-title);
-	font-weight: 300;
-	font-size: calc(var(--size-subtitle) - 5px);
-	color: var(--color-brand-3);
-}
-p {
-	text-align: justify;
-	font-size: var(--size-body);
-}
-.subtitle {
-	text-align: center;
-}
-a {
-	color: var(--color-brand-1);
-	transition: var(--transition-default);
-}
-a:hover,
-a:active,
-a:focus {
-	text-decoration: none;
-	color: var(--color-brand-2);
-	transition: var(--transition-default);
-}
-img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-hr {
-	width: 100%;
-	height: 1px;
-	background-color: var(--color-brand-4);
-}
-/*---------------- Hero Image module ----------------*/
-.hero-image {
-	height: 40vh;
-	width: 100%;
-	overflow: hidden;
-	/* float: left; */
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	justify-items: center;
-	position: relative;
-	margin-left: 5%;
-	margin-right: 5%;
-    margin-bottom: 30px;
-    border-radius: var(--border-radius-container);
-    box-shadow: 1px 1px 10px var(--color-gradient-black-20);
-	/* background-image: url("../images/img-04.jpg");
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover; */
-}
-
-.hero-image-background-image {
-	/*position: relative;*/
-	position: absolute;
-	height: 100%;
-	/*height: auto;*/
-	width: 100%;
-	margin: 0;
-	border-radius: var(--border-radius-container);
-	/*background-image: url("../images/pc-image-004.jpg");*/
-	background-image: url("../images/lunked-banner.jpg");
-	background-attachment: fixed;
-	background-position: top;
-	background-repeat: repeat;
-	/*background-size: cover;*/
-	background-size: 50%;
-}
-.hero-image-title {
-	position: absolute;
-	height: 20%;
-	width: 50%;
-	top: 40%;
-	border-radius: var(--border-radius-container);
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	box-shadow: 0px 6px 12px 2px var(--color-gradient-black-15);
-    /* background-color: rgba(241, 228, 243, 0.6); */
-	background-color: var(--color-gradient-white);
-    animation: fade-in-bottom-animation 0.8s cubic-bezier(0.250, 0.450, 0.560, 0.950) both;
-}
-.hero-image-title h2 {
-	text-align: center;
-}
-/* header > div.navbar {
-	background-color: var(--color-white);
-} */
-.container-fluid {
-	padding-left: 0;
-	padding-right: 0;
-}
-.section-module {
-	display: flex;
-	width: 100%;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	height: fit-content;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	min-height: 40vh;
-	z-index: 10;
-	background-color: var(--color-white);
-}
-
-.section-module.top-section {
-	animation: 20s linear infinite hero-bkg-cycle!important;
-    animation-delay: var(--bg-cycle-delay,0s)!important;
-}
-.section-last {
-	padding-bottom: 70px;
-	margin-bottom: 100px;
-	box-shadow: 0px 45px 43px -10px rgb(0 0 0 / 50%);
-}
-
-section .row {
-	justify-content: center;
-	
-}
-section .row.work-history {
-	max-width: var(--container-max-width);
-}
-header div.header-row {
-	display: flex;
-	height: 80px;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	position: relative;
-	z-index: 1000;
-	border-bottom: 1px solid var(--color-white);
-	/*background-color: var(--color-white);*/
-	animation: var(--animation-bkg);
-	animation-delay: var(--animation-delay-bkg);
-}
-header div.navbar-container {
-	display: block;
-	height: 0;
-	position: relative;
-	z-index: 10;
-
-}
-body.scrolled header div.header-row {
-	background-color: var(--color-white);
-	box-shadow: 0px 6px 12px 2px var(--color-gradient-black-15);
-}
-.header-row .header-logo .header-logo-link {
-	font-size: calc(var(--size-title) - 10px);
-	font-family: var(--font-title);
-	color: var(--color-brand-5);
-	transition: var(--transition-default);
-}
-
-.header-row .header-logo .header-logo-link:hover {
-	color: var(--color-brand-2);
-}
-
-.header-row div.header-tags.left {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 15px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    z-index: 7;
-}
-.header-row .header-tags .main-menu-trigger {
-    /*font-size: 40px;*/
-    padding: 0px;
-    z-index: 1000;
-    cursor: pointer;
-    transition: var(--transition-default);
-    background-color: var(--color-brand-1);
-	/*transition: background-color 0.8s ease;*/
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
-	width: 100%;
-	border-radius: var(--border-radius-button);
-}
-.header-tags .main-menu-trigger .menu-hamburger {
-	display: inline-block;
-	width: 100%;
-	/*height: 27px;*/
-	height: 100%;
-	z-index: 10;
-	padding: 17px 10px;
-}
-.header-tags.left .main-menu-trigger .menu-hamburger .menu-hamburger-bars {
-	display: flex;
-	flex-direction: column;
-	position: relative;
-	width: 100%;
-	height: 100%;
-	align-items: center;
-	justify-content: center;
-}
-.header-tags.left .main-menu-trigger .menu-hamburger .menu-hamburger-bars i {
-	position: absolute;
-	display: inherit;
-	background-color: var(--color-white);
-	border-radius: 0px;
-	height: 1px;
-	transition: var(--transition-default);
-	width: 80%;
-}
-
-.header-tags .main-menu-trigger.main-menu-visible .menu-hamburger .menu-hamburger-bars i {
-	/*background-color: var(--color-brand-5);*/
-	height: 2px;
-}
-
-.header-tags .main-menu-trigger .menu-hamburger .menu-hamburger-bars i:nth-child(1) {
-	top: 0;
-	right: 0;
-}
-.header-tags .main-menu-trigger .menu-hamburger .menu-hamburger-bars i:nth-child(2) {
-	visibility: visible;
-	transition: var(--transition-default);
-}
-
-.header-tags .main-menu-trigger .menu-hamburger .menu-hamburger-bars i:nth-child(3) {
-	bottom: 0;
-	left: 0;
-}
-
-.header-tags .main-menu-trigger:hover .menu-hamburger .menu-hamburger-bars i:nth-child(1),
-.header-tags .main-menu-trigger:hover .menu-hamburger .menu-hamburger-bars i:nth-child(2),
-.header-tags .main-menu-trigger:hover .menu-hamburger .menu-hamburger-bars i:nth-child(3) {
-	width: 100%;
-}
-
-.header-tags .main-menu-trigger.main-menu-visible .menu-hamburger .menu-hamburger-bars i:nth-child(1) {
-	top: unset;
-	right: unset;
-	transform: rotate(45deg);
-}
-.header-tags .main-menu-trigger.main-menu-visible .menu-hamburger .menu-hamburger-bars i:nth-child(2) {
-	visibility: hidden;
-}
-
-.header-tags .main-menu-trigger.main-menu-visible .menu-hamburger .menu-hamburger-bars i:nth-child(3) {
-	bottom: unset;
-	left: unset;
-	transform: rotate(-45deg);
-}
-
-.header-tags.left .main-menu-trigger:hover {
-	box-shadow: inset 0 -100px 0 0 var(--color-brand-2);
-} 
-
-#main-menu-level-one {
-	display: flex;
-	width: 100%;
-}
-
-#main-menu-level-one ul {
-	display: flex;
-	list-style: none;
-	flex-wrap: wrap;
-	justify-content: center;
-	width: 100%;
-	margin-bottom: 0;
-	padding: 0;
-}
-#main-menu-level-one ul li.menu-item a {
-	width: 100%;
-	height: 100%;
-	padding: 20px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	transition: var(--transition-default);
-}
-#main-menu-level-one ul li.menu-item a svg {
-	overflow: inherit;
-	width: 100%;
-	height: 30px;
-}
-#main-menu-level-one ul li.menu-item a svg path {
-	stroke: var(--color-brand-3);
-    stroke-width: 8px;
-    fill: none;
-    transition: stroke 0.8s ease;
-}
-#main-menu-level-one ul li.menu-item a span.menu-item-title {
-	margin-top: 10px;
-	font-size: 18px;
-	text-transform: uppercase;
-	font-family: var(--font-menu);
-	font-weight: 200;
-	padding: 0;
-}
-#main-menu-level-one ul li.menu-item {
-    width: 15%;
-    height: 100%;
-    border-right: 1px solid var(--color-brand-5);
-    
-}
-/*#main-menu-level-one ul li.menu-item:nth-child(5),*/
-#main-menu-level-one ul li.menu-item:nth-child(1) {
-	border-left: 1px solid var(--color-brand-5);
-}
-#main-menu-level-one>ul.menu-header>li:hover a{
-	color: var(--color-white) !important;
-	box-shadow: inset 0 -200px 0 0 var(--color-brand-1);
-}
-#main-menu-level-one>ul.menu-header>li:hover a>.menu-item-title {
-	color: var(--color-white) !important;
-	font-weight: 300 !important;
-}
-
-#main-menu-level-one>ul.menu-header>li:hover a>svg.menu-link-icon-svg path {
-	stroke: var(--color-white) !important;
-}
-header div.navbar-container div.main-menu {
-	transform: translateY(-200%);
-	transition: transform 2s ease;
-	margin-top: 0px;
-	height: fit-content;
-	background-color: var(--color-white);
-	box-shadow: 0px 6px 12px 2px var(--color-gradient-black-15);
-}
-
-/*header > div.navbar-container > div.main-menu.hidden {
-	transform: translateY(-200%);
-	transition: transform 2s ease;
-}*/
-header > div.navbar-container > div.main-menu.visible {
-	transform: translateY(0%);
-	transition: transform 1s ease;
-}
-
-/*---------------- Section ----------------*/
-.main-content {
-	padding-left: 5%!important;
-	padding-right: 5%!important;
-	margin-top: 100px;
-	padding-bottom: 50px;
-	max-width: var(--container-max-width);
-}
-.main-content-title {
-	float: left;
-	padding: 30px 50px;
-}
-.main-content-title-home {
-	float: right;
-	padding: 30px 50px;
-}
-.main-content-text {
-	float: right;
-	padding: 30px 0;
-}
-.main-content-text-home {
-	float: left;
-	padding: 30px 0px;
-}
-.main-content-text-home.image-bkg {
-	padding-left: 30px;
-	min-height: 35vh;
-}
-.row {
-	margin-right: 0;
-	margin-left: 0;
-	width: 100%;
-}
-section  .work-history .work-history-items {
-	width: 80%;
-	margin-left: 10%;
-}
-section  .work-history .work-history-items .work-history-item .work-history-item--trigger {
-	display: flex;
-	flex-wrap: wrap;
-	padding: 20px;
-	position: relative;
-	box-shadow: 1px 1px 10px var(--color-gradient-black-20);
-    margin-bottom: 20px;
-    border-radius: var(--border-radius-container);
-}
-section  .work-history .work-history-items .work-history-item:nth-child(odd) .work-history-item--trigger {
-	background-color: var(--color-bkg-04);
-}
-section  .work-history .work-history-items .work-history-item:nth-child(even) .work-history-item--trigger {
-	background-color: transparent;
-}
-section  .work-history .work-history-items .work-history-item .work-history-item--trigger::after {
-	content: '+';
-	position: absolute;
-	right: 20px;
-	width: 10%;
-	font-size: var(--size-title);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	top: 0;
-	height: 100%;
-	cursor: pointer;
-	transform: scale(1);
-	transition: transform 0.8s ease, color 0.8s ease;
-}
-section  .work-history .work-history-items .work-history-item .work-history-item--trigger[aria-expanded="true"]::after {
-	content: '-';
-}
-section  .work-history .work-history-items .work-history-item .work-history-item--trigger[aria-expanded="true"] + .work-history-item--panel {
-	height: auto;
-    opacity: 1;
-    padding: 20px 20px 20px 10%;
-}
-section  .work-history .work-history-items .work-history-item .work-history-item--trigger:hover::after {
-	transform: scale(1.8);
-	color: var(--color-brand-2);
-}
-section  .work-history .work-history-items .work-history-item .work-history-item--panel {
-	height: 0;
-	opacity: 0;
-	overflow: hidden;
-	transition: height 400ms ease-in-out, opacity 350ms linear;
-	display: flex;
-	align-items: flex-start;
-	flex-direction: column;
-
-}
-section  .work-history .work-history-items .work-history-item .work-history-item--trigger .work-dates {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	align-items: center;
-}
-section  .work-history .work-history-items .work-history-item .work-history-item--trigger .work-content {
-	display: flex;
-	justify-content: flex-start;
-	flex-direction: column;
-	padding-right: 10%;
-}
-/*------------------------------------------*/
-body section.container-fluid.section-module.section-last.add-animation div.col-12.section-title {
-	padding: 20px 5%;
-}
-section div.images-links-6-col {
-	max-width: var(--container-max-width);
-}
-section div.images-links-6-col,
-section div.images-links-3-col {
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
-}
-
-section div.images-links-6-col {
-	gap: 20px;
-}
-
-section div.images-links-6-col .images-links-2-col-single-col,
-section div.images-links-3-col .images-links-3-col-single-col {
-	height: auto;
-	min-height: 50vh;
-	width: 100%;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	justify-items: center;
-	position: relative;
-	overflow: hidden;
-	box-shadow: var(--box-shadow-block);
-	animation: fade-in-bottom-animation 0.8s cubic-bezier(0.250, 0.450, 0.560, 0.950) both;
-}
-section div.images-links-6-col .images-links-2-col-single-col {
-	padding: 0;
-	flex: 0 0 calc(50% - 10px);
-}
-
-section div.images-links-3-col .images-links-3-col-single-col.videos {
-	min-height: 40vh;
-}
-section div.images-links-3-col div a .portfolio-embeded {
-	width: 100%;
-}
-section div.images-links-6-col .images-links-2-col-single-col a,
-section div.images-links-3-col .images-links-3-col-single-col a {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	justify-items: center;
-	position: relative;
-	overflow: hidden;
-	border-radius: var(--border-radius-container);
-	/* border: 1px solid #2D325A; */
-	box-shadow: 1px 1px 10px var(--color-gradient-black-20);
-	overflow: hidden;
-	width: 100%;
-}
-.card-content,
-section div.images-links-6-col .images-links-2-col-single-col a span,
-section div.images-links-3-col .images-links-3-col-single-col a span {
-	position: absolute;
-	height: 50%;
-	width: 70%;
-	top: 25%;
-	padding: 20px;
-	border-radius: var(--border-radius-container);
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	z-index: 2;
-	/*background-color: rgba(241, 241, 241, 0.8);*/
-	background-color: var(--color-gradient-white-08);
-	box-shadow: 0px 6px 12px 2px var(--color-gradient-black-15);
-	/*background: rgba( var(--color-brand-4), 0.6);*/
-}
-
-section div.images-links-3-col .images-links-3-col-single-col a img {
-	/*animation: flip-vertical-right 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;*/
-	animation: none;
-	/*transform: scale(1.0);*/
-	transition: var(--transition-default);
-}
-section div.images-links-3-col .images-links-3-col-single-col a:hover img {
-	animation: flip-vertical-right 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-	/*transform: scale(1.05);*/
-	transition: var(--transition-default);
-}
-section div.images-links-3-col .images-links-3-col-single-col .portfolio-embeded {
-	position: absolute;
-	height: 100%;
-	width: 96%;
-	top: 0%;
-	border-radius: var(--border-radius-container);
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	box-shadow: 0px 6px 12px 2px var(--color-gradient-black-15);
-}
-section div.images-links-6-col .images-links-2-col-single-col a .images-links-3-col-single-col-title,
-section div.images-links-3-col .images-links-3-col-single-col a .images-links-3-col-single-col-title {
-	position: absolute;
-	height: 20%;
-	width: 100%;
-	top: unset;
-	bottom: 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	border-radius: var(--border-radius-default) var(--border-radius-default) var(--border-radius-container) var(--border-radius-container);
-	background: var(--color-gradient-white-08);
-	/*background-color: var(--color-white);*/
-	/*background: rgba( var(--color-brand-4), 0.6);*/
-}
-section div.images-links-6-col .images-links-2-col-single-col a span h3,
-section div.images-links-3-col .images-links-3-col-single-col a span h3 {
-	color: var(--color-brand-3);
-	text-align: center;
-	transition: var(--transition-default);
-}
-section div.images-links-6-col .images-links-2-col-single-col a span .subtitle,
-section div.images-links-3-col .images-links-3-col-single-col a span .subtitle {
-	color: var(--color-brand-3);
-	text-align: center;
-	transition: var(--transition-default);
-	font-family: var(--font-subtitle);
-	font-weight: 400;
-	font-size: calc(var(--size-subtitle) - 8px);
-	text-align: center;
-	visibility: hidden;
-	height: 0;
-}
-section div.images-links-6-col .images-links-2-col-single-col a:hover span h3,
-section div.images-links-3-col .images-links-3-col-single-col a:hover span h3 {
-	color: var(--color-brand-3);
-	transition: var(--transition-default);
-	animation: fade-in-bottom-animation 0.8s cubic-bezier(0.250, 0.450, 0.560, 0.950) both;
-}
-section div.images-links-6-col .images-links-2-col-single-col a:hover span .subtitle,
-section div.images-links-3-col .images-links-3-col-single-col a:hover span .subtitle {
-	color: var(--color-brand-5);
-	height: auto;
-	visibility: visible;
-	transition: color 0.8s ease, visibility 0.8s ease;
-	animation: fade-in-bottom-animation 0.8s cubic-bezier(0.250, 0.450, 0.560, 0.950) both;
-	
-}
-section .images-links-6-col .project-description {
-	position: absolute;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 20px 30px;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    z-index: 10;
-    background-color: var(--color-white);
-    overflow: auto;
-    transition: var(--transition-default);
-}
-
-section .images-links-6-col .project-description.right-side {
-	right: 0px;
-	transform: translateX(100%);
-}
-
-section .images-links-6-col .project-description.left-side {
-	left: 0;
-	transform: translateX(-100%);
-}
-
-section .images-links-6-col .images-links-2-col-single-col:hover a span {
-	height: 100%;
-	top: 0;
-	/*left: 0;*/
-	width: 50%;
-	transition: var(--transition-default);
-}
-
-section .images-links-6-col .images-links-2-col-single-col.left-side:hover a span {
-	right: 0;
-}
-
-section .images-links-6-col .images-links-2-col-single-col.right-side:hover a span {
-	left: 0;
-}
-section .images-links-6-col .images-links-2-col-single-col:hover .project-description {
-	transform: translateX(0);
-	transition: var(--transition-default);
-}
-section .images-links-6-col .description-container {
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-}
-
-section .images-links-6-col .description-container p {
-	text-align: left;
-}
-section .images-links-6-col .description-btns {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	gap: 10px;
-}
-section .images-links-6-col .images-links-2-col-single-col .description-btns a {
-	border-radius: var(--border-radius-button);
-	padding: 10px;
-	width: 80%;
-	color: var(--color-brand-1);
-	box-shadow: var(--box-shadow-pre-hover-brand-1);
-	transition: var(--transition-default);
-}
-section .images-links-6-col .images-links-2-col-single-col .description-btns a.btn-secondary {
-	color: var(--color-brand-3);
-	box-shadow: var(--box-shadow-pre-hover-brand-3);
-}
-section .images-links-6-col .images-links-2-col-single-col .description-btns a:hover {
-	color: var(--color-white);
-	/*border-color: var(--color-brand-1);*/
-	box-shadow: var(--box-shadow-hover-brand-1);
-	transition: var(--transition-default);
-}
-section .images-links-6-col .images-links-2-col-single-col .description-btns a.btn-secondary:hover {
-	color: var(--color-white);
-	box-shadow: var(--box-shadow-hover-brand-3);
-}
-
-/*---------------- Skills module ----------------*/
-.col-skills {
-	width: 100%;
-	height: 100px;
-}
-.col-skills a {
-	width: 100%;
-	height: 100%;
-	color: var(--color-brand-6);
-}
-.skills-item {
-	padding-top: 10px;
-	padding-bottom: 0px;
-	display: flex;
-	flex-direction: row;
-	padding-right: 5%;
-	animation: fade-in-bottom-animation 0.8s cubic-bezier(0.250, 0.450, 0.560, 0.950) both;
-}
-.skills-item:nth-child(1) {
-	animation-delay: 0.5s;
-}
-.skills-item:nth-child(2) {
-	animation-delay: 1s;
-}
-.skills-item:nth-child(3) {
-	animation-delay: 1.5s;
-}
-.skills-item:nth-child(4) {
-	animation-delay: 2.0s;
-}
-.skills-item:nth-child(5) {
-	animation-delay: 2.5s;
-}
-.skills-item:nth-child(6) {
-	animation-delay: 3s;
-}
-.skills-logo {
-	text-align: center;
-}
-.skills-logo:hover a {
-	color: var(--color-brand-1);
-	transition: var(--transition-default);
-}
-.skills-logo:hover a .languages-logos-skills {
-    filter: grayscale(0);
-    transform: scale(1.2);
-	transition: var(--transition-default);
-}
-.progress-type {
-	position: absolute;
-	padding: 8px;
-	color: var(--color-brand-4);
-	font-weight: 400;
-	font-size: 16px;
-}
-.programming-languages-icons-skills .col a {
-	width: 100%;
-	height: 100%;
-	object-fit: contain;
-}
-.languages-logos-skills {
-	width: 100%;
-	height: 50%;
-	object-fit: contain;
-    filter: grayscale(1);
-    transform: scale(1);
-	transition: var(--transition-default);
-}
-.progress {
-	height: 40px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	border-radius: var(--border-radius-default);
-	background-color: var(--color-brand-4);
-}
-.progress-bar {
-	background-color: var(--color-brand-3);
-}
-
-/* START -------------- Form module --------------*/
-.contact-form-section {
-	justify-content: center;
-	width: 50%;
-}
-form.contact-form-form {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	width: 100%;
-}
-form.contact-form-form button {
-	color: var(--color-brand-6);
-	width: fit-content;
-	margin: 10px 20px;
-}
-form .form-input {
-	width: 100%;
-	height: 40px;
-	border-right: 0;
-	margin-bottom: 10px;
-	border-radius: var(--border-radius-button);
-	border: 1px solid var(--color-brand-5);
-	outline: none;
-}
-form .form-input::placeholder {
-	padding-left: 20px;
-}
-form .form-input.textarea {
-	height: auto;
-}
-
-.btn.btn-primary {
-	border-radius: var(--border-radius-button);
-	color: var(--color-brand-1);
-	border: 1px solid var(--color-brand-1);
-	background-color: transparent;
-	transition: var(--transition-default);
-	padding: 15px 30px;
-	/*color: var(--color-brand-6);
-	background: var(--color-white);
-	border-radius: 0;
-	*/
-}
-.btn.btn-secondary {
-	border-radius: var(--border-radius-button);
-	color: var(--color-brand-3);
-	border: 1px solid var(--color-brand-3);
-	background-color: transparent;
-	padding: 15px 30px;
-	box-shadow: var(--box-shadow-pre-hover-brand-3);
-	transition: var(--transition-default);
-	
-}
-.btn.btn-primary:hover,
-.btn.btn-primary:active,
-.btn.btn-primary:focus {
-	/*background-color: var(--color-brand-5)!important;
-	border: 1px solid var(--color-brand-5)!important;*/
-	box-shadow: inset 0 -100px 0 0 var(--color-brand-1);
-	background-color: transparent;
-	color: var(--color-white);
-}
-
-.btn.btn-secondary:hover,
-.btn.btn-secondary:active,
-.btn.btn-secondary:focus {
-	/*box-shadow: inset 0 -100px 0 0 var(--color-brand-3);*/
-  background-color: transparent;
-	color: var(--color-white);
-	box-shadow: var(--box-shadow-hover-brand-3);
-	transition: var(--transition-default);
-}
-
-.section-title {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	margin-top: 10px;
-	margin-bottom: 40px;
-	max-width: var(--container-max-width);
-}
-
-.section-title h1 {
-	animation: fade-in-from-bottom-animation 0.8s cubic-bezier(0.25, 0.450, 0.6, 0.79) both;
-}
-
-.section-title p {
-	text-align: center;
-	/*width: 90%;
-	max-width: 50vw;*/
-	font-size: calc(var(--size-body) + 5px);
-}
-
-/*---------------- Social links module ----------------*/
-
-footer {
-	background-color: var(--color-brand-5);
-}
-.social-links-container {
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
-.social-links-container ul {
-	margin: 0;
-	padding: 0;
-}
-.social-links-container ul li {
-	margin-left: 20px;
-	margin-right: 20px!important;
-}
-.social-links-container ul li a {
-	color: var(--color-white);
-}
-.social-links-container ul li a:hover {
-	color: var(--color-brand-2);
-}
-.social-links-container ul li a:hover i {
-	transform: scale(1.2);
-	transition: var(--transition-default);
-}
-.social-links-container ul li a i {
-    font-size: 34px;
-    transform: scale(1);
-	transition: var(--transition-default);
-}
-
-.btn-outline-primary {
-	color: var(--color-brand-1);
-
-}
-.btn-outline-primary,
-.btn-outline-primary:hover {
-	background-color: transparent;
-}
-body div.btt-button.scrolling-up {
-	position: fixed;
-	border-radius: var(--border-radius-button);
-	right: 20px;
-	bottom: -100px;
-	z-index: 1000;
-	width: 100px;
-	height: 50px;
-	padding: 0;
-	border-color: var(--color-brand-1);
-	transition: transform 0.8s ease;
-	/*animation: fade-in-bottom-animation 0.8s cubic-bezier(0.25, 0.450, 0.6, 0.79) both;*/
-}
-.btt-link {
-	border-radius: var(--border-radius-button);
-	color: var(--color-brand-1);
-	background-color: var(--color-gradient-white);
-	/*position: absolute;*/
-	height: 100%;
-	width: 100%;
-	right: 0;
-	top: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	box-shadow: var(--box-shadow-pre-hover-brand-1);
-	transition: var(--transition-default);
-}
-.btt-link:hover {
-	color: var(--color-white);
-	/*box-shadow: inset 0 -100px 0 0 var(--color-brand-1);*/
-	background-color: transparent;
-	box-shadow: var(--box-shadow-hover-brand-1);
-	transition: var(--transition-default);
-}
-body.scrolled div.btt-button.scrolling-up {
-	position: fixed;
-	/*bottom: 20px;*/
-	transform: translateY(-120px);
-	transition: var(--transition-default);
-	/*animation: fade-in-bottom-animation 0.8s cubic-bezier(0.25, 0.450, 0.6, 0.79) both;*/
-}
-/*---------------- Footer ----------------*/
-footer {
-	/*margin-top: 50px;
-	padding-bottom: 50px!important;*/
-	/*clear: both;*/
-	position: fixed;
-    z-index: -1;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-}
-.footer-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-	height: 100%;
-}
-.footer-menu-row {
-	padding-top: 20px;
-	border-top: 1px solid var(--color-brand-6);
-	margin-right: 5%;
-	margin-left: 5%;
-}
-.footer-menu {
-	display: inline-block;
-	text-align: center;
-}
-.footer-menu-row .footer-menu ul {
-	margin-bottom: 30px;
-}
-.footer-menu-row .footer-menu ul li {
-	margin-right: 0!important;
-}
-.footer-menu-row .footer-menu ul li a.menuitem-link {
-	padding: 20px;
-	color: #2D325A;
-	transition: var(--transition-default);
-}
-.footer-menu-row .footer-menu ul li a.menuitem-link:hover {
-	color: var(--color-brand-1)!important;
-	background-color: var(--color-brand-4);
-	transition: var(--transition-default);
-}
-
-.add-animation {
-	animation: fade-in-bottom-animation-section 1.8s cubic-bezier(0.250, 0.450, 0.560, 0.950) both;
-}
-.no-animation {
-	animation: none!important;
-}
-
-.container{
-  width: 90%;
-  overflow: hidden;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 70vh;
-  position: relative;
-  max-width: 100%;  
-}
-/*.image{
-  display: none;
-}*/
-
-.hero-image-slider {
-	position: relative;
-	overflow: hidden;
-}
-.hero-image-slider-image {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	/*display: none;*/
-	z-index: 1;
-}
-
-.hero-image-slider-image img {
-	border-radius: var(--border-radius-container);
-}
-.hero-image-slider-content {
-	position: absolute;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: center;
-    align-items: center;
-    height: 50%;
-    top: 25%;
-    width: 60%;
-    left: 20%;
-    /*gap: 10px;*/
-    border-radius: var(--border-radius-container);
-    /*background-color: var(--color-gradient-white);*/
-    background-color: var(--color-gradient-white-08);
-}
-
-.hero-image-slider-content h2.image-subtitle {
-	font-size: var(--size-subtitle);
-}
-
-.hero-image-slider-content .hero-btn-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 20px;
-}
-
-.hero-image-slider-content .btn-primary {
-	min-width: 200px;
-}
-
-/* Next & previous buttons */
-#prev,
-#next{  
-	position: absolute;
-	top: 43%;
-	cursor: pointer;
-	padding: 16px;
-	color: var(--color-brand-1);
-	font-weight: bold;
-	font-size: 1rem;
-	background-color: var(--color-gradient-white);
-	transition: var(--transition-default);
-	border-radius: var(--border-radius-button);
-	user-select: none;
-	z-index: 1;
-}
-#prev {
-	left: 0;
-}
-#next{
-	right: 0;
-}
-
-#prev:hover, 
-#next:hover {
-  color: var(--color-white);
-} 
-
-.dots{
-	position: absolute;
-	text-align: center;
-	bottom: 0;
-	z-index: 10;
-	/*margin-top: 2%;*/
-}
-
-.dot{
-  display: inline-block;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  cursor: pointer;
-  background-color: var(--color-brand-1);
-  border-radius: var(--border-radius-button);
-  /* transition from one do to the next */
-  transition: var(--transition-default);
-}
-.active{
-  background-color: var(--color-brand-3);
-
-}
-
-.dot:hover {
-	background-color: var(--color-brand-2);
-}
-.fade{
-	opacity: 1;
-/* Animation support for different browsers */
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-  animation-fill-mode: forwards;
-}
-@-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
-
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
-
-@keyframes flip-vertical-right {
-  0% {
-    -webkit-transform: rotateY(0) scale(1.0);
-            transform: rotateY(0) scale(1.0);
-  }
-  100% {
-    -webkit-transform: rotateY(180deg) scale(1.05);
-            transform: rotateY(180deg) scale(1.05);
-  }
-}
-
-.slideFromRight {
-	/*opacity: 1;
-  animation-name: slideFromRight;
-  animation-duration: 1.5s;
-  animation-fill-mode: forwards;*/
-  animation: slideFromRight 0.5s ease-in-out forwards;
-}
-
-@keyframes slideFromRight {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fade-in-bottom-animation {
-	0% {
-		transform: translateY(30px);
-		opacity: 0;
-	}
-	100% {
-		transform: translateY(0);
-		opacity: 1;
-	}
-}
-@keyframes fade-in-bottom-animation-section {
-	0% {
-		transform: translateY(30px);
-		opacity: 1;
-	}
-	100% {
-		transform: translateY(0);
-		opacity: 1;
-	}
-}
-
-@property --hero-bkg {
-    syntax: "<color>";
-    inherits: true;
-    initial-value: var(--color-bkg-01);
-}
-
-@keyframes hero-bkg-cycle {
-    0% {
-        --hero-bkg: var(--color-bkg-01);
-        background-color: var(--color-bkg-01);
-        animation-timing-function: ease-out;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Favicons & Search Engine Icons -->
+    <!-- Google Search Engine & Android Snippet Icon -->
+    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+    <!-- Desktop Browser Tabs Fallback -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Apple / iOS Safari -->
+    <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png">
+
+    <!-- Primary SEO -->
+    <title>Andrew Cybossky | Senior Web Designer &amp; Frontend Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Andrew Cybossky (Andrej Cybovskij), an experienced Web Designer &amp; Frontend Developer with 400+ commercial projects. Specializing in UI/UX design, responsive frontend architecture, and design systems.">
+    <meta name="keywords" content="Andrew Cybossky, Andrej Cybovskij, Andrew Cybossky portfolio, Andrej Cybovskij CV, Web Designer, Frontend Developer, UI UX Designer, Design Systems, HTML CSS JavaScript, Code Institute, Full Stack Developer, Portfolio">
+    <meta name="author" content="Andrew Cybossky">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://andrewskyboss.github.io/cv/">
+
+    <!-- Open Graph / Social / AI Embeds -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://andrewskyboss.github.io/cv/">
+    <meta property="og:title" content="Andrew Cybossky | Web Designer &amp; Frontend Developer Portfolio">
+    <meta property="og:description" content="Experienced Web Designer &amp; Frontend Developer with 400+ delivered commercial projects. Specializing in responsive UI design, modern frontend architecture, and design systems.">
+    <meta property="og:site_name" content="Andrew Cybossky Portfolio">
+    <meta property="og:image" content="https://andrewskyboss.github.io/cv/assets/images/img-04.jpg">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1080">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Andrew Cybossky | Web Designer &amp; Frontend Developer Portfolio">
+    <meta name="twitter:description" content="Experienced Web Designer &amp; Frontend Developer with 400+ delivered commercial projects. Specializing in responsive UI design, modern frontend architecture, and design systems.">
+    <meta name="twitter:image" content="https://andrewskyboss.github.io/cv/assets/images/img-04.jpg">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- JavaScript Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous" defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous" defer></script>
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://andrewskyboss.github.io/cv/#person",
+          "name": "Andrew Cybossky",
+          "alternateName": ["Andrej Cybovskij", "Andrew Skyboss", "Andrey Cybossky"],
+          "url": "https://andrewskyboss.github.io/cv/",
+          "jobTitle": ["Web Designer", "Frontend Developer", "UI/UX Designer"],
+          "description": "Experienced Web Designer and Frontend Developer with over 400 commercial projects. Specializing in responsive web applications, design systems, and modern UI engineering.",
+          "knowsAbout": [
+            "Web Design",
+            "Frontend Development",
+            "UI/UX Design",
+            "Design Systems",
+            "JavaScript",
+            "HTML5",
+            "CSS3",
+            "Bootstrap",
+            "Responsive Design",
+            "Full-Stack Development"
+          ],
+          "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Code Institute"
+          },
+          "hasCredential": [
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Full Stack Software Development"
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Multimedia Programming & Design"
+            }
+          ],
+          "sameAs": [
+            "https://github.com/andrewskyboss"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://andrewskyboss.github.io/cv/#website",
+          "url": "https://andrewskyboss.github.io/cv/",
+          "name": "Andrew Cybossky | Portfolio",
+          "description": "Professional Web Design and Frontend Development Portfolio.",
+          "publisher": {
+            "@id": "https://andrewskyboss.github.io/cv/#person"
+          }
+        },
+        {
+          "@type": "VideoObject",
+          "name": "Creative Commons Project, Water",
+          "description": "Creative Commons multimedia project exploring visual design, storytelling, and digital production focused on water.",
+          "thumbnailUrl": [
+            "https://vumbnail.com/166286928.jpg",
+            "https://andrewskyboss.github.io/cv/assets/images/img-04.jpg"
+          ],
+          "uploadDate": "2016-05-11T00:00:00+00:00",
+          "contentUrl": "https://vimeo.com/166286928",
+          "embedUrl": "https://player.vimeo.com/video/166286928?badge=0&autopause=0&player_id=0&app_id=58479&loop=1"
+        },
+        {
+          "@type": "VideoObject",
+          "name": "Frontend & Web Design Commercial Showcase 1",
+          "description": "Commercial web design and interactive UI showcase demonstrating frontend development and media integration.",
+          "thumbnailUrl": [
+            "https://vumbnail.com/260163274.jpg",
+            "https://andrewskyboss.github.io/cv/assets/images/img-04.jpg"
+          ],
+          "uploadDate": "2018-03-15T00:00:00+00:00",
+          "contentUrl": "https://vimeo.com/260163274",
+          "embedUrl": "https://player.vimeo.com/video/260163274?h=268c3cd658"
+        },
+        {
+          "@type": "VideoObject",
+          "name": "Frontend & Web Design Commercial Showcase 2",
+          "description": "Interactive media and web interface presentation highlighting custom styling and user experience design.",
+          "thumbnailUrl": [
+            "https://vumbnail.com/240646094.jpg",
+            "https://andrewskyboss.github.io/cv/assets/images/img-04.jpg"
+          ],
+          "uploadDate": "2017-10-31T00:00:00+00:00",
+          "contentUrl": "https://vumbnail.com/240646094.jpg",
+          "embedUrl": "https://player.vimeo.com/video/240646094?h=c43d4139e9"
+        }
+      ]
     }
+    </script>
+</head>
+<body class="page">
+	<div class="site-container">
+		<header class="container-fluid fixed-top">
+            <div class="header-row">
+                <div class="header-logo">
+                    <a href="index.html" class="header-logo-link" title="Andrew Cybossky | CV">
+                    Andrew Cybossky</a>
+                </div>
+                <div class="header-tags left">
+                    <a class="header-tag main-menu-trigger">
+                        <div class="menu-hamburger">
+                            <span class="menu-hamburger-bars">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="navbar-container">
+                <!-- <div class="main-menu hidden"> -->
+                <div class="main-menu">
+                    <nav class="navbar">
+                        <div class="menu-header-container" id="main-menu-level-one">
+                            <ul class="menu-header">
+                                <li class="menu-item experience">
+                                    <a class="menu-link experience" href="experience.html" title="Experience">
+                                        <svg class="menu-link-icon-svg" viewBox="0 0 280.4 239.08" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="st1" d="M289.51,98.88V240.82a28.47,28.47,0,0,1-28.46,28.47H38.58a28.47,28.47,0,0,1-28.47-28.47V98.88A28.47,28.47,0,0,1,38.58,70.41h39v-4.2a35,35,0,0,1,35-35h74.94a35,35,0,0,1,35,35v4.2h38.58A28.47,28.47,0,0,1,289.51,98.88ZM173.6,187.27V150.94a10.87,10.87,0,0,0-10.87-10.87H137.27a10.87,10.87,0,0,0-10.87,10.87v36.33a10.87,10.87,0,0,0,10.87,10.86h25.46A10.87,10.87,0,0,0,173.6,187.27ZM261.24,70.41H38.39A28.28,28.28,0,0,0,10.11,98.69h0a66.1,66.1,0,0,0,66.11,66.1H126.4V150.94a10.87,10.87,0,0,1,10.87-10.87h25.46a10.87,10.87,0,0,1,10.87,10.87v13.85h49.81a66.09,66.09,0,0,0,66.1-66.1h0A28.28,28.28,0,0,0,261.24,70.41Zm-63.6-6.16a10,10,0,0,0-10-10H112.36a10,10,0,0,0-10,10v6.16h95.28Z" transform="translate(-9.61 -30.71)">
+                                            </path>
+                                        </svg>
+                                        <span class="menu-item-title experience">Experience</span>
+                                    </a>
+                                </li>
+                                <li class="menu-item education">
+                                    <a class="menu-link" href="education.html" title="Education">
+                                        <svg class="menu-link-icon-svg" viewBox="0 0 281.66 197.24" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="st1"
+                                            d="M21.2,121l132.1,66.4L290,118.7,157.9,52.2Zm224.9,20.8V207s-41.6,33.3-93,33.3-93-33.3-93-33.3V140.4M21.2,121v77.3l13.9,26.8L21.2,247.8,10,222l11.2-23.7" transform="translate(-9.45 -51.64)">
+                                            </path>
+                                        </svg>
+                                        <span class="menu-item-title education">Education</span>
+                                    </a>
+                                </li>
+                                <li class="menu-item contact">
+                                    <a class="menu-link" href="contact.html" title="Contact">
+                                        <svg class="menu-link-icon-svg" viewBox="0 0 281.1 176.2" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="st1"
+                                            d="M276.3,237.6H23.7c-7.6,0-13.7-5.9-13.7-13.1V75.5c0-7.2,6.1-13.1,13.7-13.1H276.4c7.5,0,13.7,5.9,13.7,13.1V224.6C290,231.8,283.9,237.6,276.3,237.6ZM266,96.2,160.1,171c-5.6,4-14.7,4-20.3,0L31.8,94.6m168.9,72.7,65.3,47M31.8,212.8l65.8-46.6" transform="translate(-9.5 -61.9)">
+                                            </path>
+                                        </svg>
+                                        <span class="menu-item-title contact">Contact</span>
+                                    </a>
+                                </li>
+                                <li class="menu-item download">
+                                    <a class="menu-link" target="_blank" rel="noopener noreferrer" href="assets/documents/AC_CV.pdf" title="Download">
+                                        <svg class="menu-link-icon-svg" viewBox="0 0 281.1 260" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="st1"
+                                            d="M209,163.3l-53.37,53a7.24,7.24,0,0,1-10.24,0L91,162.17M150,20.25V218.43m-140,0v48.22c0,7.2,6.1,13.1,13.7,13.1h252.6c7.6,0,13.7-5.8,13.8-13V218.43" transform="translate(-9.45 -20.25)">
+                                            </path>
+                                        </svg>
+                                        <span class="menu-item-title download">Download CV</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <section class="container-fluid section-module top-section no-animation">
+            <div class="main-content col-12">
+                <div class="col-lg-6 col-sm-12 main-content-text-home">
+                    <h1>UI/UX, Web Designer &amp;<br> Frontend Developer</h1>
+                </div>
+                <div class="col-lg-6 col-sm-12 main-content-text-home image-bkg">
+                    <p>
+                        Experienced Web Designer & Frontend Developer with a proven track record of architecting, designing, and launching 350+ commercial digital products across diverse complexity tiers. Certified in Full-Stack Software Development and Multimedia Programming & Design (Code Institute), I combine systems thinking with pixel-perfect UI execution to deliver scalable, user-centric web applications.
+                    </p>
+                    <ul>
+                        <li><b>Design Systems & UI:</b> Building scalable, accessible UI components and design tokens that keep products consistent.</li>
+                        <li><b>Frontend Engineering:</b> Translating complex Figma prototypes into clean, responsive, and performant code.</li>
+                        <li><b>User-Centric Process:</b> Bridging the gap between user research, wireframing, and production-ready applications.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="container-fluid section-module">
+                <div class="col-12 section-title">
+                    <h2>Featured Website Projects</h2>
+                    <p>A showcase of end-to-end website redesigns built to elevate brand presence, modernize user experiences, and drive measurable conversion growth. Each project highlights responsive design, streamlined UI/UX design, and clean frontend implementation tailored to complex commercial requirements.</p>
+                    <p>Select any example below to navigate directly to the live website.</p>
+                </div>
+                <div class="container hero-image-slider">
+                    <div class="hero-image-slider-image fade">
+                        <img src="assets/images/choice-01.jpg" alt="Choice Hotel Group title image" loading="lazy">
+                        <div class="hero-image-slider-content">
+                            <h2 class="image-title">Choice Hotel Group</h2>
+                            <h2 class="image-subtitle">Website redesign</h2>
+                            <div class="hero-btn-container">
+                                <a class="button btn btn-primary" target="_blank" rel="noopener noreferrer" title="Go to Choice Hotel Group website" href="https://www.choicehotelgroup.ie">Visit website</a>
+                                <a class="button btn btn-secondary" href="#link-to-choice" title="Go to Figma">Preview Figma</a> 
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="hero-image-slider-image fade">
+                        <img src="assets/images/gnh-01.jpg" alt="GNH & Resorts title image" loading="lazy">
+                        <div class="hero-image-slider-content">
+                            <h2 class="image-title">GNH & Resorts</h2>
+                            <h2 class="image-subtitle">Website redesign</h2>
+                            <a class="button btn btn-primary" target="_blank" rel="noopener noreferrer" title="Go to GNH & Resorts website" href="https://www.greatnationalhotels.com">Visit website</a>
+                        </div>
+                    </div>
+                    <div class="hero-image-slider-image fade">
+                        <img src="assets/images/revanista-01.jpg" alt="Revanista Website title image" loading="lazy">
+                        <div class="hero-image-slider-content">
+                            <h2 class="image-title">Revanista</h2>
+                            <h2 class="image-subtitle">Website redesign</h2>
+                            <a class="button btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://www.revanista.com" title="Revanista Website">Visit website</a>
+                        </div>
+                    </div>
+                    <div class="hero-image-slider-image fade">
+                        <img src="assets/images/hardiman-01.jpg" alt="The Hardiman Hotel title image" loading="lazy">
+                        <div class="hero-image-slider-content">
+                            <h2 class="image-title">The Hardiman</h2>
+                            <h2 class="image-subtitle">Website redesign</h2>
+                            <a class="button btn btn-primary" target="_blank" rel="noopener noreferrer" title="Go to The Hardiman Hotel website" href="https://www.thehardiman.ie">Visit website</a>
+                        </div>
+                    </div>
+                    <div class="hero-image-slider-image fade">
+                        <img src="assets/images/exterior-005.jpg" alt="The Lensfield Hotel website title image" loading="lazy">
+                        <div class="hero-image-slider-content">
+                            <h2 class="image-title">The Lensfield Hotel</h2>
+                            <h2 class="image-subtitle">Website redesign</h2>
+                            <a class="button btn btn-primary" target="_blank" rel="noopener noreferrer" title="Go to The Lensfield Hotel website" href="https://www.lensfieldhotel.co.uk">Visit website</a>
+                        </div>
+                    </div>
+                    <div class="hero-image-slider-image fade">
+                        <img src="assets/images/riverside-park-hotel-exterior-2019.jpg" alt="The Riverside Park Hotel website title image" loading="lazy">
+                        <div class="hero-image-slider-content">
+                            <h2 class="image-title">The Riverside Park Hotel</h2>
+                            <h2 class="image-subtitle">Website redesign</h2>
+                            <a class="button btn btn-primary" target="_blank" rel="noopener noreferrer" title="Go to The Riverside Park Hotel website" href="https://www.riversideparkhotel.com">Visit website</a>
+                        </div>
+                    </div>
+                    <div class="hero-image-slider-image fade">
+                        <img src="assets/images/tmh-01.jpg" alt="TMR Hotel Collection website title image" loading="lazy">
+                        <div class="hero-image-slider-content">
+                            <h2 class="image-title">TMR Hotel Collection</h2>
+                            <h2 class="image-subtitle">Website redesign</h2>
+                            <a class="button btn btn-primary" target="_blank" rel="noopener noreferrer" title="Go to TMR Hotel Collection website" href="https://www.tmrhotelcollection.com">Visit website</a>
+                        </div>
+                    </div>
 
-    20% {
-        --hero-bkg: var(--color-bkg-02);
-        background-color: var(--color-bkg-02);
-        animation-timing-function: ease-out;
-    }
+                    <a id="prev" class="button btn btn-primary" onclick="show_slide(-1)">&#10094;</a>
+                    <a id="next" class="button btn btn-primary" onclick="show_slide(1)">&#10095;</a>
 
-    40% {
-        --hero-bkg: var(--color-bkg-03);
-        background-color: var(--color-bkg-03);
-        animation-timing-function: ease-out;
-    }
+                    <div class="dots">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+        </section>
 
-    60% {
-        --hero-bkg: var(--color-bkg-04);
-        background-color: var(--color-bkg-04);
-        animation-timing-function: ease-out;
-    }
+        <section class="container-fluid section-module">
+            <div class="row images-links">
+                <div class="col-12 section-title">
+                    <h2>Live UI/UX Showcase</h2>
+                    <h3>Websites, BE in Action</h3>
+                    <p>Select any example below to explore the live, fully functional booking interface.</p>
+                </div>
+                <div class="images-links-6-col">
+                    <div class="col-lg-6 col-sm-12 images-links-2-col-single-col left-side">
+                        <a href="https://booking.ligula.se/ibe/default.aspx?hgID=1676&brandID=3606" target="_blank" rel="noopener noreferrer" title="Ligula Hospitality Group" class="card-link">
+                            <div class="card-slideshow">
+                               <img src="assets/images/ligula-01.jpg" alt="Ligula Hospitality Group image" class="slide-img active" loading="lazy">
+                               <img src="assets/images/ligula-02.jpg" alt="Ligula Hospitality Group image" class="slide-img" loading="lazy">
+                               <img src="assets/images/ligula-03.jpg" alt="Ligula Hospitality Group image" class="slide-img" loading="lazy">
+                               <img src="assets/images/ligula-04.jpg" alt="Ligula Hospitality Group image" class="slide-img" loading="lazy">
+                            </div>
+                            <span class="card-content">
+                                <h3 class="title">Ligula Hospitality Group</h3>
+                                <!-- <p class="subtitle">Tailored booking engine & modern UI design for multi-brand hotel stays</p> -->
+                            </span>
+                        </a>
+                        <div class="project-description left-side">
+                            <div class="description-container">
+                                <h4>Case Study of multi-brand booking engine redesign</h4>
+                                 <p class="description-body small-description">
+                                    A complete UX/UI transformation of Ligula Hospitality Group's booking engine - streamlining reservation flows across diverse hotel brands, elevating digital aesthetics, and driving cross-property conversions
+                                </p>
+                                <div class="description-btns">
+                                    <a class="button btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://booking.ligula.se/ibe/default.aspx?hgID=1676&brandID=3606" title="Go to Booking engine website">Booking Engine</a>
+                                    <a class="button btn btn-secondary" target="_blank" rel="noopener noreferrer" href="https://ligula.se/en/" title="Go to hotel Website">Hotel Website</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 images-links-2-col-single-col right-side" >
+                        <a href="https://booking.gothiatowers.com/ibe/index.aspx?propertyid=17452&adults=1&childAges=" target="_blank" rel="noopener noreferrer" title="Gothia Towers" class="card-link">
+                            <div class="card-slideshow">
+                                <img src="assets/images/gothia-01.jpg" alt="Gothia Towers image" class="slide-img active" loading="lazy">
+                                <img src="assets/images/gothia-02.jpg" alt="Gothia Towers image" class="slide-img" loading="lazy">
+                                <img src="assets/images/gothia-03.jpg" alt="Gothia Towers image" class="slide-img" loading="lazy">
+                                <img src="assets/images/gothia-04.jpg" alt="Gothia Towers image" class="slide-img" loading="lazy">
+                            </div>
+                            <span class="card-content">
+                                <h3 class="title">Gothia Towers</h3>
+                                <!-- <p class="subtitle">High-converting booking engine & sleek UI redesign for iconic landmark stays</p> -->
+                            </span>
+                        </a>
+                        <div class="project-description right-side">
+                            <div class="description-container">
+                                <h4>Case Study of dual-tier booking platform overhaul</h4>
+                                 <p class="description-body small-description">
+                                    A targeted UX redesign tailored for Gothia Towers and the 5-star Upper House - delivering a refined, intuitive reservation journey that highlights premium room tiers and maximizes direct bookings
+                                </p>
+                                <div class="description-btns">
+                                    <a class="button btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://booking.gothiatowers.com/ibe/index.aspx?propertyid=17452&adults=1&childAges=" title="Go to Booking engine website">Booking Engine</a>
+                                    <a class="button btn btn-secondary" target="_blank" rel="noopener noreferrer" href="https://en.gothiatowers.com" title="Go to hotel Website">Hotel Website</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 images-links-2-col-single-col">
+                        <a href="https://www.theaddresscollective.com" target="_blank" rel="noopener noreferrer" title="The Address Collective Group" class="card-link">
+                            <div class="card-slideshow">
+                               <img src="assets/images/address-collective.webp" alt="The Address Collective Group image" class="slide-img active" loading="lazy">
+                               <img src="assets/images/address-collective-03.jpg" alt="The Address Collective Group image" class="slide-img" loading="lazy">
+                               <img src="assets/images/address-collective-01.jpg" alt="The Address Collective Group image" class="slide-img" loading="lazy">
+                               <img src="assets/images/address-collective-02.jpg" alt="The Address Collective Group image" class="slide-img" loading="lazy">
+                            </div>
+                            <span class="card-content">
+                                <h3 class="title">The Address Collective Group</h3>
+                                <p class="subtitle">Direct booking engine & modern UI redesign for boutique luxury stays.</p>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 images-links-2-col-single-col">
+                        <a href="https://pitlochryhotels.com" target="_blank" rel="noopener noreferrer" title="Pitlochry Hotels Group" class="card-link">
+                            <div class="card-slideshow">
+                                <img src="assets/images/pitchlory.jpg" alt="Pitlochry Hotels Group image" class="slide-img active" loading="lazy">
+                                <img src="assets/images/pitchlory-02.jpg" alt="Pitlochry Hotels Group image" class="slide-img" loading="lazy">
+                                <img src="assets/images/pitchlory-01.jpg" alt="Pitlochry Hotels Group image" class="slide-img" loading="lazy">
+                                <img src="assets/images/pitchlory-03.jpg" alt="Pitlochry Hotels Group image" class="slide-img" loading="lazy">
+                            </div>
+                            <span class="card-content">
+                                <h3 class="title">Pitlochry Hotels Group</h3>
+                                <p class="subtitle">Tailored booking UX & responsive direct reservation portal for resort destinations</p>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    80% {
-        --hero-bkg: var(--color-bkg-05);
-        background-color: var(--color-bkg-05);
-        animation-timing-function: ease-out;
-    }
 
-    to {
-        --hero-bkg: var(--color-bkg-01);
-        background-color: var(--color-bkg-01);
-    }
-}
+        <section class="container-fluid section-module">
+            <div class="row images-links">
+                <div class="col-12 section-title">
+                    <!-- <h2>My Works</h2> -->
+                    <h2>Booking Engine UI/UX Showcase</h2>
+                    <p>A collection of custom booking engine interfaces designed to optimize the reservation flow, increase direct bookings, and deliver frictionless user journeys across all screen sizes. Each solution focuses on intuitive navigation, accessible UI components, and high-performance design.</p>
+                    <p>Select any example below to explore the live, fully functional booking interface.</p>
+                </div>
+                <div class="images-links-3-col">
+                    <div class="col-lg-4 col-sm-12 images-links-3-col-single-col">
+                        <a href="https://res.windsurfercrs.com/ibe/index.aspx?propertyID=16861&brandID=3422" target="_blank" rel="noopener noreferrer" title="Adrift Hospitality Group">
+                            <img src="assets/images/adrift-01.jpg" alt="Adrift Hospitality Group booking interface" loading="lazy">
+                            <span class="images-links-3-col-single-col-title">
+                                <h3>Adrift Hospitality Group</h3>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-12 images-links-3-col-single-col">
+                        <a href="https://www.newporthotelgroup.com/" target="_blank" rel="noopener noreferrer" title="Newport Hotel Group BE websites">
+                            <img src="assets/images/newport-01.jpg" alt="Newport Hotel Group" loading="lazy">
+                            <span class="images-links-3-col-single-col-title">
+                                <h3>Newport Hotel Group</h3>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-12 images-links-3-col-single-col">
+                        <a href="https://res.windsurfercrs.com/ibe/index.aspx?propertyID=18157&nono=1&lang=en-us&adults=2" target="_blank" rel="noopener noreferrer" title="TSOGO SUN Group">
+                            <img src="assets/images/tsogo-01.jpg" alt="TSOGO SUN South Africa's Leading Casino, Hotel & Entertainment Group " loading="lazy">
+                            <span class="images-links-3-col-single-col-title">
+                                <h3>TSOGO SUN Group</h3>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section class="container-fluid section-module">
+            <div class="row images-links">
+                <div class="col-12 section-title">
+                    <h2>UI/UX Showcase</h2>
+                    <h3>Booking Engine Demos</h3>
+                </div>
+                <div class="images-links-6-col">
+                    <div class="col-lg-6 col-sm-12 images-links-2-col-single-col">
+                        <a href="https://res.windsurfercrs.com/ibe/index.aspx?propertyID=17797&brandID=5380" target="_blank" rel="noopener noreferrer" title="Dakota Hotels" class="card-link">
+                            <div class="card-slideshow">
+                               <img src="assets/images/bkg-img-02.jpg" alt="Dakota Hotels room image" class="slide-img active" loading="lazy">
+                               <img src="assets/images/dakota-01.jpg" alt="Dakota Hotels room image" class="slide-img" loading="lazy">
+                               <img src="assets/images/dakota-02.jpg" alt="Dakota Hotels room image" class="slide-img" loading="lazy">
+                               <img src="assets/images/dakota-03.jpg" alt="Dakota Hotels room image" class="slide-img" loading="lazy"> 
+                            </div>
+                            <span class="card-content">
+                                <h3 class="title">Dakota Hotels</h3>
+                                <p class="subtitle">Seamless booking UX & direct room reservation engine for luxury stays. Demo version</p>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 images-links-2-col-single-col">
+                        <a href="https://res.windsurfercrs.com/ibe/index.aspx?propertyID=17646&brandID=3402" target="_blank" rel="noopener noreferrer" title="The Keefer House Hotel" class="card-link">
+                            <div class="card-slideshow">
+                                <img src="assets/images/keefer.jpg" alt="The Keefer House Hotel image" class="slide-img active" loading="lazy">
+                                <img src="assets/images/keefer-01.jpg" alt="The Keefer House Hotel image" class="slide-img" loading="lazy">
+                                <img src="assets/images/keefer-02.jpg" alt="The Keefer House Hotel image" class="slide-img" loading="lazy">
+                                <img src="assets/images/keefer-03.jpg" alt="The Keefer House Hotel image" class="slide-img" loading="lazy">
+                            </div>
+                            <span class="card-content">
+                                <h3 class="title">The Keefer House Hotel</h3>
+                                <p class="subtitle">Direct booking engine & custom reservation UI for seamless guest checkout. Demo version</p>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-.images-links-2-col-single-col .card-link {
-    display: block;
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px; /* Adjust as needed */
-    height: 100%;
-    min-height: 380px;
-    text-decoration: none;
-}
+        <section class="container-fluid section-module section-last">
+            <div class="col-12 row">
+                <div class="col-12 section-title">
+                    <h2>Figma UI/UX Showcase</h2>
+                    <h3 id="link-to-choice">
+                        <a href="https://www.choicehotelgroup.ie" target="_blank" rel="noopener noreferrer" title="Choice (Elevate) Hotel Group redesign">Choice (Elevate) Hotel Group redesign</a>
+                    </h3>
+                </div>
+                <div class="col-12">
+                    <iframe style="border: 0px solid rgba(0, 0, 0, 0.1); height: 90vh;" width="100%" height="" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FyMRckWqcI7scF3rgBlpREN%2FPresentation%3Fnode-id%3D3%253A2%26scaling%3Dmin-zoom%26page-id%3D0%253A1%26starting-point-node-id%3D3%253A2" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer Section -->
+        <footer class="container-fluid">
+            <div class="row footer-container">
+                <div class="container-fluid social-links-container">
+                    <ul class="list-inline social-links text-center">
+                        <li class="list-inline-item">
+                            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/andrew-cybossky" aria-label="Go to LinkedIn website" title="Go to LinkedIn website">
+                                <i class="fab fa-linkedin-in" aria-hidden="true" ></i>
+                                <span class="sr-only">LinkedIn</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a target="_blank" rel="noopener noreferrer" href="https://github.com/andrewskyboss" aria-label="Go to Github website" title="Go to Github website">
+                                <i class="fab fa-github" aria-hidden="true" ></i>
+                                <span class="sr-only">Github</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a target="_blank" rel="noopener noreferrer" href="https://codepen.io/newcapulet/pens/showcase" aria-label="Go to Codepen website" title="Go to Codepen website">
+                                <i class="fab fa-codepen" aria-hidden="true" ></i>
+                                <span class="sr-only">Codepen</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-/* Background Slideshow Stack */
-.card-slideshow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-.card-slideshow .slide-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
-}
-
-.card-slideshow .slide-img.active {
-    opacity: 1;
-    z-index: 2;
-}
-
-/* Subtle zoom effect on card hover */
-.card-link:hover .slide-img.active {
-    transform: scale(1.04);
-}
-
-/* Text Overlay Positioning */
-/*.card-content {
-    position: relative;
-    z-index: 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    height: 100%;
-    padding: 1.5rem;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.75) 100%);
-    color: #ffffff;
-}*/
-
-/*.card-content .title {
-    margin: 0 0 0.5rem 0;
-    color: #ffffff;
-}
-
-.card-content .subtitle {
-    margin: 0;
-    font-size: 0.95rem;
-    line-height: 1.4;
-    color: #e0e0e0;
-}*/
-
-@media (max-width: 1199px) {
-
-	.hero-image {
-		height: 20vh;
-	}
-
-	h1 {
-		/*font-size: 35px;*/
-		text-align: center;
-	}
-	/*h2 {
-		font-size: 30px;
-	}
-	h3 {
-		font-size: 26px;
-	}
-	h4 {
-		font-size: 24px;
-	}*/
-
-	.container {
-		height: 50vh;
-	}
-
-	.section-module {
-		min-height: 50vh;
-	}
-
-	.header-row .header-logo .header-logo-link {
-		font-size: var(--size-subtitle);
-	}
-	.contact-form-section {
-		width: 90%;
-	}
-	.section-title h1 {
-		font-size: var(--size-subtitle);
-	}
-	section  .work-history div .work-history-items {
-		width: 96%;
-		margin-left: 2%;
-	}
-
-	#main-menu-level-one ul li.menu-item {
-		width: 19%;
-	}
-
-	section div.images-links-6-col .images-links-2-col-single-col, 
-	section div.images-links-3-col .images-links-3-col-single-col {
-		min-height: 35vh;
-	}
-
-}
-
-@media (max-width: 991px) {
-
-	.hero-image {
-		height: 20vh;
-	}
-
-	.container {
-		height: 35vh;
-	}
-
-	section div.images-links-3-col .images-links-3-col-single-col.videos {
-		min-height: 25vh;
-	}
-	section div.images-links-6-col .images-links-2-col-single-col, 
-	section div.images-links-3-col .images-links-3-col-single-col {
-		min-height: 35vh;
-	}
-
-	section div.images-links-6-col, 
-	section div.images-links-3-col {
-		gap: 30px;
-		max-width: 98%;
-	}
-
-	.main-content-text-home.image-bkg {
-		padding-left: 0;
-		min-height: 20vh;
-	}
-
-	.hero-image-background-image {
-		background-size: 90%;
-	}
-
-	.hero-image-slider-content {
-		top: 20%;
-		height: 60%;
-		width: 80%;
-		left: 10%;
-	}
-
-	section div.images-links-6-col .images-links-2-col-single-col a span, 
-	section div.images-links-3-col .images-links-3-col-single-col a span {
-		width: 80%;
-		top: 20%;
-		height: 60%;
-	}
-
-}
-
-@media (max-width: 771px) {
-
-	.header-row .header-logo .header-logo-link {
-		font-size: calc(var(--size-subtitle) - 6px);
-	}
-
-	#main-menu-level-one ul li.menu-item {
-		width: 25%;
-	}
-
-	#main-menu-level-one ul li.menu-item a svg {
-		display: none;
-	}
-
-	#main-menu-level-one ul li.menu-item a span.menu-item-title {
-		margin-top: 0px;
-		font-size: 14px;
-		font-weight: 400;
-	}
-
-	#main-menu-level-one ul li.menu-item a {
-		padding: 10px;
-		text-align: center;
-	}
-
-	.section-title p {
-		max-width: 90vw;
-	}
-
-}
+            </div>
+        </footer>
+        <div class="btt-button btn btn-outline-primary scrolling-up">
+            <a class="btt-link" href="#" aria-label="Scroll back to top">
+                <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+                <!-- <i class="fas fa-chevron-up"></i> -->
+            </a>
+        </div>
+        <!-- <button class="btt-button btn btn-outline-primary scrolling-up" aria-label="Scroll back to top">
+            <span class="btt-link">
+                <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+            </span>
+        </button> -->
+    </div>
+    <script src="assets/js/scripts.js"></script>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+</body>
+</html>

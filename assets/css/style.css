@@ -126,7 +126,7 @@ h1 {
 h2 {
 	font-family: var(--font-title);
 	font-weight: 400;
-	font-size: calc(var(--size-title) - 0);
+	font-size: calc(var(--size-title) - 0px);
 	color: var(--color-black);
 }
 h3 {

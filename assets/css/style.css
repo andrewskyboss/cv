@@ -785,12 +785,15 @@ section .images-links-6-col .description-btns {
 	flex-direction: column;
 	gap: 10px;
 }
-section .images-links-6-col .description-btns a {
+section .images-links-6-col .images-links-2-col-single-col .description-btns a {
+	border-radius: var(--border-radius-button);
+	padding: 10px;
+	width: 80%;
 	color: var(--color-brand-1);
 	box-shadow: var(--box-shadow-pre-hover-brand-1);
 	transition: var(--transition-default);
 }
-section .images-links-6-col .description-btns a:hover {
+section .images-links-6-col .images-links-2-col-single-col .description-btns a:hover {
 	color: var(--color-white);
 	box-shadow: var(--box-shadow-hover-brand-1);
 	transition: var(--transition-default);
